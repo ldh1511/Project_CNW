@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+.main-container{
+    background-color: #e0e0e6;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.content-box{
+    background-color: #f4f4f6;
+    width: 100%;
+    margin: 15px;
+    box-shadow: 0 3px 8px 0 rgba(15,15,20,.2);
+    display: flex;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.content-box::-webkit-scrollbar,
+.left-element::-webkit-scrollbar{
+    display: none;
+}
+.content-left{
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+}
+.left-element{
+    background: linear-gradient(159deg,rgba(255,255,255,1) 0%,rgba(255,255,255,.95) 100%);
+    position: fixed;
+    width: 19%;
+    height: calc(100vh - 30px);
+    z-index: 999;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.content-right{
+    width: 80%;
+}
