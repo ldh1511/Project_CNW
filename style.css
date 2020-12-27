@@ -142,3 +142,77 @@ html,body{
 .info-download a:hover{
     color: #1e1e28;
 }
+
+
+.title{
+    text-align: left;
+    padding-top: 45px;
+    padding-left: 30px;
+    color: #000000;
+    font-weight: 200%;
+}
+.row{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+h5{
+    padding-top: 10%;
+    font-weight: 100%;
+    text-align: center;
+}
+.resume,
+.price{
+    font-weight: 450%;
+    color: #f00f0f ;
+    font-size: 35px;
+}
+.resume em,
+.price em {
+    font-size: 15px;
+    font-weight: 120%;
+    color: #000000;
+}
+.price{
+    text-align: center;
+    margin: 40px;
+}
+/* .li{
+    line-height: 35px;
+} */
+.icon{
+    color:  #5c5c6f;
+    font-size: 120%;
+}
+.box{
+    background-color: white;
+    box-shadow: 1.5px 1.5px 1.5px #9d9d9e;
+}
+ul{
+    list-style: none;
+    text-align: center;
+}
+.icon-price{
+    color: #f00f0f;
+    letter-spacing: 7px;
+}
+.price-no{
+    opacity: 0.5;
+}
+.avt{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    border-radius: 50%;
+}
+img.logo{
+    height: 100;
+    width: 100;
+    opacity: 0.6;
+}
+img.logo:hover{
+    opacity: 1;
+}
+.contact{
+    background-color: #fff;
+    height: 100px;
+}
