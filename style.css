@@ -35,7 +35,6 @@ html,body{
     width: 23%;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 3px 8px 0 rgba(15,15,20,.2);
 }
 .left-element{
     position: fixed;
@@ -45,11 +44,14 @@ html,body{
     overflow: scroll;
     overflow-x: hidden;
     background: #f4f4f6;
+    box-shadow: rgba(15, 15, 20, 0.2) 0px 3px 8px 0px;
 }
 .content-right{
     width: 80%;
+    padding-right: 80px;
+    position: relative;
 }
-
+/* Menu left */
 .info-box{
     padding: 30px;
     text-align: center;
@@ -143,7 +145,7 @@ html,body{
     color: #1e1e28;
 }
 
-
+/* Main content */
 .title{
     text-align: left;
     padding-top: 45px;
@@ -215,4 +217,120 @@ img.logo:hover{
 .contact{
     background-color: #fff;
     height: 100px;
+}
+/* Menu right */
+.content-right.content-right-active{
+    animation: ani2 .5s forwards;
+}
+.content-right.content-right-active2{
+    animation: ani2_2 .5s forwards;
+}
+@keyframes ani2{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-240px);
+       
+    }
+}
+@keyframes ani2_2{
+    from{
+        transform: translateX(-240px);
+    }
+    to{
+        transform: translateX(0px);
+       
+    }
+}
+.menu-right{
+    position: absolute;
+    right: 0;
+    height: calc(100vh - 30px);
+    width: 80px;
+}
+.menu-right-box{
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    right: 15px;
+    box-shadow: 0 3px 8px 0 rgba(15,15,20,.2);
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f6;
+}
+.menu-right-box.active{
+   
+    animation: ani1 .5s forwards;
+}
+.menu-right-box.active2{
+   
+    animation: ani1_1 .5s forwards;
+}
+@keyframes ani1{
+    from{
+        width: 80px;
+    }
+    to{
+        width: 240px;
+    }
+}
+@keyframes ani1_1{
+    from{
+        width: 240px;
+    }
+    to{
+        width: 80px;
+    }
+}
+.right-box-bars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-color: white;
+    cursor: pointer;
+}
+.right-box-title.hidden{
+    visibility: hidden;
+}
+.right-box-bars i{
+    font-size: 23px;
+}
+.right-box-bars.bars-active{
+    justify-content: flex-start;
+}
+.right-box-content{
+    padding: 25px;
+}
+.right-box-content h5{
+    text-orientation: mixed;
+    writing-mode: vertical-lr;
+    font-size: 15px;
+}
+.right-menu{
+    visibility: hidden;
+    opacity: 0;
+}
+.right-menu.menu-active{
+    visibility: visible;
+    opacity: 1;
+}
+.right-menu li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+}
+.right-menu li i{
+    transition: .5s;
+}
+.right-menu li:hover i{
+    transform: rotate(90deg);
+}
+.right-menu li a{
+    color: #5c5c6f;
 }
