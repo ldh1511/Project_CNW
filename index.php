@@ -332,9 +332,9 @@
           <div class="right-box-content">
             <h5 class="right-box-title">HOME</h5>
             <ul class="right-menu">
-              <li><a href="#">HOME</a></li>
+              <li><a href="index.php">Trang chủ</a></li>
               <li><a href="#">PORTFOLIO</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#">HISTORY</a></li>
+              <li><a href="login.php">Quản lý</a></li>
               <li><a href="#">BLOG</a><i class="fas fa-chevron-right"></i></li>
               <li><a href="#">CONTACT</a></li>
             </ul>
