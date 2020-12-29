@@ -71,6 +71,7 @@ html,body{
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .info-avt img{
     width: 100%;
@@ -333,4 +334,27 @@ img.logo:hover{
 }
 .right-menu li a{
     color: #5c5c6f;
+}
+
+/* LOGIN FORM */
+form{
+    width: 485px;
+    margin: 0 auto;
+    margin-top: 85px;
+    box-shadow: 0 3px 8px 0 rgba(15,15,20,.2);
+    padding: 25px;
+    border-radius: 10px;
+}
+.form-input{
+    border: none;
+}
+form h2{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.btn-add{
+    border-radius: 25px;
+    background-color: #00b8ff !important;
+    border: none;
+    color: white;
 }

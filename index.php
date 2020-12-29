@@ -22,40 +22,37 @@
         <div class="left-element">
           <div class="info-box">
             <div class="info-avt">
-              <img src="./Img/avt.jpg" alt="">
+              <img src="./Img/logo.png" alt="">
             </div>
-            <h4>Artur Carter</h4>
-            <p>Front-end Deweloper <br>
-              Ui/UX Designer</p>
+            <h4>Lê Dương Hùng</h4>
+            <h4>Ngô Thị Duyên</h4>
+            <p>Front-end Deweloper</p>
           </div>
           <div class="info-content">
             <div class="info-content-element">
               <ul>
                 <li>
-                  <h6>Residence:</h6><span>Canada</span>
+                  <h6>Địa chỉ:</h6><span>Đại học Thủy lợi</span>
                 </li>
                 <li>
-                  <h6>City:</h6><span>Torono</span>
-                </li>
-                <li>
-                  <h6>Age:</h6><span>26</span>
+                  <h6>Thành phố:</h6><span>Hà Nội</span>
                 </li>
               </ul>
             </div>
             <div class="info-content-element info-skill">
               <ul>
-                <li><i class="far fa-check-circle"></i> Bootstrap, Materialize</li>
-                <li><i class="far fa-check-circle"></i> Stylus, Sass, Less</li>
-                <li><i class="far fa-check-circle"></i> Gulp, Webpack, Grunt</li>
+                <li><i class="far fa-check-circle"></i> Bootstrap</li>
+                <li><i class="far fa-check-circle"></i> HTML, CSS</li>
+                <li><i class="far fa-check-circle"></i> PHP</li>
                 <li><i class="far fa-check-circle"></i> GIT knowledge</li>
               </ul>
             </div>
             <div class="info-content-element info-skill">
               <ul>
-                <li><i class="far fa-check-circle"></i> Bootstrap, Materialize</li>
-                <li><i class="far fa-check-circle"></i> Stylus, Sass, Less</li>
-                <li><i class="far fa-check-circle"></i> Gulp, Webpack, Grunt</li>
-                <li><i class="far fa-check-circle"></i> GIT knowledge</li>
+                <li><i class="far fa-check-circle"></i> SQL</li>
+                <li><i class="far fa-check-circle"></i> C#</li>
+                <li><i class="far fa-check-circle"></i> C++</li>
+                <li><i class="far fa-check-circle"></i> Python</li>
               </ul>
             </div>
             <div class="info-content-element info-download">
@@ -74,6 +71,11 @@
       </div>
       <div class="content-right">
         <!--  resume -->
+        <div class="container">
+          <div class="banner">
+            <img src="./Img/banner.png" alt="">
+          </div>
+        </div>
         <div class="container">
           <div class="row">
             <div class="col span-1-of-4">
