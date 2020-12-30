@@ -73,7 +73,7 @@
         <!--  resume -->
         <div class="container">
           <div class="banner">
-            <img src="./Img/banner.png" alt="">
+            <img src="./Img/banner.jpg" alt="">
           </div>
         </div>
         <div class="container">
