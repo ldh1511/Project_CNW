@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -17,37 +17,10 @@
 <body>
     <div class="main-container">
         <div class="content-box">
-            <div class="content-left">
-                <div class="left-element">
-                    <div class="menu-admin">
-                        <ul>
-                            <li>
-                                <a href="#">Quản lý tài khoản</a>
-                                <div class="admin-dropdown">
-                                    <ul>
-                                        <li><a href="info_add.html">Tài khoản</a></li>
-                                        <li><a href="info_add.html">Thông tin cá nhân</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="info_index.html">Quản lý thông tin</a>
-                                <div class="admin-dropdown">
-                                    <ul>
-                                        <li><a href="info_add.html">Thêm</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#">Quản lý chứng chỉ</a></li>
-                            <li><a href="#">Quản lý trình độ học vấn</a></li>
-                            <li><a href="#">Quản lý kinh nghiệm làm việc</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <?php include('./left_menu.php') ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Quản lý thông tin</h3>
+                <h3 class="admin-title">Thông tin chung</h3>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -67,8 +40,8 @@
                             <td>Design</td>
                             <td>1.500.000</td>
                             <td>Lorem ipsum dolor sit amet...</td>
-                            <td><a href="info_detail.html"><i class="fas fa-book-reader"></i></a></td>
-                            <td><a href="info_edit.html"><i class="far fa-edit"></i></a></td>
+                            <td><a href="info_detail.php"><i class="fas fa-book-reader"></i></a></td>
+                            <td><a href="info_edit.php"><i class="far fa-edit"></i></a></td>
                             <td><a href="#"><i class="far fa-trash"></i></a></td>
                         </tr>
                     </tbody>

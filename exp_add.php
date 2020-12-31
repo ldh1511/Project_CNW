@@ -22,21 +22,25 @@
                 <!--  resume -->
                 <h3 class="admin-title">Thêm thông tin</h3>
                 <form action="info_add.php" method="post" class="form-manage form">
-                    <div class="form-group">
-                      <label for="">Tên dịch vụ</label>
-                      <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
+                <div class="form-group">
+                        <label for="">Ngày bắt đầu</label>
+                        <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                      <label for="">Giá dịch vụ</label>
-                      <input type="text" name="price" id="" class="form-control form-input" aria-describedby="helpId">
+                        <label for="">Ngày kết thúc</label>
+                        <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                      <label for="">Mô tả</label>
-                      <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
+                        <label for="">Tên công ty</label>
+                        <input type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></input>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="service_add">Thêm</button>
+                    <div class="form-group">
+                        <label for="">Mô tả</label>
+                        <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
+                    </div>
+                    <button class="btn btn-primary btn-manage" name="exp_add">Thêm</button>
                 </form>
-                <a class="btn btn-primary btn-back" href="info_index.php">Quay lại</a>
+                <a class="btn btn-primary btn-back" href="exp_index.php">Quay lại</a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -70,7 +70,7 @@
             <div class="content-right">
                 <!--  resume -->
                 <div class="container">
-                    <form action="login.php" method="post">
+                    <form action="login.php" method="post" class="form">
                         <h2>Đăng nhập hệ thống</h2>
                         <div class="form-group">
                             <label>Tên đăng nhập</label>

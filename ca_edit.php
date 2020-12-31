@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -20,23 +20,23 @@
             <?php include('./left_menu.php') ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Thêm thông tin</h3>
-                <form action="info_add.php" method="post" class="form-manage form">
+                <h3 class="admin-title">Sửa thông tin chứng chỉ</h3>
+                <form action="edu_edit.php" method="post">
                     <div class="form-group">
-                      <label for="">Tên dịch vụ</label>
-                      <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
+                        <label for="">Ngày cấp</label>
+                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                      <label for="">Giá dịch vụ</label>
-                      <input type="text" name="price" id="" class="form-control form-input" aria-describedby="helpId">
+                        <label for="">Tên chứng chỉ</label>
+                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
-                      <label for="">Mô tả</label>
-                      <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
+                        <label for="">Mô tả</label>
+                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="service_add">Thêm</button>
+                    <button class="btn btn-primary btn-manage" name="ca_save">Lưu lại</button>
                 </form>
-                <a class="btn btn-primary btn-back" href="info_index.php">Quay lại</a>
+                <a class="btn btn-primary btn-back" href="ca_index.php">Quay lại</a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

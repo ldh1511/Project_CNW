@@ -168,7 +168,7 @@ html,body{
     color: #888888;
 }
 .menu-admin ul li:hover{
-    background-color: #f0f0f6;
+    background-color: #f4f4f6;
 }
 .menu-admin ul li a:hover{
     text-decoration: none;
@@ -176,6 +176,7 @@ html,body{
 .admin-dropdown{
     display: none;
     visibility: 0;
+    margin-top: 10px;
 }
 
 .menu-admin ul li:hover .admin-dropdown{
@@ -373,7 +374,7 @@ img.logo:hover{
 }
 
 /* LOGIN FORM */
-form{
+.form{
     width: 485px;
     margin: 0 auto;
     margin-top: 85px;
@@ -420,7 +421,7 @@ form h2{
     background: -webkit-linear-gradient(to right, #36d1dc, #5b86e5); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #36d1dc, #5b86e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: block;
-    width: 85%;
+    width: 25%;
     margin: 0 auto;
     border-radius: 26px;
     font-weight: 500;
@@ -435,6 +436,9 @@ form h2{
     font-weight: 500;
     font-size: 17px;
     border-radius: 26px;
+}
+.input-read{
+    border: none;
 }
 .input-read:disabled{
     border: none;
