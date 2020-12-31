@@ -145,7 +145,43 @@ html,body{
 .info-download a:hover{
     color: #1e1e28;
 }
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+/* MENU ADMIN */
+.menu-admin{
+    padding: 20px;
+}
+.menu-admin ul li{
+    text-align: left;
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .2s;
+    position: relative;
+}
+.menu-admin ul li a{
+    font-weight: 700;
+    color: #888888;
+}
+.menu-admin ul li:hover{
+    background-color: #f0f0f6;
+}
+.menu-admin ul li a:hover{
+    text-decoration: none;
+}
+.admin-dropdown{
+    display: none;
+    visibility: 0;
+}
 
+.menu-admin ul li:hover .admin-dropdown{
+    display: block;
+    visibility: visible;
+}
 /* Main content */
 .title{
     text-align: left;
@@ -357,4 +393,50 @@ form h2{
     background-color: #00b8ff !important;
     border: none;
     color: white;
+}
+
+
+/* ADMIN-CONTAINER */
+.admin-container{
+    margin: 20px;
+    padding: 0;
+}
+.admin-title{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-shadow: 5px 2px 0px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.form-manage{
+    background-color: white;
+}
+.form-input{
+    background: #f4f4f6;
+    outline: none;
+}
+.btn-manage{
+    border: none;
+    background: -webkit-linear-gradient(to right, #36d1dc, #5b86e5); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #36d1dc, #5b86e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 26px;
+    font-weight: 500;
+    font-size: 19px;
+}
+.btn-back{
+    position: absolute;
+    bottom: 0;
+    border: none;
+    background: -webkit-linear-gradient(to right, #36d1dc, #5b86e5); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #36d1dc, #5b86e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 26px;
+}
+.input-read:disabled{
+    border: none;
+    background-color: white;
 }
