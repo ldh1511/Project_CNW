@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -20,23 +20,18 @@
             <?php include('./left_menu.php') ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Thêm thông tin chứng chỉ</h3>
-                <form action="ca_add.php" method="post" class="form-manage form">
-                <div class="form-group">
-                        <label for="">Ngày cấp</label>
-                        <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
-                    </div>
+                <h3 class="admin-title">Cập nhật ảnh đại diện</h3>
+                <form action="acc_avt.php" method="post" class="form-manage form form-info">
                     <div class="form-group">
-                        <label for="">Tên chứng chỉ</label>
-                        <input type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></input>
+                        <label for="">Ảnh đại diện</label>
+                        <div class="info-avt">
+                            <img src="./Img/logo.png" alt="">
+                        </div>
+                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                        <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại</button>
                     </div>
-                    <div class="form-group">
-                        <label for="">Mô tả</label>
-                        <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
-                    </div>
-                    <button class="btn btn-primary btn-manage" name="ca_add">Thêm</button>
                 </form>
-                <a class="btn btn-primary btn-back" href="ca_index.php">Quay lại</a>
+                <a class="btn btn-primary btn-back" href="accdetail_index.php">Quay lại</a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

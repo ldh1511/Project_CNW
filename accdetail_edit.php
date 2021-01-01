@@ -21,7 +21,7 @@
             <div class="content-right admin-container">
                 <!--  resume -->
                 <h3 class="admin-title">Cập nhật thông tin cá nhân</h3>
-                <form action="acc_edit.php" method="post">
+                <form action="accdetail_edit.php" method="post">
                     <div class="container">
                         <div class="row  p-0 m-0">
                             <div class="form-group flex-grow-1 mr-2">
@@ -69,7 +69,7 @@
                         <button class="btn btn-primary btn-manage">Lưu lại</button>
                     </div>
                 </form>
-                <a class="btn btn-primary btn-back" href="info_index.php">Quay lại</a>
+                <a class="btn btn-primary btn-back" href="accdetail_index.php">Quay lại</a>
 
             </div>
             <!-- Optional JavaScript -->

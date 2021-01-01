@@ -20,22 +20,33 @@
             <?php include('./left_menu.php') ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Chi tiết thông tin</h3>
+                <h3 class="admin-title">Thông tin dịch vụ</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên dịch vụ</th>
+                            <th>Giá tiền</th>
+                            <th>Mô tả</th>
+                            <th>Chi tiết</th>
+                            <th>Sửa</th>
+                            <th>Xóa</th>
 
-                <div class="form-group">
-                    <label for="">Tên dịch vụ</label>
-                    <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" disabled>
-                </div>
-                <div class="form-group">
-                    <label for="">Giá dịch vụ</label>
-                    <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" disabled>
-                </div>
-                <div class="form-group">
-                    <label for="">Mô tả</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
-                </div>
-
-                <a class="btn btn-primary btn-back" href="info_index.php">Quay lại</a>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Design</td>
+                            <td>1.500.000</td>
+                            <td>Lorem ipsum dolor sit amet...</td>
+                            <td><a href="svc_detail.php"><i class="fas fa-book-reader"></i></a></td>
+                            <td><a href="svc_edit.php"><i class="far fa-edit"></i></a></td>
+                            <td><a href="#"><i class="far fa-trash"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="svc_add.php" class="btn-skill"><i class="fas fa-plus"></i></a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

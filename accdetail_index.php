@@ -59,10 +59,8 @@
                         <label for="">Địa chỉ</label>
                         <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" disabled>
                     </div>
-                    <a href="acc_edit.php"><i class="far fa-edit h5"></i></a>
+                    <a href="accdetail_edit.php"><i class="far fa-edit h5"></i></a>
                 </div>
-                <a class="btn btn-primary btn-back" href="info_index.php">Quay lại</a>
-
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

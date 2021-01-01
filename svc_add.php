@@ -20,23 +20,23 @@
             <?php include('./left_menu.php') ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Thêm thông tin chứng chỉ</h3>
-                <form action="ca_add.php" method="post" class="form-manage form">
-                <div class="form-group">
-                        <label for="">Ngày cấp</label>
-                        <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
+                <h3 class="admin-title">Thêm thông tin dịch vụ</h3>
+                <form action="svc_add.php" method="post" class="form-manage form">
+                    <div class="form-group">
+                      <label for="">Tên dịch vụ</label>
+                      <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Tên chứng chỉ</label>
-                        <input type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></input>
+                      <label for="">Giá dịch vụ</label>
+                      <input type="text" name="price" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Mô tả</label>
-                        <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
+                      <label for="">Mô tả</label>
+                      <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="ca_add">Thêm</button>
+                    <button class="btn btn-primary btn-manage" name="svc_add">Thêm</button>
                 </form>
-                <a class="btn btn-primary btn-back" href="ca_index.php">Quay lại</a>
+                <a class="btn btn-primary btn-back" href="svc_index.php">Quay lại</a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

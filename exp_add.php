@@ -20,7 +20,7 @@
             <?php include('./left_menu.php') ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Thêm thông tin</h3>
+                <h3 class="admin-title">Thêm thông tin kinh nghiệm làm việc</h3>
                 <form action="info_add.php" method="post" class="form-manage form">
                 <div class="form-group">
                         <label for="">Ngày bắt đầu</label>

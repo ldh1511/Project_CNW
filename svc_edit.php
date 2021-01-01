@@ -20,8 +20,8 @@
             <?php include('./left_menu.php') ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Cập nhật thông tin</h3>
-                <form action="info_edit.php" method="post" class="form-manage form">
+                <h3 class="admin-title">Cập nhật thông tin dịch vụ</h3>
+                <form action="svc_edit.php" method="post" class="form-manage form">
                     <div class="form-group">
                         <label for="">Tên dịch vụ</label>
                         <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
@@ -36,7 +36,7 @@
                     </div>
                     <button class="btn btn-primary btn-manage" name="service_save">Lưu lại</button>
                 </form>
-                <a class="btn btn-primary btn-back" href="info_index.php">Quay lại</a>
+                <a class="btn btn-primary btn-back" href="svc_index.php">Quay lại</a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
