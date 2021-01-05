@@ -24,7 +24,7 @@
                         </div>
                         <h4>Lê Dương Hùng</h4>
                         <h4>Ngô Thị Duyên</h4>
-                        <p>Front-end Deweloper</p>
+                        <p>Front-end Developer</p>
                     </div>
                     <div class="info-content">
                         <div class="info-content-element">

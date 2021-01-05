@@ -225,6 +225,7 @@ h5{
 .box{
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 15px;
 }
 ul{
     list-style: none;
@@ -439,4 +440,53 @@ form h2{
 .input-read:disabled{
     border: none;
     background-color: white;
+}
+
+/* Contact page */
+.contact-box ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+.contact-box ul li h6{
+    font-size: 15px;
+}
+.contact-box ul li span{
+    font-size: 14px;
+}
+.contact-box{
+    background-color: white;
+    box-shadow: rgba(121, 113, 113, 0.1) 0px 4px 12px;
+    border-radius: 15px;
+    padding: 10px;
+}
+.contact-info{
+    padding-left: 20px;
+    padding-right: 30px;
+}
+.contact-info h4{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.contact-element{
+    padding: 2%;
+}
+.contact-element i{
+    margin-right: 1%;
+    margin-top: 2%;
+}
+.contact-form-box{
+    background-color: white;
+    box-shadow: rgba(121, 113, 113, 0.1) 0px 4px 12px;
+    border-radius: 15px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+.contact-form h4{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 20px;
 }
