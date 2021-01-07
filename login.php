@@ -1,3 +1,5 @@
+<?php include('./path.php'); ?>
+<?php include('./database/process.php'); ?>
 <!doctype html>
 <html lang="en">
 
@@ -8,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -71,16 +74,16 @@
                 <!--  resume -->
                 <div class="container">
                     <form action="login.php" method="post" class="form">
-                        <h2>Đăng nhập hệ thống</h2>
+                        <h2>login</h2>
                         <div class="form-group">
                             <label>Tên đăng nhập</label>
-                            <input type="text" name="name" class="form-control form-input" aria-describedby="helpId">
+                            <input type="text" name="name" class="form-control form-input login-input" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <label>Mật khẩu</label>
-                            <input type="text" name="name" class="form-control form-input" aria-describedby="helpId">
+                            <input type="text" name="password" class="form-control form-input login-input" aria-describedby="helpId">
                         </div>
-                        <button class="btn btn-add">Đăng nhập</button>
+                        <button class="btn btn-add" name="btn-login">Đăng nhập</button>
                     </form>
                 </div>
 
