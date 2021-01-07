@@ -70,7 +70,7 @@
             <div class="content-right">
                 <!--  resume -->
                 <div class="container">
-                    <form action="login.php" method="post">
+                    <form action="login.php" method="post" class="form">
                         <h2>Đăng nhập hệ thống</h2>
                         <div class="form-group">
                             <label>Tên đăng nhập</label>
@@ -97,7 +97,7 @@
                             <li><a href="#">PORTFOLIO</a><i class="fas fa-chevron-right"></i></li>
                             <li><a href="login.php">Quản lý</a></li>
                             <li><a href="#">BLOG</a><i class="fas fa-chevron-right"></i></li>
-                            <li><a href="#">CONTACT</a></li>
+                            <li><a href="contact.php">CONTACT</a></li>
                         </ul>
                     </div>
                 </div>

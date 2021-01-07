@@ -17,38 +17,11 @@
 <body>
     <div class="main-container">
         <div class="content-box">
-            <div class="content-left">
-                <div class="left-element">
-                    <div class="menu-admin">
-                        <ul>
-                            <li>
-                                <a href="#">Quản lý tài khoản</a>
-                                <div class="admin-dropdown">
-                                    <ul>
-                                        <li><a href="info_add.html">Tài khoản</a></li>
-                                        <li><a href="info_add.html">Thông tin cá nhân</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="info_index.html">Quản lý thông tin</a>
-                                <div class="admin-dropdown">
-                                    <ul>
-                                        <li><a href="info_add.html">Thêm</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#">Quản lý chứng chỉ</a></li>
-                            <li><a href="#">Quản lý trình độ học vấn</a></li>
-                            <li><a href="#">Quản lý kinh nghiệm làm việc</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <?php include('./left_menu.php') ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Thêm thông tin</h3>
-                <form action="info_add.php" method="post" class="form-manage">
+                <h3 class="admin-title">Thêm thông tin dịch vụ</h3>
+                <form action="svc_add.php" method="post" class="form-manage form">
                     <div class="form-group">
                       <label for="">Tên dịch vụ</label>
                       <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
@@ -61,9 +34,9 @@
                       <label for="">Mô tả</label>
                       <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="service_add">Thêm</button>
+                    <button class="btn btn-primary btn-manage" name="svc_add">Thêm</button>
                 </form>
-                <a class="btn btn-primary btn-back" href="info_index.html">Quay lại</a>
+                <a class="btn btn-primary btn-back" href="svc_index.php">Quay lại</a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

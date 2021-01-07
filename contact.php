@@ -92,24 +92,30 @@
                     </div>
                 </div>
 
-                <div class="contact-form">
+              <div class="contact-form">
                   <h4>Liên lạc với chúng tôi</h4>
+                <form action="mail.php" method="post">
                   <div class="contact-form-box">
                     <div class="input-group mb-3 contact-element">
                       <i class="fas fa-users"></i>
-                      <input type="text" class="form-control" placeholder="Tên của bạn" aria-label="Username" aria-describedby="basic-addon1">
+                      <input type="text" class="form-control" placeholder="Tên của bạn" aria-label="Username" name="Username" aria-describedby="basic-addon1">
                     </div>
                     <div class="input-group mb-3 contact-element">
                       <i class="fas fa-at"></i>
-                      <input type="text" class="form-control" placeholder="Email của bạn" aria-label="Email" aria-describedby="basic-addon1">
+                      <input type="text" class="form-control" placeholder="Email của bạn" aria-label="Email" name="Email" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3 contact-element">
+                      <i class="fas fa-paint-brush"></i>
+                      <input type="text" class="form-control" placeholder="Tiêu đề thư" aria-label="Subject" name="Subject" aria-describedby="basic-addon1">
                     </div>
                     <div class="input-group contact-element">
                       <i class="fas fa-comment-dots"></i>
-                      <textarea class="form-control" placeholder="Lời nhắn tới chúng tôi" aria-label="Message"></textarea>
+                      <textarea class="form-control" placeholder="Lời nhắn tới chúng tôi" aria-label="Message" name="Message"></textarea>
                     </div>
-
+                    <button type="submit"><i class="fas fa-paper-plane"></i>Gửi</button>
                   </div>
-                </div>
+                </form>
+              </div>
             
             </div>
         </div>
@@ -126,7 +132,7 @@
               <li><a href="#">PORTFOLIO</a><i class="fas fa-chevron-right"></i></li>
               <li><a href="login.php">Quản lý</a></li>
               <li><a href="#">BLOG</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#">CONTACT</a></li>
+              <li><a href="contact.php">CONTACT</a></li>
             </ul>
           </div>
         </div>
