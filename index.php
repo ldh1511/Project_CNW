@@ -25,7 +25,7 @@
             </div>
             <h4>Lê Dương Hùng</h4>
             <h4>Ngô Thị Duyên</h4>
-            <p>Front-end Deweloper</p>
+            <p>Front-end Developer</p>
           </div>
           <div class="info-content">
             <div class="info-content-element">
@@ -331,7 +331,7 @@
               <li><a href="#">PORTFOLIO</a><i class="fas fa-chevron-right"></i></li>
               <li><a href="login.php">Quản lý</a></li>
               <li><a href="#">BLOG</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#">CONTACT</a></li>
+              <li><a href="contact.php">CONTACT</a></li>
             </ul>
           </div>
         </div>

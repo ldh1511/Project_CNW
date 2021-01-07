@@ -261,6 +261,7 @@ h5{
 .box{
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 15px;
 }
 ul{
     list-style: none;
@@ -500,45 +501,4 @@ form h2{
     border: none;
     background-color: white;
 }
-.btn-skill{
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    font-size: 25px;
-    font-weight: 800;
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: .1s;
-}
-.btn-skill:hover{
-    width: 45px;
-    height: 45px;
-    text-decoration: none;
-}
-.form-info{
-    margin-top: 0;
-    width: 90%;
-    margin-bottom: 20px;
-    position: relative;
-}
-.form-group .banner{
-    margin-bottom: 20px;
-}
-.login-info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.login-info .info-avt{
-    margin: 0;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
+
