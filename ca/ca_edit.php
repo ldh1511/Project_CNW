@@ -37,9 +37,9 @@ include('../path.php');
                         <label for="">Mô tả</label>
                         <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="ca_save">Lưu lại</button>
+                    <button class="btn btn-primary btn-manage" name="ca_save">Lưu lại <div class="btn-manage-box"></div></button>
                 </form>
-                <a class="btn btn-primary btn-back" href="ca_index.php">Quay lại</a>
+                <a class="btn btn-primary btn-back" href="ca_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

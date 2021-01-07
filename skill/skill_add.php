@@ -33,7 +33,7 @@ include('../path.php');
                         <label for="">Mô tả</label>
                         <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="skill_add">Thêm</button>
+                    <button class="btn btn-primary btn-manage" name="skill_add">Thêm <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

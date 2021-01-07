@@ -488,7 +488,23 @@ form h2{
     border-radius: 26px;
     font-weight: 500;
     font-size: 19px;
+    position: relative;
+    transition: .2s;
+    z-index: 9999999;
 }
+.btn-manage-box{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: inherit;
+    z-index: -1;
+    transition: all .2s;
+}
+.btn-manage:hover .btn-manage-box{transform: scale(1.2);}
 .btn-back{
     position: absolute;
     bottom: 15px;

@@ -30,7 +30,7 @@
                             <img src="./Img/logo.png" alt="">
                         </div>
                         <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-                        <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại</button>
+                        <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại <div class="btn-manage-box"></div></button>
                     </div>
                 </form>
                 <a class="btn btn-primary btn-back" href="accdetail_index.php"><i class="fas fa-chevron-circle-left"></i></a>

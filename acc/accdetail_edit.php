@@ -68,7 +68,7 @@
                             <label for="">Địa chỉ</label>
                             <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId">
                         </div>
-                        <button class="btn btn-primary btn-manage">Lưu lại</button>
+                        <button class="btn btn-primary btn-manage">Lưu lại <div class="btn-manage-box"></div></button>
                     </div>
                 </form>
                 <a class="btn btn-primary btn-back" href="accdetail_index.php"><i class="fas fa-chevron-circle-left"></i></a>

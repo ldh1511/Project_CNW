@@ -38,7 +38,7 @@ include('../path.php');
                     <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
                 </div>
 
-                <a class="btn btn-primary btn-back" href="ca_index.php">Quay lại</a>
+                <a class="btn btn-primary btn-back" href="ca_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

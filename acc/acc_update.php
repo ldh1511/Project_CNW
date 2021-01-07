@@ -43,7 +43,10 @@
                             <label for="">Nhập lại mật khẩu mới</label>
                             <input type="password" name="pass_conf" id="" class="form-control input-read" aria-describedby="helpId">
                         </div>
-                        <button class="btn btn-primary btn-manage" name="updatePass">Lưu lại</button>
+                        <button class="btn btn-primary btn-manage" name="updatePass">
+                            Lưu lại
+                            <div class="btn-manage-box"></div>
+                        </button>
                     </div>
                 </form>
                 <a class="btn btn-primary btn-back" href="accdetail_index.php"><i class="fas fa-chevron-circle-left"></i></a>

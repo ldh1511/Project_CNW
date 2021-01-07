@@ -31,7 +31,7 @@ include('../path.php');
                                 <img src="../Img/banner.jpg" alt="">
                             </div>
                             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-                            <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại</button>
+                            <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại <div class="btn-manage-box"></div></button>
                         </div>
                     </form>
                     <form action="gi_index.php" method="post" class="form-manage form form-info">
@@ -41,7 +41,7 @@ include('../path.php');
                                 <img src="../Img/logo.png" alt="">
                             </div>
                             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-                            <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại</button>
+                            <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại <div class="btn-manage-box"></div></button>
                         </div>
                     </form>
                 </div>
