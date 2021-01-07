@@ -1,5 +1,5 @@
 <?php include('./path.php'); ?>
-<?php include('./database/process.php'); ?>
+<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -27,7 +27,7 @@
                         </div>
                         <h4>Lê Dương Hùng</h4>
                         <h4>Ngô Thị Duyên</h4>
-                        <p>Front-end Developer</p>
+                        <p>Front-end Deweloper</p>
                     </div>
                     <div class="info-content">
                         <div class="info-content-element">
@@ -73,17 +73,22 @@
             <div class="content-right">
                 <!--  resume -->
                 <div class="container">
+                    
                     <form action="login.php" method="post" class="form">
                         <h2>login</h2>
+                        <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                         <div class="form-group">
                             <label>Tên đăng nhập</label>
                             <input type="text" name="name" class="form-control form-input login-input" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <label>Mật khẩu</label>
-                            <input type="text" name="password" class="form-control form-input login-input" aria-describedby="helpId">
+                            <input type="password" name="password" class="form-control form-input login-input" aria-describedby="helpId">
                         </div>
-                        <button class="btn btn-add" name="btn-login">Đăng nhập</button>
+                        <button class="btn btn-add" name="btn-login">
+                            Đăng nhập <i class="fas fa-chevron-right"></i>
+                            <div class="circle-btn"></div>
+                        </button>
                     </form>
                 </div>
 
@@ -100,7 +105,7 @@
                             <li><a href="#">PORTFOLIO</a><i class="fas fa-chevron-right"></i></li>
                             <li><a href="login.php">Quản lý</a></li>
                             <li><a href="#">BLOG</a><i class="fas fa-chevron-right"></i></li>
-                            <li><a href="contact.php">CONTACT</a></li>
+                            <li><a href="#">CONTACT</a></li>
                         </ul>
                     </div>
                 </div>

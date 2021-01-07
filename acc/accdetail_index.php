@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php');?>
+<?php include(ROOT_PATH."/controllers/acc.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -11,7 +10,7 @@ include('../path.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
@@ -28,39 +27,39 @@ include('../path.php');
                     <div class="row  p-0 m-0">
                         <div class="form-group flex-grow-1 mr-2">
                             <label for="">Họ và tên</label>
-                            <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" disabled>
+                            <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['name'] ?>" disabled>
                         </div>
                         <div class="form-group mr-2">
                             <label for="">Tuổi</label>
-                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" disabled>
+                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['age'] ?>" disabled>
                         </div>
                         <div class="form-group ">
                             <label for="">Giới tính</label>
-                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" disabled>
+                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['gender'] ?>" disabled>
                         </div>
                     </div>
                     <div class="row  p-0 m-0">
                         <div class="form-group flex-grow-1 mr-2">
                             <label for="">Email</label>
-                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" disabled>
+                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['email'] ?>" disabled>
                         </div>
                         <div class="form-group flex-grow-1">
                             <label for="">Số điện thoại</label>
-                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" disabled>
+                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['phone_number'] ?>" disabled>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="">Tóm lược</label>
-                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
+                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $info['sumary'] ?></textarea>
                     </div>
                     <div class="form-group">
                         <label for="">Mục tiêu</label>
-                        <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" disabled>
+                        <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['target'] ?>" disabled>
                     </div>
                     <div class="form-group">
                         <label for="">Địa chỉ</label>
-                        <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" disabled>
+                        <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['address'] ?>" disabled>
                     </div>
                     <a href="accdetail_edit.php"><i class="far fa-edit h5"></i></a>
                 </div>
