@@ -112,10 +112,32 @@
                       <i class="fas fa-comment-dots"></i>
                       <textarea class="form-control" placeholder="Lời nhắn tới chúng tôi" aria-label="Message" name="Message"></textarea>
                     </div>
-                    <button type="submit"><i class="fas fa-paper-plane"></i>Gửi</button>
+                    <button type="submit" name="btn-send"><i class="fas fa-paper-plane"></i>Gửi</button>
                   </div>
                 </form>
               </div>
+              
+              <!-- Thêm vào db
+              <?php
+                $conn= mysqli_connect('localhost','root','','login');
+                if(!$conn){
+                    die('Connect Fail'.mysqli_connect_error());
+                }
+                if(isset($_POST['btn-send'])){
+                  $name=$_POST['Username'];
+                  $email=$_POST['Email'];
+                  $subject=$_POST['Subject'];
+                  $mess=$_POST['Message'];
+                  $sql="insert into customers (customer_name,customer_email,email_subject,email_message) values('$name','$email','$subject','$mess')";
+                  $result= mysqli_query($conn,$sql);
+                  if ($result){
+                    header("Location: index.php");
+                  }
+                  else{
+                    echo 'error';
+                  } 
+              }
+              ?> -->
             
             </div>
         </div>
