@@ -27,15 +27,15 @@ include('../path.php');
                 <form action="ca_add.php" method="post" class="form-manage form">
                     <div class="form-group">
                         <label for="">Ngày cấp</label>
-                        <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
+                        <input type="date" name="ca_date" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">Tên chứng chỉ</label>
-                        <input type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></input>
+                        <input type="text" name="ca_name" id="" class="form-control form-input" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
                         <label for="">Mô tả</label>
-                        <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
+                        <textarea type="text" name="ca_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="ca_add">Thêm <div class="btn-manage-box"></div></button>
                 </form>

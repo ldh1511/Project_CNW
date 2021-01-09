@@ -1,5 +1,6 @@
 <?php
 include('../path.php');
+include(ROOT_PATH . "/controllers/ca.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -20,22 +21,22 @@ include('../path.php');
 <body>
     <div class="main-container">
         <div class="content-box">
-            <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
+            <?php 
+                include(ROOT_PATH . "/includes/left_menu.php")       
+            ?>
             <div class="content-right admin-container">
-                <!--  resume -->
                 <h3 class="admin-title">Chi tiết chứng chỉ</h3>
-
                 <div class="form-group">
                     <label for="">Ngày cấp</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                    <input type="text" name="ca_date" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $date ?> " readonly>
                 </div>
                 <div class="form-group">
                     <label for="">Tên chứng chỉ</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                    <input type="text" name="ca_name" id="" class="form-control input-read" aria-describedby="helpId" disabled value="<?php echo $certificate_name ?> " readonly></input>
                 </div>
                 <div class="form-group">
                     <label for="">Mô tả</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
+                    <textarea type="text" name="ca_description" id="" class="form-control input-read" aria-describedby="helpId" disabled readonly><?php echo $description ?></textarea>
                 </div>
 
                 <a class="btn btn-primary btn-back" href="ca_index.php"><i class="fas fa-chevron-circle-left"></i></a>
