@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('config.php');
 function selectAll($table, $conditions = [])
 {
@@ -23,6 +24,7 @@ function selectAll($table, $conditions = [])
         return $result;
     }
 }
+
 function selectOne($table, $conditions)
 {
     global $conn;
@@ -41,13 +43,20 @@ function selectOne($table, $conditions)
     return $result;
 }
 
-if (isset($_POST['btn-login'])) {
-    $name = $_POST['name'];
-    $password = $_POST['password'];
-    $result = selectOne('account', ['name' => $name, 'password' => $password]);
-    if ($result) {
-        header('location: ' . BASE_URL . "/acc/accdetail_index.php");
-    } else {
-        header('location: ' . BASE_URL . "/index.php");
+function update($table, $id, $data){
+    global $conn;
+    $sql="update $table set ";
+    $i=0;
+    foreach ($data as $key => $value) {
+        if($i===0){
+            $sql=$sql." $key='$value'";
+        }
+        else{
+            $sql=$sql.", $key='$value'";
+        }
+        $i++;
     }
+    $sql=$sql." where id='$id'";
+    mysqli_query($conn, $sql);
 }
+

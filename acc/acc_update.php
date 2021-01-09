@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -11,7 +10,7 @@ include('../path.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
@@ -24,28 +23,33 @@ include('../path.php');
             <div class="content-right admin-container">
                 <!--  resume -->
                 <h3 class="admin-title">Cập nhật mật khẩu</h3>
-                <form action="accdetail_edit.php" method="post">
+                <?php include(ROOT_PATH."/helper/formErrors.php") ?>
+                <form action="acc_update.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo  $_SESSION['account_id'] ?>">
                     <div class="container">
                         <div class="form-group">
                             <label for="">Tên đăng nhập</label>
-                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" disabled>
+                            <input type="text" name="" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $_SESSION['account_name'] ?>" disabled>
                         </div>
                         <div class="form-group">
-                            <label for="">Mật khẩu</label>
-                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId">
+                            <label for="">Mật khẩu hiện tại</label>
+                            <input type="password" name="pass_old" id="" class="form-control input-read" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <label for="">Mật khẩu mới</label>
-                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId">
+                            <input type="password" name="pass_new" id="" class="form-control input-read" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <label for="">Nhập lại mật khẩu mới</label>
-                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId">
+                            <input type="password" name="pass_conf" id="" class="form-control input-read" aria-describedby="helpId">
                         </div>
-                        <button class="btn btn-primary btn-manage">Lưu lại</button>
+                        <button class="btn btn-primary btn-manage" name="updatePass">
+                            Lưu lại
+                            <div class="btn-manage-box"></div>
+                        </button>
                     </div>
                 </form>
-                <a class="btn btn-primary btn-back" href="accdetail_index.php">Quay lại</a>
+                <a class="btn btn-primary btn-back" href="accdetail_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

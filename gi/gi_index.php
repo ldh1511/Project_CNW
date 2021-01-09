@@ -11,7 +11,7 @@ include('../path.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
@@ -31,7 +31,7 @@ include('../path.php');
                                 <img src="../Img/banner.jpg" alt="">
                             </div>
                             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-                            <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại</button>
+                            <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại <div class="btn-manage-box"></div></button>
                         </div>
                     </form>
                     <form action="gi_index.php" method="post" class="form-manage form form-info">
@@ -41,7 +41,7 @@ include('../path.php');
                                 <img src="../Img/logo.png" alt="">
                             </div>
                             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-                            <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại</button>
+                            <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại <div class="btn-manage-box"></div></button>
                         </div>
                     </form>
                 </div>

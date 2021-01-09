@@ -261,7 +261,6 @@ h5{
 .box{
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border-radius: 15px;
 }
 ul{
     list-style: none;
@@ -416,7 +415,7 @@ img.logo:hover{
 .form{
     width: 485px;
     margin: 0 auto;
-    margin-top: 85px;
+    margin-top: 25px;
     /* box-shadow: 0 3px 8px 0 rgba(15,15,20,.2); */
     padding: 25px;
     border-radius: 10px;
@@ -430,6 +429,7 @@ img.logo:hover{
 form h2{
     text-transform: uppercase;
     letter-spacing: 5px;
+    font-weight: 800;
 }
 .btn-add{
     border-radius: 25px;
@@ -439,7 +439,7 @@ form h2{
     position: relative;
     z-index: 9999;
 }
-.btn-add::before{
+.circle-btn{
     content: '';
     position: absolute;
     top: 0;
@@ -451,20 +451,25 @@ form h2{
     z-index: -1;
     transition: .2s;
 }
-.btn-add:hover:before{
-    background-color: red;
+.btn-add:hover .circle-btn{
+    width: 100%;
+    border-radius: 25px;
 }
 /* ADMIN-CONTAINER */
 .admin-container{
-    padding: 0;
-    background-color: #f9f9f9;
+    padding: 0 20px;
+    background-color: #f7f7f7;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: rgba(15, 15, 20, 0.2) 0px 3px 8px 0px;
 }
 .admin-title{
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 6px;
-    text-shadow: 5px 2px 0px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    /* text-shadow: 5px 2px 0px rgba(0,0,0,0.1); */
+    /* margin-bottom: 20px; */
+    padding: 20px;
 }
 .form-manage{
     background-color: white;
@@ -476,23 +481,53 @@ form h2{
 .btn-manage{
     border: none;
     background: -webkit-linear-gradient(to right, #36d1dc, #5b86e5); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #36d1dc, #5b86e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #00b8ff; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: block;
     width: 25%;
     margin: 0 auto;
     border-radius: 26px;
     font-weight: 500;
     font-size: 19px;
+    position: relative;
+    transition: .2s;
+    z-index: 9999999;
 }
+.btn-manage-box{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: inherit;
+    z-index: -1;
+    transition: all .2s;
+}
+.btn-manage:hover .btn-manage-box{transform: scale(1.2);}
 .btn-back{
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     border: none;
     background: -webkit-linear-gradient(to right, #36d1dc, #5b86e5); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #36d1dc, #5b86e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #00b8ff !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-weight: 500;
     font-size: 17px;
     border-radius: 26px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-back i{
+    font-size: 24px;
+    display: block;
+    transition: all .2s;
+}
+.btn-back:hover i{
+    font-size: 37px;
 }
 .input-read{
     border: none;
@@ -529,6 +564,7 @@ form h2{
     padding-left: 15px;
     padding-top: 15px;
 }
+<<<<<<< HEAD
 
 .contact-element{
     padding: 2%;
@@ -560,3 +596,61 @@ form h2{
     margin-left: 30px;
     margin-right: 20px;
 }
+=======
+.btn-skill{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 25px;
+    font-weight: 800;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .1s;
+}
+.btn-skill:hover{
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+}
+.form-info{
+    margin-top: 0;
+    width: 90%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.form-group .banner{
+    margin-bottom: 20px;
+}
+.login-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.login-info .info-avt{
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+/* ERROR */
+.error-box{
+    background-color: #ff6e6e;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.error-box li{
+    list-style: none;
+}
+.error-box li i{
+    margin-right: 10px;
+}
+>>>>>>> 1635cdf09a637139f1284a5eb09f493f8476d09f
