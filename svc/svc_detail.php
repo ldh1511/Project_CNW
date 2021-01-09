@@ -23,7 +23,9 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Chi tiết thông tin dịch vụ</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">service detail</h3>
+                    </div>
                 <div class="form-group">
                     <label for="">Tên dịch vụ</label>
                     <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" disabled>

@@ -23,14 +23,16 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Sửa thông tin kỹ năng</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">update skill</h3>
+                    </div>
                 <form action="skill_edit.php" method="post">
                     <div class="form-group">
-                        <label for="">Tên kỹ năng</label>
+                        <label for="">Name</label>
                         <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
-                        <label for="">Mô tả</label>
+                        <label for="">Describle</label>
                         <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại <div class="btn-manage-box"></div></button>

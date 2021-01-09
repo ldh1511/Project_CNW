@@ -23,7 +23,9 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Trình độ học vấn</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">education</h3>
+                    </div>
                 <table class="table table-striped table-hover bg-white table-borderless rounded">
                     <thead>
                         <tr>

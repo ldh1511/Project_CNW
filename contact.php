@@ -1,4 +1,5 @@
 <?php include('path.php'); ?>
+<?php include(ROOT_PATH."/controllers/contact.php") ?>
 <!doctype html>
 <html lang="en">
 
@@ -104,7 +105,7 @@
 
           <div class="contact-form">
             <h4>Liên lạc với chúng tôi</h4>
-            <form action="mail.php" method="post">
+            <form action="contact.php" method="post">
               <div class="contact-form-box">
                 <div class="input-group mb-3 contact-element">
                   <i class="fas fa-users"></i>

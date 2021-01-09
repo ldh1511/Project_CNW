@@ -23,7 +23,9 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Chi tiết kỹ năng</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">Skill detail</h3>
+                    </div>
                 <div class="form-group">
                     <label for="">Tên kỹ năng</label>
                     <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
@@ -32,7 +34,7 @@ include('../path.php');
                     <label for="">Mô tả</label>
                     <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
                 </div>
-                <a class="btn btn-primary btn-back" href="edu_index.php"><i class="fas fa-chevron-circle-left"></i></a>
+                <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

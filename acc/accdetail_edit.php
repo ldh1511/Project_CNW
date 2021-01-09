@@ -1,5 +1,5 @@
-<?php include('../path.php');?>
-<?php include(ROOT_PATH."/controllers/acc.php"); ?>
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -22,53 +22,63 @@
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Cập nhật thông tin cá nhân</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">Update information</h3>
+                    </div>
+                <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                 <form action="accdetail_edit.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $id ?>">
                     <div class="container">
                         <div class="row  p-0 m-0">
                             <div class="form-group flex-grow-1 mr-2">
-                                <label for="">Họ và tên</label>
-                                <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                                <label for="">Full name</label>
+                                <input type="text" name="name" class="form-control input-read" aria-describedby="helpId" value="<?php echo $name ?>">
                             </div>
                             <div class="form-group mr-2">
-                                <label for="">Tuổi</label>
-                                <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId">
+                                <label for="">Age</label>
+                                <input type="text" name="age" class="form-control input-read" aria-describedby="helpId" value="<?php echo $age ?>">
                             </div>
                             <div class="form-check-inline">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="optradio">Nam
+                                    <input type="radio" class="form-check-input" name="gender" <?php if ($gender == 'Male') : ?> checked='checked' <?php endif; ?> value="Male">Nam
                                 </label>
                             </div>
                             <div class="form-check-inline">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="optradio">Nữ
+                                    <input type="radio" class="form-check-input" name="gender" <?php if ($gender == 'Female') : ?> checked='checked' <?php endif; ?> value="Female">Nữ
                                 </label>
                             </div>
                         </div>
                         <div class="row  p-0 m-0">
                             <div class="form-group flex-grow-1 mr-2">
                                 <label for="">Email</label>
-                                <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId">
+                                <input type="text" name="email" class="form-control input-read" aria-describedby="helpId" value="<?php echo $email ?>">
                             </div>
                             <div class="form-group flex-grow-1">
-                                <label for="">Số điện thoại</label>
-                                <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId">
+                                <label for="">Phone Number</label>
+                                <input type="text" name="phone_number" class="form-control input-read" aria-describedby="helpId" value="<?php echo $phone_number ?>">
                             </div>
+                        </div>
+                        <div class="row  p-0 m-0">
+                            <div class="form-group form-group flex-grow-1 mr-2">
+                                <label for="">Target</label>
+                                <input type="text" name="target" class="form-control input-read" aria-describedby="helpId" value="<?php echo $target ?>">
+                            </div>
+                            <div class="form-group form-group flex-grow-1">
+                                <label for="">Hobby</label>
+                                <input type="text" name="hobby" class="form-control input-read" aria-describedby="helpId" value="<?php echo $hobby ?>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Summary</label>
+                            <textarea type="text" name="sumary" class="form-control input-read" aria-describedby="helpId"><?php echo $sumary ?></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="">Tóm lược</label>
-                            <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
+                            <label for="">Address</label>
+                            <input type="text" name="address" class="form-control input-read" aria-describedby="helpId" value="<?php echo $address ?>">
                         </div>
-                        <div class="form-group">
-                            <label for="">Mục tiêu</label>
-                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Địa chỉ</label>
-                            <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId">
-                        </div>
-                        <button class="btn btn-primary btn-manage">Lưu lại <div class="btn-manage-box"></div></button>
+                        <button class="btn btn-primary btn-manage" name="acc_infoUpdate">Lưu lại <div class="btn-manage-box"></div></button>
                     </div>
                 </form>
                 <a class="btn btn-primary btn-back" href="accdetail_index.php"><i class="fas fa-chevron-circle-left"></i></a>

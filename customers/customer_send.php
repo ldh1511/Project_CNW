@@ -24,33 +24,24 @@ include('../path.php');
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">Add project</h3>
+                        <h3 class="admin-title">Phản hồi</h3>
                     </div>
-                <form action="pj_add.php" method="post">
-                    <div class="form-group">
-                        <label for="">Thời gian</label>
-                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                <form action="contact_add.php" method="post" class="mail-form">
+                    <h6>Send Message</h6>
+                    <div class="d-flex align-items-center mail-box">
+                        <label class="admin-label">To</label>
+                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId">
                     </div>
-                    <div class="form-group">
-                        <label for="">Tên dự án</label>
-                        <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                    <div class="d-flex align-items-center mail-box">
+                        <label class="admin-label">Subject</label>
+                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId">
                     </div>
-
-                    <div class="form-group">
-                        <label for="">Mô tả</label>
-                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
+                    <div class="d-flex mail-box">
+                        <textarea name="content" class="form-control input-read mail-text" placeholder="Content"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="">Ảnh</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Link</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
-                    <button class="btn btn-primary btn-manage" name="exp_save">Add<div class="btn-manage-box"></div></button>
+                    <button class="btn btn-primary btn-manage" name="exp_add">Send <div class="btn-manage-box"></div></button>
                 </form>
-                <a class="btn btn-primary btn-back" href="pj_index.php"><i class="fas fa-chevron-circle-left"></i></a>
+                <a class="btn btn-primary btn-back" href="customer_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

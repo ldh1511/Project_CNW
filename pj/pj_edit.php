@@ -23,27 +23,34 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Sửa thông tin kinh nghiệm làm việc</h3>
-                <form action="exp_edit.php" method="post">
+                <div class="title-box">
+                        <h3 class="admin-title">update project</h3>
+                    </div>
+                <form action="pj_edit.php" method="post">
                     <div class="form-group">
-                        <label for="">Ngày bắt đầu</label>
+                        <label for="">Thời gian</label>
                         <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Ngày kết thúc</label>
-                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                        <label for="">Tên dự án</label>
+                        <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
                     </div>
-                    <div class="form-group">
-                        <label for="">Tên công ty</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
+
                     <div class="form-group">
                         <label for="">Mô tả</label>
                         <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="exp_save">Lưu lại <div class="btn-manage-box"></div></button>
+                    <div class="form-group">
+                        <label for="">Ảnh</label>
+                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Link</label>
+                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
+                    </div>
+                    <button class="btn btn-primary btn-manage" name="exp_save">Save <div class="btn-manage-box"></div></button>
                 </form>
-                <a class="btn btn-primary btn-back" href="exp_index.php"><i class="fas fa-chevron-circle-left"></i></a>
+                <a class="btn btn-primary btn-back" href="pj_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

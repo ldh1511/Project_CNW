@@ -23,7 +23,9 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Dự án</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">project</h3>
+                    </div>
                 <table class="table table-striped table-hover bg-white table-borderless rounded">
                     <thead>
                         <tr>
@@ -47,8 +49,8 @@ include('../path.php');
                             <td>Lorem ipsum dolor sit amet...</td>
                             <td>project.jpg</td>
                             <td>test</td>
-                            <td><a href="exp_detail.php"><i class="fas fa-book-reader"></i></a></td>
-                            <td><a href="exp_edit.php"><i class="far fa-edit"></i></a></td>
+                            <td><a href="pj_detail.php"><i class="fas fa-book-reader"></i></a></td>
+                            <td><a href="pj_edit.php"><i class="far fa-edit"></i></a></td>
                             <td><a href="#"><i class="far fa-trash"></i></a></td>
                         </tr>
                     </tbody>

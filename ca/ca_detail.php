@@ -23,7 +23,9 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Chi tiết chứng chỉ</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">Certificate detail</h3>
+                    </div>
 
                 <div class="form-group">
                     <label for="">Ngày cấp</label>

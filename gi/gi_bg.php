@@ -23,7 +23,9 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <div class="container">
-                    <h3 class="admin-title">Thông tin chung</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">Cập nhật mật khẩu</h3>
+                    </div>
                     <form action="gi_index.php" method="post" class="form-manage form form-info">
                         <div class="form-group">
                             <label for="">Ảnh bìa</label>
@@ -31,17 +33,7 @@ include('../path.php');
                                 <img src="../Img/banner.jpg" alt="">
                             </div>
                             <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-                            <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại <div class="btn-manage-box"></div></button>
-                        </div>
-                    </form>
-                    <form action="gi_index.php" method="post" class="form-manage form form-info">
-                        <div class="form-group">
-                            <label for="">Ảnh đại diện</label>
-                            <div class="info-avt">
-                                <img src="../Img/logo.png" alt="">
-                            </div>
-                            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-                            <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại <div class="btn-manage-box"></div></button>
+                            <button class="btn btn-primary btn-manage" name="edu_save">Save <div class="btn-manage-box"></div></button>
                         </div>
                     </form>
                 </div>
