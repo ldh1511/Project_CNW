@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php');?>
+<?php include(ROOT_PATH."/controllers/contact.php"); ?>
 <!doctype html>
 <html lang="en">
 

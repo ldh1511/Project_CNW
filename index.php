@@ -1,3 +1,4 @@
+<?php include('path.php'); ?>
 <!doctype html>
 <html lang="en">
 
@@ -319,23 +320,7 @@
         </div>
 
       </div>
-      <div class="menu-right">
-        <div class="menu-right-box">
-          <div class="right-box-bars">
-            <i class="fas fa-bars"></i>
-          </div>
-          <div class="right-box-content">
-            <h5 class="right-box-title">HOME</h5>
-            <ul class="right-menu">
-              <li><a href="index.php">Trang chủ</a></li>
-              <li><a href="#">PORTFOLIO</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="login.php">Quản lý</a></li>
-              <li><a href="#">BLOG</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#">CONTACT</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <?php include(ROOT_PATH."/includes/right_menu.php"); ?>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
