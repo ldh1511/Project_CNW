@@ -28,15 +28,15 @@ include('../path.php');
                     </div>
 
                 <div class="form-group">
-                    <label for="">Ngày cấp</label>
+                    <label for="">Date of Issue</label>
                     <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
                 </div>
                 <div class="form-group">
-                    <label for="">Tên chứng chỉ</label>
+                    <label for="">Name</label>
                     <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
                 </div>
                 <div class="form-group">
-                    <label for="">Mô tả</label>
+                    <label for="">Description</label>
                     <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
                 </div>
 

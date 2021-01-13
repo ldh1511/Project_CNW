@@ -23,14 +23,15 @@
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">Update Avatar</h3>
-                    </div>
+                    <h3 class="admin-title">Update Avatar</h3>
+                </div>
+                <?php include(ROOT_PATH . "/includes/message.php") ?>
                 <form action="acc_avt.php" method="post" class="form-manage form form-info form-avt" enctype="multipart/form-data">
                     
                     <div class="form-group">
                         <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                         <div class="info-avt acc-avt">
-                            <img src="<?php echo '../Img/'.$acc['avatar'] ?>" alt="" id="avatar-img">
+                            <img src="<?php echo '../Img/' . $acc['avatar'] ?>" alt="" id="avatar-img">
                         </div>
                         <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" onchange="displayImg(this)" class="input-avt">
                         <button class="btn btn-primary btn-manage" name="avt_save">Save <div class="btn-manage-box"></div></button>

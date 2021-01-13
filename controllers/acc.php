@@ -30,9 +30,11 @@ if (isset($_POST['btn-login'])) {
         if ($result && password_verify($_POST['password'], $result['password'])) {
             $_SESSION['account_name'] = $name;
             $_SESSION['account_id'] = $result['id'];
+            $_SESSION['message'] = 'Login sucessfully';
+            $_SESSION['type'] = 'success';
             header('location: ' . BASE_URL . "/acc/accdetail_index.php");
         } else {
-            array_push($errors, 'Mật khẩu không chính xác');
+            array_push($errors, 'Incorrect Password');
         }
     }
 }
@@ -54,7 +56,9 @@ if (isset($_POST['updatePass'])) {
         } else {
             $id = $_POST['id'];
             $password_New = password_hash($_POST['pass_new'], PASSWORD_DEFAULT);
-            update('account', $id, ['password' => $password_New]);
+            update('account', $id, ['password' => $password_New], 'id');
+            // $_SESSION['message'] = 'Password updated successfully';
+            // $_SESSION['type'] = 'success';
         }
     } else {
         $password = $_POST['pass_old'];
@@ -69,8 +73,10 @@ if (isset($_POST['avt_save'])) {
             $profileImage = $_FILES['avatar']['name'];
             $target = ROOT_PATH . '/Img/' . $profileImage;
             move_uploaded_file($_FILES['avatar']['tmp_name'], $target);
-            update('account', $info['id'], ['avatar' => $profileImage]);
+            update('account', $info['id'], ['avatar' => $profileImage], 'id');
             header('location: ' . BASE_URL . "/acc/acc_avt.php");
+            $_SESSION['message'] = 'Avatar changed successfully';
+            $_SESSION['type'] = 'success';
         }
     }
 }
@@ -118,9 +124,11 @@ if (isset($_POST['acc_infoUpdate'])) {
         array_push($errors, 'Gender is required');
     }
     if (count($errors) === 0) {
-        $id=$_POST['id'];
+        $id = $_POST['id'];
         unset($_POST['acc_infoUpdate'], $_POST['id']);
-        update('infomation',$id,$_POST);
+        update('infomation', $id, $_POST, 'id');
+        $_SESSION['message'] = 'Information changed successfully';
+        $_SESSION['type'] = 'success';
         header('location: ' . BASE_URL . "/acc/accdetail_index.php");
     } else {
         $name = $_POST['name'];

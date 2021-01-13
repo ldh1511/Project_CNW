@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php');?>
+<?php include(ROOT_PATH . "/controllers/customer.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -24,9 +23,9 @@ include('../path.php');
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">Liên hệ mới</h3>
+                        <h3 class="admin-title">New Contact</h3>
                     </div>
-                <form action="contact_add.php" method="post" class="mail-form">
+                <form action="customer_new.php" method="post" class="mail-form">
                     <h6>Send Message</h6>
                     <div class="d-flex align-items-center mail-box">
                         <label class="admin-label">To</label>
@@ -39,7 +38,7 @@ include('../path.php');
                     <div class="d-flex mail-box">
                         <textarea name="content" class="form-control input-read mail-text" placeholder="Content"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="exp_add">Send <div class="btn-manage-box"></div></button>
+                    <button class="btn btn-primary btn-manage" name="customer_send">Send <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="customer_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

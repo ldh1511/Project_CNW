@@ -28,15 +28,15 @@ include('../path.php');
                     </div>
                 <form action="ca_add.php" method="post" class="form-manage form">
                     <div class="form-group">
-                        <label for="">Ngày cấp</label>
+                        <label for="">Date of Issue</label>
                         <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Tên chứng chỉ</label>
+                        <label for="">Name</label>
                         <input type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
-                        <label for="">Mô tả</label>
+                        <label for="">Description</label>
                         <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="ca_add">Add <div class="btn-manage-box"></div></button>

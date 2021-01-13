@@ -27,11 +27,11 @@ include('../path.php');
                         <h3 class="admin-title">Skill detail</h3>
                     </div>
                 <div class="form-group">
-                    <label for="">Tên kỹ năng</label>
+                    <label for="">Name</label>
                     <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
                 </div>
                 <div class="form-group">
-                    <label for="">Mô tả</label>
+                    <label for="">Description</label>
                     <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
                 </div>
                 <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>

@@ -28,11 +28,11 @@ include('../path.php');
                     </div>
                 <form action="skill_add.php" method="post" class="form-manage form">
                     <div class="form-group">
-                        <label for="">Tên kỹ năng</label>
+                        <label for="">Name</label>
                         <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Mô tả</label>
+                        <label for="">Desciption</label>
                         <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="skill_add">Add <div class="btn-manage-box"></div></button>

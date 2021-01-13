@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php');?>
+<?php include(ROOT_PATH . "/controllers/customer.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -24,28 +23,28 @@ include('../path.php');
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">Chi tiết liên hệ</h3>
+                        <h3 class="admin-title">Customer Details</h3>
                     </div>
                 <form action="contact_add.php" method="post" class="mail-form">
-                    <h6>Detail Message</h6>
+                    <h6>Message Details</h6>
                     <div class="d-flex align-items-center mail-box">
                         <label class="admin-label">To</label>
-                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId" disabled>
+                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId" value="<?php echo $reply_email ?>" disabled>
                     </div>
                     <div class="d-flex align-items-center mail-box">
                         <label class="admin-label">Subject</label>
-                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId" disabled>
+                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId" value="<?php echo $reply_subject ?>" disabled>
                     </div>
                     <div class="d-flex mail-box">
-                        <textarea name="content" class="form-control input-read mail-text" placeholder="Content" disabled></textarea>
+                        <textarea name="content" class="form-control input-read mail-text" placeholder="Content" disabled><?php echo $reply_content ?></textarea>
                     </div>
                     <div class="d-flex align-items-center mail-box">
-                        <label class="admin-label">Người gửi</label>
-                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId" disabled>
+                        <label class="admin-label">Sender</label>
+                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId" value="<?php echo $sender ?>" disabled>
                     </div>
                     <div class="d-flex align-items-center mail-box">
-                        <label class="admin-label">Giờ gửi</label>
-                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId" disabled>
+                        <label class="admin-label">Sending time</label>
+                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId" value="<?php echo $sending_time ?>" disabled>
                     </div>
                 </form>
                 <a class="btn btn-primary btn-back" href="customer_index.php"><i class="fas fa-chevron-circle-left"></i></a>

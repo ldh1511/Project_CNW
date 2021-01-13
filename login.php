@@ -78,15 +78,15 @@
                         <h2>login</h2>
                         <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                         <div class="form-group">
-                            <label>Tên đăng nhập</label>
+                            <label>User name</label>
                             <input type="text" name="name" class="form-control form-input login-input" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                            <label>Mật khẩu</label>
+                            <label>Password</label>
                             <input type="password" name="password" class="form-control form-input login-input" aria-describedby="helpId">
                         </div>
                         <button class="btn btn-add" name="btn-login">
-                            Đăng nhập <i class="fas fa-chevron-right"></i>
+                            Login <i class="fas fa-chevron-right"></i>
                             <div class="circle-btn"></div>
                         </button>
                     </form>

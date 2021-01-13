@@ -40,12 +40,12 @@
                             </div>
                             <div class="form-check-inline">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="gender" <?php if ($gender == 'Male') : ?> checked='checked' <?php endif; ?> value="Male">Nam
+                                    <input type="radio" class="form-check-input" name="gender" <?php if ($gender == 'Male') : ?> checked='checked' <?php endif; ?> value="Male">Male
                                 </label>
                             </div>
                             <div class="form-check-inline">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="gender" <?php if ($gender == 'Female') : ?> checked='checked' <?php endif; ?> value="Female">Nữ
+                                    <input type="radio" class="form-check-input" name="gender" <?php if ($gender == 'Female') : ?> checked='checked' <?php endif; ?> value="Female">Female
                                 </label>
                             </div>
                         </div>

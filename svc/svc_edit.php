@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/svc.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -24,22 +23,24 @@ include('../path.php');
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">update service</h3>
-                    </div>
+                    <h3 class="admin-title">update service</h3>
+                </div>
                 <form action="svc_edit.php" method="post" class="form-manage form">
+                    <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                    <input type="hidden" name="svc_id" value="<?php echo $svc_id ?>">
                     <div class="form-group">
-                        <label for="">Tên dịch vụ</label>
-                        <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
+                        <label for="">Name</label>
+                        <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId" value="<?php echo $svc_name ?>">
                     </div>
                     <div class="form-group">
-                        <label for="">Giá dịch vụ</label>
-                        <input type="text" name="price" id="" class="form-control form-input" aria-describedby="helpId">
+                        <label for="">Price</label>
+                        <input type="text" name="price" id="" class="form-control form-input" aria-describedby="helpId" value="<?php echo $svc_price ?>">
                     </div>
                     <div class="form-group">
-                        <label for="">Mô tả</label>
-                        <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
+                        <label for="">Description</label>
+                        <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"><?php echo $svc_des ?></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="service_save">Save <div class="btn-manage-box"></div></button>
+                    <button class="btn btn-primary btn-manage" name="svc_edit">Save <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="svc_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

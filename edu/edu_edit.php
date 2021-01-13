@@ -28,19 +28,19 @@ include('../path.php');
                     </div>
                 <form action="edu_edit.php" method="post">
                     <div class="form-group">
-                        <label for="">Ngày bắt đầu</label>
+                        <label for="">Start date</label>
                         <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Ngày tốt nghiệp</label>
+                        <label for="">End date</label>
                         <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Tên trường học</label>
+                        <label for="">Name</label>
                         <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
-                        <label for="">Mô tả</label>
+                        <label for="">Description</label>
                         <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="edu_save">Save <div class="btn-manage-box"></div></button>

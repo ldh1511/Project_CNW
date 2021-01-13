@@ -29,13 +29,13 @@ include('../path.php');
                 <table class="table table-striped table-hover bg-white table-borderless rounded">
                     <thead>
                         <tr>
-                            <th>STT</th>
-                            <th>Tên kỹ năng</th>
-                            <th>Mô tả</th>
-                            <th>Ngày thêm</th>
-                            <th>Chi tiết</th>
-                            <th>Sửa</th>
-                            <th>Xóa</th>
+                            <th>Number</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Add at</th>
+                            <th>Detail</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
 
                         </tr>
                     </thead>

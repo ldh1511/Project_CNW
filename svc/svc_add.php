@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/svc.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -24,19 +23,21 @@ include('../path.php');
       <div class="content-right admin-container">
         <!--  resume -->
         <div class="title-box">
-                        <h3 class="admin-title">add service</h3>
-                    </div>
+          <h3 class="admin-title">add service</h3>
+        </div>
         <form action="svc_add.php" method="post" class="form-manage form">
+          <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+          <input type="hidden" name="id" value="<?php echo $acc['id']; ?>">
           <div class="form-group">
-            <label for="">Tên dịch vụ</label>
+            <label for="">Name</label>
             <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
           </div>
           <div class="form-group">
-            <label for="">Giá dịch vụ</label>
+            <label for="">Price</label>
             <input type="text" name="price" id="" class="form-control form-input" aria-describedby="helpId">
           </div>
           <div class="form-group">
-            <label for="">Mô tả</label>
+            <label for="">Description</label>
             <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
           </div>
           <button class="btn btn-primary btn-manage" name="svc_add">Add <div class="btn-manage-box"></div></button>

@@ -26,17 +26,17 @@ include('../path.php');
                 <div class="title-box">
                         <h3 class="admin-title">Update Certificate</h3>
                     </div>
-                <form action="edu_edit.php" method="post">
+                <form action="ca_edit.php" method="post">
                     <div class="form-group">
-                        <label for="">Ngày cấp</label>
+                        <label for="">Date of Issue</label>
                         <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Tên chứng chỉ</label>
+                        <label for="">Name</label>
                         <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
-                        <label for="">Mô tả</label>
+                        <label for="">Description</label>
                         <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="ca_save">Save <div class="btn-manage-box"></div></button>

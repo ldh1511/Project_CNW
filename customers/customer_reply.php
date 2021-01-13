@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/customer.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -24,22 +23,29 @@ include('../path.php');
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">Phản hồi</h3>
-                    </div>
-                <form action="contact_add.php" method="post" class="mail-form">
+                    <h3 class="admin-title">Reply</h3>
+                </div>
+                <form action="customer_reply.php" method="post" class="mail-form" enctype="multipart/form-data">
                     <h6>Send Message</h6>
+                    <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                    <input type="hidden" name="customer_id" value="<?php echo $id ?>">
+                    <input type="hidden" name="id" value="<?php echo $acc['id'] ?>">
                     <div class="d-flex align-items-center mail-box">
                         <label class="admin-label">To</label>
-                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId">
+                        <input class="flex-grow-1 mail-input" type="text" name="customer_email" id="" class="form-control" aria-describedby="helpId" value="<?php echo $reply_email ?>">
                     </div>
                     <div class="d-flex align-items-center mail-box">
                         <label class="admin-label">Subject</label>
-                        <input class="flex-grow-1 mail-input" type="text" name="customer_mail" id="" class="form-control" aria-describedby="helpId">
+                        <input class="flex-grow-1 mail-input" type="text" name="reply_subject" id="" class="form-control" aria-describedby="helpId" value="<?php echo $reply_subject ?>">
                     </div>
                     <div class="d-flex mail-box">
-                        <textarea name="content" class="form-control input-read mail-text" placeholder="Content"></textarea>
+                        <textarea name="reply_content" class="form-control input-read mail-text" placeholder="Content"><?php echo $reply_content ?></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="exp_add">Send <div class="btn-manage-box"></div></button>
+                    <!-- <div class="d-flex align-items-center mail-box">
+                        <label class="admin-label">Attach</label>
+                        <input class="flex-grow-1 mail-input" type="file" name="reply_file" id="" class="form-control" aria-describedby="helpId">
+                    </div> -->
+                    <button class="btn btn-primary btn-manage" name="customer_reply">Send <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="customer_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

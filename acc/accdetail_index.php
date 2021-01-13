@@ -23,9 +23,10 @@
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">Information</h3>
-                    </div>
+                    <h3 class="admin-title">Personal Information</h3>
+                </div>
                 <div class="container">
+                    <?php include(ROOT_PATH . "/includes/message.php") ?>
                     <div class="row  p-0 m-0">
                         <div class="form-group flex-grow-1 mr-2">
                             <label for="">Full name</label>

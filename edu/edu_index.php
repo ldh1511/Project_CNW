@@ -30,13 +30,13 @@ include('../path.php');
                     <thead>
                         <tr>
                             <th>STT</th>
-                            <th>Ngày bắt đầu</th>
-                            <th>Ngày tốt nghiệp</th>
-                            <th>Tên trường học</th>
-                            <th>Mô tả</th>
-                            <th>Chi tiết</th>
-                            <th>Sửa</th>
-                            <th>Xóa</th>
+                            <th>Start date</th>
+                            <th>End date</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Detail</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
 
                         </tr>
                     </thead>

@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/svc.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -24,21 +23,24 @@ include('../path.php');
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">service detail</h3>
-                    </div>
-                <div class="form-group">
-                    <label for="">Tên dịch vụ</label>
-                    <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" disabled>
+                    <h3 class="admin-title">service detail</h3>
                 </div>
                 <div class="form-group">
-                    <label for="">Giá dịch vụ</label>
-                    <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" disabled>
+                    <label for="">Name</label>
+                    <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $svc_name ?>" disabled>
                 </div>
                 <div class="form-group">
-                    <label for="">Mô tả</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
+                    <label for="">Price</label>
+                    <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $svc_price ?>" disabled>
                 </div>
-
+                <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $svc_des ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="">Add by</label>
+                    <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $svc_acc ?>" disabled>
+                </div>
                 <a class="btn btn-primary btn-back" href="svc_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
             <!-- Optional JavaScript -->

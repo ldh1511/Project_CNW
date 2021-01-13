@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/pj.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -24,30 +23,41 @@ include('../path.php');
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">project detail</h3>
+                    <h3 class="admin-title">project detail</h3>
+                </div>
+                <div class="row p-0 m-0">
+                    <div class="form-group flex-grow-1 mr-2">
+                        <label for="">Start Date</label>
+                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $pj_start ?>" disabled>
                     </div>
+                    <div class="form-group flex-grow-1">
+                        <label for="">End Date</label>
+                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $pj_end ?>" disabled>
+                    </div>
+                </div>
+                <div class="row p-0 m-0">
+                    <div class="form-group flex-grow-1 mr-2">
+                        <label for="">Name</label>
+                        <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $pj_name ?>" disabled>
+                    </div>
+                    <div class="form-group flex-grow-1">
+                        <label for="">Link</label>
+                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled value="<?php echo $pj_link ?>"></input>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $pj_des ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="">Image</label>
+                    <div class="pj-img-box">
+                        <div class="pj-img">
+                            <img src="<?php echo '../Img/'.$pj_img ?>" alt="" id="avatar-img">
+                        </div>
+                    </div>
+                </div>
 
-                <div class="form-group">
-                    <label for="">Thời gian</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" disabled>
-                </div>
-                <div class="form-group">
-                    <label for="">Tên dự án</label>
-                    <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" disabled>
-                </div>
-
-                <div class="form-group">
-                    <label for="">Mô tả</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="">Ảnh</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                </div>
-                <div class="form-group">
-                    <label for="">Link</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                </div>
                 <a class="btn btn-primary btn-back" href="pj_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
             <!-- Optional JavaScript -->

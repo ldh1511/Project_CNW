@@ -3,6 +3,88 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.preview-container {
+    background-color: white;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.search-box {
+    width: 500px;
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 25px;
+    overflow: hidden;
+    background-color: #e8e8e8;
+    border-radius: 40px;
+    width: 365px;
+    display: flex;
+    height: 40px;
+}
+
+.header-button {
+    background-color: #00b8ff;
+    width: 93px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    margin-right: 10px;
+}
+
+.header-btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-button a {
+    color: white;
+    font-weight: 600;
+}
+
+
+.search-box .input-search {
+    padding: 5px;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    width: 100%;
+}
+.input-search::placeholder{
+    color: white;
+    font-weight: 600;
+}
+.search-box .btn {
+    border: none;
+    background-color: inherit;
+    outline: none;
+    color: white;
+}
+
+.success li {
+    list-style: none;
+    padding: 5px;
+    background-color: #0ad20a;
+    color: white;
+    border-radius: 10px;
+}
+.success li i{
+    margin-right: 10px;
+}
 html,body{
     height: 100%;
     color: #5c5c6f;
@@ -487,9 +569,17 @@ form h2{
     width: 500px;
     border-bottom-right-radius: 35px;
     height: inherit;
+    position: relative;
 }
 .form-manage{
     background-color: white;
+}
+
+.form-import {
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
 }
 .form-input{
     background: #f4f4f6;
@@ -509,6 +599,16 @@ form h2{
     position: relative;
     transition: .2s;
     z-index: 9999999;
+}
+
+.btn-import-prv {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
 }
 .btn-manage-box{
     content: '';
@@ -583,6 +683,9 @@ form h2{
 }
 .form-group .banner{
     margin-bottom: 20px;
+    width: 842px;
+    height: 321px;
+    overflow: hidden;
 }
 .login-info{
     display: flex;
@@ -673,7 +776,7 @@ form h2{
     margin-right: 10px;
 }
 .admin-label{
-    width: 85px;
+    width: 125px;
 }
 
 .mail-form{
@@ -709,12 +812,15 @@ form h2{
     padding: 0;
 }
 .title-box{
-    width: 500px;
+    /* width: 500px; */
     position: relative;
     height: 69px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.title-box::after{
+.admin-title::after{
     content: '';
     background-image: url(./Img/vectorpaint.svg);
     height: 100%;
@@ -735,4 +841,38 @@ form h2{
 }
 .input-avt{
     margin-bottom: 15px;
+}
+
+.btn-status{
+    padding: 5px;
+    border-radius: 27px;
+    color: white;
+    transition: .1s;
+}
+.btn-status:hover{
+    text-decoration: none;
+    color: white;
+}
+.pj-img-box{
+    display: flex;
+    align-items: center;
+}
+.pj-img{
+    width: 365px;
+    height: 140px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.pj-img img{
+    width: 100%;
+    height: 100%;
+}
+.img-col{
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+    display: block;
+    border-radius: 10px;
 }

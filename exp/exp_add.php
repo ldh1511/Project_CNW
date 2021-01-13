@@ -28,19 +28,19 @@ include('../path.php');
                     </div>
                 <form action="info_add.php" method="post" class="form-manage form">
                     <div class="form-group">
-                        <label for="">Ngày bắt đầu</label>
+                        <label for="">Start date</label>
                         <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Ngày kết thúc</label>
+                        <label for="">End date</label>
                         <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Tên công ty</label>
+                        <label for="">Name</label>
                         <input type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
-                        <label for="">Mô tả</label>
+                        <label for="">Description</label>
                         <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="exp_add">Add <div class="btn-manage-box"></div></button>

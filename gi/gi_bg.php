@@ -1,6 +1,5 @@
-<?php
-include('../path.php');
-?>
+<?php include('../path.php');?>
+<?php include(ROOT_PATH . "/controllers/gi.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -22,27 +21,41 @@ include('../path.php');
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <div class="container">
-                <div class="title-box">
-                        <h3 class="admin-title">Cập nhật mật khẩu</h3>
+              
+                    <div class="title-box">
+                        <h3 class="admin-title">Update Banner</h3>
                     </div>
-                    <form action="gi_index.php" method="post" class="form-manage form form-info">
+                    <form action="gi_bg.php" method="post" class="form-manage form form-info" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="">Ảnh bìa</label>
+                            <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                            <label for="">Banner</label>
                             <div class="banner">
-                                <img src="../Img/banner.jpg" alt="">
+                                <img src="<?php echo '../Img/' . $gi_bg ?>" alt="" id="avatar-img">
                             </div>
-                            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-                            <button class="btn btn-primary btn-manage" name="edu_save">Save <div class="btn-manage-box"></div></button>
+                            <input type="file" id="avatar" name="general_banner" accept="image/png, image/jpeg" onchange="displayImg(this)" class="input-avt">
+                            <button class="btn btn-primary btn-manage" name="banner_save">Save <div class="btn-manage-box"></div></button>
                         </div>
                     </form>
-                </div>
+                
             </div>
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function displayImg(e) {
+            if (e.files[0]) {
+                let reader = new FileReader();
+                reader.onload = (e) => {
+                    document.querySelector('#avatar-img').setAttribute('src', e.target.result);
+                }
+                reader.readAsDataURL(e.files[0]);
+            }
+        }
+    </script>
 </body>
 
 </html>
