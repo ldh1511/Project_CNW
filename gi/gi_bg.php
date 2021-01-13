@@ -1,4 +1,4 @@
-<?php include('../path.php');?>
+<?php include('../path.php'); ?>
 <?php include(ROOT_PATH . "/controllers/gi.php"); ?>
 <!doctype html>
 <html lang="en">
@@ -14,29 +14,32 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../queries.css">
 </head>
 
 <body>
     <div class="main-container">
-        <div class="content-box">
+        <div class="content-box-admin">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-              
-                    <div class="title-box">
-                        <h3 class="admin-title">Update Banner</h3>
+                <div class="title-box">
+                    <h3 class="admin-title">Update Banner</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
                     </div>
-                    <form action="gi_bg.php" method="post" class="form-manage form form-info" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
-                            <label for="">Banner</label>
-                            <div class="banner">
-                                <img src="<?php echo '../Img/' . $gi_bg ?>" alt="" id="avatar-img">
-                            </div>
-                            <input type="file" id="avatar" name="general_banner" accept="image/png, image/jpeg" onchange="displayImg(this)" class="input-avt">
-                            <button class="btn btn-primary btn-manage" name="banner_save">Save <div class="btn-manage-box"></div></button>
+                </div>
+                <form action="gi_bg.php" method="post" class="form-manage form form-info" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                        <label for="">Banner</label>
+                        <div class="banner">
+                            <img src="<?php echo '../Img/' . $gi_bg ?>" alt="" id="avatar-img">
                         </div>
-                    </form>
-                
+                        <input type="file" id="avatar" name="general_banner" accept="image/png, image/jpeg" onchange="displayImg(this)" class="input-avt">
+                        <button class="btn btn-primary btn-manage" name="banner_save">Save <div class="btn-manage-box"></div></button>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
@@ -56,6 +59,7 @@
             }
         }
     </script>
+    <script src="../script_admin.js"></script>
 </body>
 
 </html>

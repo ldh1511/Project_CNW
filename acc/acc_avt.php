@@ -14,16 +14,20 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../queries.css">
 </head>
 
 <body>
     <div class="main-container">
-        <div class="content-box">
+        <div class="content-box-admin">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
                     <h3 class="admin-title">Update Avatar</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
                 <?php include(ROOT_PATH . "/includes/message.php") ?>
                 <form action="acc_avt.php" method="post" class="form-manage form form-info form-avt" enctype="multipart/form-data">
@@ -57,6 +61,7 @@
             }
         }
     </script>
+    <script src="../script_admin.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php include('path.php'); ?>
-<?php include(ROOT_PATH."/controllers/contact.php") ?>
+<?php include(ROOT_PATH . "/controllers/contact.php") ?>
 <!doctype html>
 <html lang="en">
 
@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
@@ -32,10 +33,10 @@
             <div class="info-content-element">
               <ul>
                 <li>
-                  <h6>Địa chỉ:</h6><span>Đại học Thủy lợi</span>
+                  <h6>Address:</h6><span>Thuyloi University</span>
                 </li>
                 <li>
-                  <h6>Thành phố:</h6><span>Hà Nội</span>
+                  <h6>City:</h6><span>Ha Noi</span>
                 </li>
               </ul>
             </div>
@@ -73,19 +74,19 @@
       <div class="content-right">
         <div class="container">
           <div class="contact-info">
-            <h4>Thông tin liên lạc</h4>
+            <h4>Communications</h4>
 
             <div class=row>
               <div class="col-md-5 contact-box">
                 <ul>
                   <li>
-                    <h6>Trường:</h6> <span>Đại học Thủy Lợi</span>
+                    <h6></h6> <span>Thuyloi University</span>
                   </li>
                   <li>
-                    <h6>Số:</h6> <span>175 Tây Sơn, Đống Đa</span>
+                    <h6>Address:</h6> <span>175 Tay Son, Đong Da</span>
                   </li>
                   <li>
-                    <h6>Thành phố:</h6> <span>Hà Nội</span>
+                    <h6>City:</h6> <span>Ha Noi</span>
                   </li>
                 </ul>
               </div>
@@ -96,7 +97,7 @@
                     <h6>Email:</h6> <span>admin@gmail.com</span>
                   </li>
                   <li>
-                    <h6>Số điện thoại:</h6> <span>03 1111 1111</span>
+                    <h6>Phone number:</h6> <span>03 1111 1111</span>
                   </li>
                 </ul>
               </div>
@@ -104,26 +105,26 @@
           </div>
 
           <div class="contact-form">
-            <h4>Liên lạc với chúng tôi</h4>
+            <h4>Contact with Us</h4>
             <form action="contact.php" method="post">
               <div class="contact-form-box">
                 <div class="input-group mb-3 contact-element">
                   <i class="fas fa-users"></i>
-                  <input type="text" class="form-control" placeholder="Tên của bạn" aria-label="Username" name="Username" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control" placeholder="Your name" aria-label="Username" name="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3 contact-element">
                   <i class="fas fa-at"></i>
-                  <input type="text" class="form-control" placeholder="Email của bạn" aria-label="Email" name="Email" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control" placeholder="Your email" aria-label="Email" name="Email" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3 contact-element">
                   <i class="fas fa-paint-brush"></i>
-                  <input type="text" class="form-control" placeholder="Tiêu đề thư" aria-label="Subject" name="Subject" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control" placeholder="Title" aria-label="Subject" name="Subject" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group contact-element">
                   <i class="fas fa-comment-dots"></i>
-                  <textarea class="form-control" placeholder="Lời nhắn tới chúng tôi" aria-label="Message" name="Message"></textarea>
+                  <textarea class="form-control" placeholder="Message to us" aria-label="Message" name="Message"></textarea>
                 </div>
-                <button type="submit" name="btn-send"><i class="fas fa-paper-plane"></i>Gửi</button>
+                <button type="submit" name="btn-send btn"><i class="fas fa-paper-plane"></i>Send</button>
               </div>
             </form>
           </div>

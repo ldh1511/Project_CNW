@@ -14,42 +14,46 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../queries.css">
 </head>
 
 <body>
     <div class="main-container">
-        <div class="content-box">
+        <div class="content-box-admin">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
                     <h3 class="admin-title">Add project</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
-                <form action="pj_add.php" method="post" enctype="multipart/form-data">
+                <form action="pj_add.php" method="post" enctype="multipart/form-data" class="form-manage form">
                     <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                     <div class="row row  p-0 m-0">
                         <div class="form-group flex-grow-1 mr-2">
                             <label for="">Start Date</label>
-                            <input type="date" name="project_begin" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $pj_start ?>">
+                            <input type="date" name="project_begin" id="" class="form-control form-input" aria-describedby="helpId" value="<?php echo $pj_start ?>">
                         </div>
                         <div class="form-group flex-grow-1">
                             <label for="">End Date</label>
-                            <input type="date" name="project_end" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $pj_end ?>">
+                            <input type="date" name="project_end" id="" class="form-control form-input" aria-describedby="helpId" value="<?php echo $pj_end ?>">
                         </div>
                     </div>
                     <div class="row p-0 m-0">
                         <div class="form-group flex-grow-1 mr-2">
                             <label for="">Name</label>
-                            <input type="text" name="project_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $pj_name ?>">
+                            <input type="text" name="project_name" id="" class="form-control form-input" aria-describedby="helpId" value="<?php echo $pj_name ?>">
                         </div>
                         <div class="form-group flex-grow-1">
                             <label for="">Link</label>
-                            <input type="text" name="project_link" id="" class="form-control input-read" aria-describedby="helpId" <?php echo $pj_link ?>></input>
+                            <input type="text" name="project_link" id="" class="form-control form-input" aria-describedby="helpId" <?php echo $pj_link ?>></input>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="">Description</label>
-                        <textarea type="text" name="project_description" id="" class="form-control input-read" aria-describedby="helpId"><?php echo $pj_des ?></textarea>
+                        <textarea type="text" name="project_description" id="" class="form-control form-input" aria-describedby="helpId"><?php echo $pj_des ?></textarea>
                     </div>
                     <div class="form-group">
                         <label for="">Image</label>
@@ -82,6 +86,7 @@
             }
         }
     </script>
+    <script src="../script_admin.js"></script>
 </body>
 
 </html>
