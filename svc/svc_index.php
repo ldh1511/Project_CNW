@@ -1,5 +1,7 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/svc.php"); ?>
+<?php include(ROOT_PATH . "/controllers/svc.php");
+adminOnly();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -30,6 +32,9 @@
                     </div>
                     <div class="search-box">
                         <div class="header-btn-container">
+                            <div class="header-button">
+                                <a href="svc_history.php" class="btn-import"><i class="fas fa-history"></i> History</a>
+                            </div>
                             <div class="header-button">
                                 <a href="svc_import.php" class="btn-import"><i class="fas fa-file-import"></i> Import</a>
                             </div>

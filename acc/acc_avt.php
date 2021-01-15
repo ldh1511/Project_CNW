@@ -1,5 +1,7 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
+<?php include(ROOT_PATH . "/controllers/acc.php");
+adminOnly(); 
+?>
 <!doctype html>
 <html lang="en">
 
@@ -29,11 +31,11 @@
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-                <?php include(ROOT_PATH . "/includes/message.php") ?>
                 <form action="acc_avt.php" method="post" class="form-manage form form-info form-avt" enctype="multipart/form-data">
                     
                     <div class="form-group">
                         <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                        <?php include(ROOT_PATH . "/includes/message.php") ?>
                         <div class="info-avt acc-avt">
                             <img src="<?php echo '../Img/' . $acc['avatar'] ?>" alt="" id="avatar-img">
                         </div>

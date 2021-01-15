@@ -1,5 +1,7 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
+<?php include(ROOT_PATH . "/controllers/acc.php");
+adminOnly(); 
+?>
 <!doctype html>
 <html lang="en">
 
@@ -29,6 +31,7 @@
                     </div>
                 </div>
                 <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                <?php include(ROOT_PATH . "/includes/message.php") ?>
                 <form action="acc_update.php" method="post">
                     <input type="hidden" name="id" value="<?php echo  $_SESSION['account_id'] ?>">
                     <div class="container">

@@ -1,5 +1,7 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/customer.php"); ?>
+<?php include(ROOT_PATH . "/controllers/customer.php"); 
+adminOnly();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -35,6 +37,7 @@
                         </form>
                     </div>
                 </div>
+                <?php include(ROOT_PATH . "/includes/message.php") ?>
                 <table class="table table-striped table-hover bg-white table-borderless rounded table-admin" id="result">
                     <thead>
                         <tr>

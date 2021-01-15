@@ -1,5 +1,7 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/gi.php"); ?>
+<?php include(ROOT_PATH . "/controllers/gi.php");
+adminOnly(); 
+?>
 <!doctype html>
 <html lang="en">
 
@@ -31,6 +33,7 @@
                 <form action="gi_bg.php" method="post" class="form-manage form form-info" enctype="multipart/form-data">
                     <div class="form-group">
                         <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                        <?php include(ROOT_PATH . "/includes/message.php") ?>
                         <label for="">Banner</label>
                         <div class="banner">
                             <img src="<?php echo '../Img/' . $gi_bg ?>" alt="" id="avatar-img">

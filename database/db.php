@@ -23,6 +23,7 @@ function selectAll($table, $conditions = [])
         $result = mysqli_fetch_all($data);
         return $result;
     }
+    echo $sql;
 }
 
 function selectOne($table, $conditions)
@@ -83,6 +84,7 @@ function update($table, $id, $data,$nameID){
         $i++;
     }
     $sql=$sql." where $nameID='$id'";
+    echo $sql;
     mysqli_query($conn, $sql);
 }
 

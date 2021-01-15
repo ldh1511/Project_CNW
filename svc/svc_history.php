@@ -1,6 +1,6 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/pj.php");
-adminOnly(); 
+<?php include(ROOT_PATH . "/controllers/svc.php");
+adminOnly();
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,15 +26,24 @@ adminOnly();
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                    <h3 class="admin-title">project</h3>
+                    <h3 class="admin-title">service history update</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
-                    <div class="search-box" style="justify-content: flex-end;">
+                    <div class="search-box">
+                        <div class="header-btn-container">
+                            <div class="header-button">
+                                <a href="svc_history.php" class="btn-import"><i class="fas fa-history"></i> History</a>
+                            </div>
+                            <div class="header-button">
+                                <a href="svc_import.php" class="btn-import"><i class="fas fa-file-import"></i> Import</a>
+                            </div>
+                        </div>
                         <form class="search-box-form">
                             <input type="text" name="" id="" class="input-search" placeholder="Search here...">
                             <button type="button" class="btn"><i class="fas fa-search"></i></button>
                         </form>
+
                     </div>
                 </div>
                 <?php include(ROOT_PATH . "/includes/message.php") ?>
@@ -42,40 +51,27 @@ adminOnly();
                     <thead>
                         <tr>
                             <th>Number</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Image</th>
-                            <th>Link</th>
-                            <th>Detail</th>
-                            <th>Edit</th>
+                            <th>Content</th>
+                            <th>Time</th>
+                            <th>Update By</th>
                             <th>Delete</th>
-
                         </tr>
                     </thead>
                     <tbody>
                         <?php $i = 1; ?>
-                        <?php foreach ($projects as $key) : ?>
+                        <?php foreach ($history as $key) : ?>
                             <tr>
-                                <td class="align-middle"><?php echo $i ?></td>
-                                <td class="align-middle"><?php echo $key[1] ?></td>
-                                <td class="align-middle"><?php echo $key[2] ?></td>
-                                <td class="align-middle"><?php echo $key[3] ?></td>
-                                <td class="align-middle"><?php echo $key[4] ?></td>
-                                <td class="align-middle">
-                                    <img class="img-col" src="<?php echo '../Img/' . $key[5] ?>" alt="">
-                                </td>
-                                <td class="align-middle"><?php echo $key[6] ?></td>
-                                <td class="align-middle"><a href="pj_detail.php?pj_id=<?php echo $key[0] ?>"><i class="fas fa-book-reader"></i></a></td>
-                                <td class="align-middle"><a href="pj_edit.php?edit_id=<?php echo $key[0] ?>"><i class="far fa-edit"></i></a></td>
-                                <td class="align-middle"><a href="pj_edit.php?delete_id=<?php echo $key[0] ?>"><i class="far fa-trash"></i></a></td>
+                                <td><?php echo $i ?></td>
+                                <td><?php echo $key[1] ?></td>
+                                <td><?php echo $key[2] ?></td>
+                                <td><?php echo $key[5] ?></td>
+                                <td><a href="svc_edit.php?history_id=<?php echo $key[0] ?>"><i class="far fa-trash"></i></a></td>
                             </tr>
-                            <?php $i++; ?>
+                            <?php $i++ ?>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <a href="pj_add.php" class="btn-skill"><i class="fas fa-plus"></i></a>
+                <a class="btn btn-primary btn-back" href="svc_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
         </div>
     </div>
@@ -89,7 +85,7 @@ adminOnly();
                 var result = $('#result');
                 if (inputVal.length) {
                     $.ajax({
-                        url: "/project/controllers/pj.php",
+                        url: "/project/controllers/svc.php",
                         type: "get",
                         data: {
                             term: inputVal

@@ -94,6 +94,16 @@
 .success li i{
     margin-right: 10px;
 }
+.error li {
+    list-style: none;
+    padding: 5px;
+    background-color: #ff6e6e;
+    color: white;
+    border-radius: 10px;
+}
+.error li i{
+    margin-right: 10px;
+}
 html,body{
     height: 100%;
     color: #5c5c6f;
@@ -282,6 +292,9 @@ html,body{
     width: 100%;
     height: 100%;
 }
+.banner_gi{
+    border-radius: 15px;
+}
 /* MENU ADMIN */
 
 .left-element-admin{
@@ -317,7 +330,7 @@ html,body{
     background: white;
     margin-bottom: 10px;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all .2s;
     position: relative;
@@ -353,6 +366,7 @@ html,body{
 .row{
     padding-left: 30px;
     padding-top: 20px;
+    justify-content: space-between;
 }
 h5{
     padding-top: 10%;
@@ -720,10 +734,11 @@ form h2{
     position: relative;
 }
 .form-group .banner{
-    margin-bottom: 20px;
     width: 842px;
     height: 321px;
     overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 15px;
 }
 .login-info{
     display: flex;
@@ -943,4 +958,10 @@ form h2{
     overflow: hidden;
     display: block;
     border-radius: 10px;
+}
+.menu-admin-line{
+    background-color: #e0e0e0;
+    height: 7px;
+    border-radius: 95px;
+    margin-bottom: 10px;
 }

@@ -1,5 +1,6 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/project/database/db.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/project/helper/middleware.php");
 if (isset($_SESSION['account_id'])) {
     $acc = selectOne('account', ['id' => $_SESSION['account_id']]);
 }
@@ -12,9 +13,10 @@ $pj_link = '';
 $errors = array();
 
 if (isset($_REQUEST['term'])) {
+    adminOnly();
     $param_term = mysqli_real_escape_string($conn, $_REQUEST['term']);
     if (strlen($param_term) > 0) {
-        $sql = "SELECT * FROM projects where projects.project_begin like '%".$param_term."%' or projects.project_end like '%".$param_term."%' or projects.project_name like '%".$param_term."%' or projects.project_description like '%".$param_term."%' or projects.project_img like '%".$param_term."%' or projects.project_link like '%".$param_term."%'";
+        $sql = "SELECT * FROM projects where projects.project_begin like '%" . $param_term . "%' or projects.project_end like '%" . $param_term . "%' or projects.project_name like '%" . $param_term . "%' or projects.project_description like '%" . $param_term . "%' or projects.project_img like '%" . $param_term . "%' or projects.project_link like '%" . $param_term . "%'";
         $data = mysqli_query($conn, $sql);
         $resultSearch = mysqli_fetch_all($data);
     } else {
@@ -43,11 +45,11 @@ if (isset($_REQUEST['term'])) {
         echo "<td class='align-middle'>" . $key[2] . "</td>";
         echo "<td class='align-middle'>" . $key[3] . "</td>";
         echo "<td class='align-middle'>" . $key[4] . "</td>";
-        echo "<td class='align-middle'><img class='img-col' src='../Img/" . $key[5]."' alt=''></td>";
+        echo "<td class='align-middle'><img class='img-col' src='../Img/" . $key[5] . "' alt=''></td>";
         echo "<td>" . $key[6] . "</td>";
         echo "<td class='align-middle'><a href='pj_detail.php?pj_id=" . $key[0] . "'><i class='fas fa-book-reader'></i></a></td>";
         echo "<td class='align-middle'><a href='pj_edit.php?edit_id=" . $key[0] . "'><i class='far fa-edit'></i></a></td>";
-        echo "<td class='align-middle'><a href='pj_edit.php?delete_Id=" . $key[0] . "'><i class='far fa-trash'></i></a></td>";
+        echo "<td class='align-middle'><a href='pj_edit.php?delete_id=" . $key[0] . "'><i class='far fa-trash'></i></a></td>";
         echo "</tr>";
         $i++;
     }
@@ -65,6 +67,7 @@ if (isset($_GET['pj_id'])) {
 }
 
 if (isset($_POST['pj_add'])) {
+    adminOnly();
     if (empty($_POST['project_begin'])) {
         array_push($errors, 'Enter day start');
     }
@@ -81,6 +84,11 @@ if (isset($_POST['pj_add'])) {
         if (isset($_FILES['project_img'])) {
             if ($_FILES['project_img']['error'] > 0) {
                 array_push($errors, 'File upload failed something went wrong');
+                $pj_start = $_POST['project_begin'];
+                $pj_end = $_POST['project_end'];
+                $pj_name = $_POST['project_name'];
+                $pj_des = $_POST['project_description'];
+                $pj_link = $_POST['project_link'];
             } else {
                 $profileImage = $_FILES['project_img']['name'];
                 $target = ROOT_PATH . '/Img/' . $profileImage;
@@ -92,6 +100,7 @@ if (isset($_POST['pj_add'])) {
                 $_SESSION['message'] = 'Poject added successfully';
                 $_SESSION['type'] = 'success';
                 header('location: ' . BASE_URL . "/pj/pj_index.php");
+                exit();
             }
         }
     } else {
@@ -116,6 +125,7 @@ if (isset($_GET['edit_id'])) {
 }
 
 if (isset($_POST['btn-pj_edit'])) {
+    adminOnly();
     unset($_POST['btn-pj_edit']);
     if (empty($_POST['project_begin'])) {
         array_push($errors, 'Enter day start');
@@ -136,6 +146,7 @@ if (isset($_POST['btn-pj_edit'])) {
             $_SESSION['message'] = 'Poject information changed successfully';
             $_SESSION['type'] = 'success';
             header('location: ' . BASE_URL . "/pj/pj_index.php");
+            exit();
         } else if ($_FILES['project_img']['error'] > 0) {
             array_push($errors, 'File upload failed something went wrong');
         } else {
@@ -149,6 +160,7 @@ if (isset($_POST['btn-pj_edit'])) {
             $_SESSION['message'] = 'Poject information changed successfully';
             $_SESSION['type'] = 'success';
             header('location: ' . BASE_URL . "/pj/pj_index.php");
+            exit();
         }
     } else {
         $pj_start = $_POST['project_begin'];
@@ -162,9 +174,11 @@ if (isset($_POST['btn-pj_edit'])) {
     }
 }
 if (isset($_GET['delete_id'])) {
+    adminOnly();
     $id = $_GET['delete_id'];
     delete('projects', $id, 'project_id');
     $_SESSION['message'] = 'Poject deleted successfully';
     $_SESSION['type'] = 'success';
     header('location: ' . BASE_URL . "/pj/pj_index.php");
+    exit();
 }

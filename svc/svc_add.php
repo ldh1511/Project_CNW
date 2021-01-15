@@ -1,5 +1,7 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/svc.php"); ?>
+<?php include(ROOT_PATH . "/controllers/svc.php");
+ adminOnly(); 
+?>
 <!doctype html>
 <html lang="en">
 
@@ -34,15 +36,15 @@
           <input type="hidden" name="id" value="<?php echo $acc['id']; ?>">
           <div class="form-group">
             <label for="">Name</label>
-            <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
+            <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId" value="<?php echo $svc_name; ?>">
           </div>
           <div class="form-group">
             <label for="">Price</label>
-            <input type="text" name="price" id="" class="form-control form-input" aria-describedby="helpId">
+            <input type="text" name="price" id="" class="form-control form-input" aria-describedby="helpId" value="<?php echo $svc_price; ?>">
           </div>
           <div class="form-group">
             <label for="">Description</label>
-            <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
+            <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"><?php echo $svc_des?></textarea>
           </div>
           <button class="btn btn-primary btn-manage" name="svc_add">Add <div class="btn-manage-box"></div></button>
         </form>

@@ -1,5 +1,7 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
+<?php include(ROOT_PATH . "/controllers/acc.php");
+adminOnly(); 
+?>
 <!doctype html>
 <html lang="en">
 
@@ -82,7 +84,7 @@
                             <label for="">Address</label>
                             <input type="text" name="address" class="form-control input-read" aria-describedby="helpId" value="<?php echo $address ?>">
                         </div>
-                        <button class="btn btn-primary btn-manage" name="acc_infoUpdate">Lưu lại <div class="btn-manage-box"></div></button>
+                        <button class="btn btn-primary btn-manage" name="acc_infoUpdate">Save <div class="btn-manage-box"></div></button>
                     </div>
                 </form>
                 <a class="btn btn-primary btn-back" href="accdetail_index.php"><i class="fas fa-chevron-circle-left"></i></a>

@@ -1,5 +1,6 @@
 <?php
 include(ROOT_PATH . "/database/db.php");
+include(ROOT_PATH."/helper/middleware.php");
 $errors = array();
 $id = '';
 $name = '';
@@ -15,8 +16,6 @@ if (isset($_SESSION['account_id'])) {
     $info = selectOne('infomation', ['id' => $_SESSION['account_id']]);
     $acc = selectOne('account', ['id' => $_SESSION['account_id']]);
 }
-
-
 if (isset($_POST['btn-login'])) {
     if (empty($_POST['name'])) {
         array_push($errors, 'Enter your account name');
@@ -33,6 +32,7 @@ if (isset($_POST['btn-login'])) {
             $_SESSION['message'] = 'Login sucessfully';
             $_SESSION['type'] = 'success';
             header('location: ' . BASE_URL . "/acc/accdetail_index.php");
+            exit();
         } else {
             array_push($errors, 'Incorrect Password');
         }
@@ -40,6 +40,7 @@ if (isset($_POST['btn-login'])) {
 }
 
 if (isset($_POST['updatePass'])) {
+    adminOnly();
     if (empty($_POST['pass_old'])) {
         array_push($errors, 'Password is required');
     }
@@ -57,8 +58,10 @@ if (isset($_POST['updatePass'])) {
             $id = $_POST['id'];
             $password_New = password_hash($_POST['pass_new'], PASSWORD_DEFAULT);
             update('account', $id, ['password' => $password_New], 'id');
-            // $_SESSION['message'] = 'Password updated successfully';
-            // $_SESSION['type'] = 'success';
+            $_SESSION['message'] = 'Password updated successfully';
+            $_SESSION['type'] = 'success';
+            header('location: ' . BASE_URL . "/acc/acc_update.php");
+            exit();
         }
     } else {
         $password = $_POST['pass_old'];
@@ -66,6 +69,7 @@ if (isset($_POST['updatePass'])) {
 }
 
 if (isset($_POST['avt_save'])) {
+    adminOnly();
     if (isset($_FILES['avatar'])) {
         if ($_FILES['avatar']['error'] > 0) {
             array_push($errors, 'File upload failed something went wrong');
@@ -73,10 +77,28 @@ if (isset($_POST['avt_save'])) {
             $profileImage = $_FILES['avatar']['name'];
             $target = ROOT_PATH . '/Img/' . $profileImage;
             move_uploaded_file($_FILES['avatar']['tmp_name'], $target);
-            update('account', $info['id'], ['avatar' => $profileImage], 'id');
-            header('location: ' . BASE_URL . "/acc/acc_avt.php");
-            $_SESSION['message'] = 'Avatar changed successfully';
+            update('account', $acc['id'], ['avatar' => $profileImage], 'id');
+            $_SESSION['message'] = 'Avatar changed sucessfully';
             $_SESSION['type'] = 'success';
+            header('location: ' . BASE_URL . "/acc/acc_avt.php");
+            exit();
+        }
+    }
+}
+if (isset($_POST['background_save'])) {
+    adminOnly();
+    if (isset($_FILES['background'])) {
+        if ($_FILES['background']['error'] > 0) {
+            array_push($errors, 'File upload failed something went wrong');
+        } else {
+            $profileImage = $_FILES['background']['name'];
+            $target = ROOT_PATH . '/Img/' . $profileImage;
+            move_uploaded_file($_FILES['background']['tmp_name'], $target);
+            update('account', $acc['id'], ['background' => $profileImage], 'id');
+            $_SESSION['message'] = 'Background changed successfully';
+            $_SESSION['type'] = 'success';
+            header('location: ' . BASE_URL . "/acc/acc_background.php");
+            exit();
         }
     }
 }
@@ -96,6 +118,7 @@ if (isset($_GET['edit_id'])) {
 }
 
 if (isset($_POST['acc_infoUpdate'])) {
+    adminOnly();
     if (empty($_POST['name'])) {
         array_push($errors, 'Name is required');
     }
@@ -130,6 +153,7 @@ if (isset($_POST['acc_infoUpdate'])) {
         $_SESSION['message'] = 'Information changed successfully';
         $_SESSION['type'] = 'success';
         header('location: ' . BASE_URL . "/acc/accdetail_index.php");
+        exit();
     } else {
         $name = $_POST['name'];
         $sumary = $_POST['sumary'];

@@ -1,5 +1,7 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
+<?php include(ROOT_PATH . "/controllers/acc.php");
+adminOnly(); 
+?>
 <!doctype html>
 <html lang="en">
 
