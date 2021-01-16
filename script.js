@@ -2,7 +2,6 @@ let menu = document.querySelector('.right-box-bars i');
 let content = document.querySelector('.content-right');
 let right_title=document.querySelector('.right-box-title');
 let right_menu=document.querySelector('.right-menu');
-console.log(menu);
 menu.addEventListener('click', (e) => {
     let ele = e.target;
     if (ele.classList.contains('fa-bars')) {
@@ -34,5 +33,4 @@ menu.addEventListener('click', (e) => {
             content.classList.remove('content-right-active');
         },1)
     }
-
 })

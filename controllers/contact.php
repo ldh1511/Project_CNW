@@ -15,6 +15,8 @@ if (isset($_POST['btn-send'])) {
         echo 'error';
     }
 }
+
+
 // if (isset($_POST['Username'])) {
 //     //#1
 //     $name = trim(strip_tags($_POST['Username']));

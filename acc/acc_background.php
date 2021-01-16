@@ -1,6 +1,6 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/gi.php");
-adminOnly(); 
+<?php include(ROOT_PATH . "/controllers/acc.php");
+adminOnly();
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,26 +24,26 @@ adminOnly();
         <div class="content-box-admin">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-
+                <!--  resume -->
                 <div class="title-box">
-                    <h3 class="admin-title">Update Team Avatar</h3>
+                    <h3 class="admin-title">Update background</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-                <form action="gi_avt.php" method="post" class="form-manage form form-info" enctype="multipart/form-data">
+                <form action="acc_background.php" method="post" class="form-manage form form-info" enctype="multipart/form-data">
                     <div class="form-group">
                         <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                         <?php include(ROOT_PATH . "/includes/message.php") ?>
-                        <label for="">Team Avatar</label>
-                        <div class="info-avt">
-                            <img src="<?php echo '../Img/' . $gi_avt ?>" alt="" id="avatar-img">
+                        <label for="">Background</label>
+                        <div class="banner">
+                            <img src="<?php echo '../Img/' . $acc['background'] ?>" alt="" id="avatar-img">
                         </div>
-                        <input type="file" id="avatar" name="general_ava" accept="image/png, image/jpeg" onchange="displayImg(this)" class="input-avt">
-                        <button class="btn btn-primary btn-manage" name="gi_avt_save">Save <div class="btn-manage-box"></div></button>
+                        <input type="file" id="avatar" name="background" accept="image/png, image/jpeg" onchange="displayImg(this)" class="input-avt">
+                        <button class="btn btn-primary btn-manage" name="background_save">Save <div class="btn-manage-box"></div></button>
                     </div>
                 </form>
-
+                <a class="btn btn-primary btn-back" href="accdetail_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
         </div>
     </div>

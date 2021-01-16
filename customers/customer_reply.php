@@ -1,6 +1,6 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/gi.php");
-adminOnly(); 
+<?php include(ROOT_PATH . "/controllers/customer.php"); 
+adminOnly();
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,26 +24,36 @@ adminOnly();
         <div class="content-box-admin">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-
+                <!--  resume -->
                 <div class="title-box">
-                    <h3 class="admin-title">Update Team Avatar</h3>
+                    <h3 class="admin-title">Reply</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-                <form action="gi_avt.php" method="post" class="form-manage form form-info" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
-                        <?php include(ROOT_PATH . "/includes/message.php") ?>
-                        <label for="">Team Avatar</label>
-                        <div class="info-avt">
-                            <img src="<?php echo '../Img/' . $gi_avt ?>" alt="" id="avatar-img">
-                        </div>
-                        <input type="file" id="avatar" name="general_ava" accept="image/png, image/jpeg" onchange="displayImg(this)" class="input-avt">
-                        <button class="btn btn-primary btn-manage" name="gi_avt_save">Save <div class="btn-manage-box"></div></button>
+                <form action="customer_reply.php" method="post" class="mail-form" enctype="multipart/form-data">
+                    <h6>Send Message</h6>
+                    <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                    <input type="hidden" name="customer_id" value="<?php echo $id ?>">
+                    <input type="hidden" name="id" value="<?php echo $acc['id'] ?>">
+                    <div class="d-flex align-items-center mail-box">
+                        <label class="admin-label">To</label>
+                        <input class="flex-grow-1 mail-input" type="text" name="customer_email" id="" class="form-control" aria-describedby="helpId" value="<?php echo $reply_email ?>">
                     </div>
+                    <div class="d-flex align-items-center mail-box">
+                        <label class="admin-label">Subject</label>
+                        <input class="flex-grow-1 mail-input" type="text" name="reply_subject" id="" class="form-control" aria-describedby="helpId" value="<?php echo $reply_subject ?>">
+                    </div>
+                    <div class="d-flex mail-box">
+                        <textarea name="reply_content" class="form-control input-read mail-text" placeholder="Content"><?php echo $reply_content ?></textarea>
+                    </div>
+                    <!-- <div class="d-flex align-items-center mail-box">
+                        <label class="admin-label">Attach</label>
+                        <input class="flex-grow-1 mail-input" type="file" name="reply_file" id="" class="form-control" aria-describedby="helpId">
+                    </div> -->
+                    <button class="btn btn-primary btn-manage" name="customer_reply">Send <div class="btn-manage-box"></div></button>
                 </form>
-
+                <a class="btn btn-primary btn-back" href="customer_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
         </div>
     </div>
@@ -52,17 +62,6 @@ adminOnly();
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-        function displayImg(e) {
-            if (e.files[0]) {
-                let reader = new FileReader();
-                reader.onload = (e) => {
-                    document.querySelector('#avatar-img').setAttribute('src', e.target.result);
-                }
-                reader.readAsDataURL(e.files[0]);
-            }
-        }
-    </script>
     <script src="../script_admin.js"></script>
 </body>
 

@@ -1,5 +1,7 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
+<?php include(ROOT_PATH . "/controllers/acc.php");
+adminOnly(); 
+?>
 <!doctype html>
 <html lang="en">
 
@@ -14,23 +16,28 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../queries.css">
 </head>
 
 <body>
     <div class="main-container">
-        <div class="content-box">
+        <div class="content-box-admin">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">Update Avatar</h3>
+                    <h3 class="admin-title">Update Avatar</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
                     </div>
+                </div>
                 <form action="acc_avt.php" method="post" class="form-manage form form-info form-avt" enctype="multipart/form-data">
                     
                     <div class="form-group">
                         <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                        <?php include(ROOT_PATH . "/includes/message.php") ?>
                         <div class="info-avt acc-avt">
-                            <img src="<?php echo '../Img/'.$acc['avatar'] ?>" alt="" id="avatar-img">
+                            <img src="<?php echo '../Img/' . $acc['avatar'] ?>" alt="" id="avatar-img">
                         </div>
                         <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" onchange="displayImg(this)" class="input-avt">
                         <button class="btn btn-primary btn-manage" name="avt_save">Save <div class="btn-manage-box"></div></button>
@@ -56,6 +63,7 @@
             }
         }
     </script>
+    <script src="../script_admin.js"></script>
 </body>
 
 </html>

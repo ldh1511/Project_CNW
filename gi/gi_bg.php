@@ -1,5 +1,6 @@
-<?php
-include('../path.php');
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/gi.php");
+adminOnly(); 
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,34 +16,53 @@ include('../path.php');
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../queries.css">
 </head>
 
 <body>
     <div class="main-container">
-        <div class="content-box">
+        <div class="content-box-admin">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <div class="container">
                 <div class="title-box">
-                        <h3 class="admin-title">Cập nhật mật khẩu</h3>
+                    <h3 class="admin-title">Update Banner</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
                     </div>
-                    <form action="gi_index.php" method="post" class="form-manage form form-info">
-                        <div class="form-group">
-                            <label for="">Ảnh bìa</label>
-                            <div class="banner">
-                                <img src="../Img/banner.jpg" alt="">
-                            </div>
-                            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-                            <button class="btn btn-primary btn-manage" name="edu_save">Save <div class="btn-manage-box"></div></button>
-                        </div>
-                    </form>
                 </div>
+                <form action="gi_bg.php" method="post" class="form-manage form form-info" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                        <?php include(ROOT_PATH . "/includes/message.php") ?>
+                        <label for="">Banner</label>
+                        <div class="banner">
+                            <img src="<?php echo '../Img/' . $gi_bg ?>" alt="" id="avatar-img">
+                        </div>
+                        <input type="file" id="avatar" name="general_banner" accept="image/png, image/jpeg" onchange="displayImg(this)" class="input-avt">
+                        <button class="btn btn-primary btn-manage" name="banner_save">Save <div class="btn-manage-box"></div></button>
+                    </div>
+                </form>
+
             </div>
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function displayImg(e) {
+            if (e.files[0]) {
+                let reader = new FileReader();
+                reader.onload = (e) => {
+                    document.querySelector('#avatar-img').setAttribute('src', e.target.result);
+                }
+                reader.readAsDataURL(e.files[0]);
+            }
+        }
+    </script>
+    <script src="../script_admin.js"></script>
 </body>
 
 </html>
