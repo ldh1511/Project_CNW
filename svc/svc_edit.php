@@ -23,7 +23,9 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Cập nhật thông tin dịch vụ</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">update service</h3>
+                    </div>
                 <form action="svc_edit.php" method="post" class="form-manage form">
                     <div class="form-group">
                         <label for="">Tên dịch vụ</label>
@@ -37,7 +39,7 @@ include('../path.php');
                         <label for="">Mô tả</label>
                         <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="service_save">Lưu lại <div class="btn-manage-box"></div></button>
+                    <button class="btn btn-primary btn-manage" name="service_save">Save <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="svc_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

@@ -22,13 +22,11 @@ include('../path.php');
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <!--  resume -->
-                <h3 class="admin-title">Các chứng chỉ</h3>
+                <div class="title-box">
+                    <h3 class="admin-title">Certificate</h3>
+                </div>
                 <?php
-                        $conn= mysqli_connect('localhost','root','','login');
-                        if(!$conn){
-                            die('Connect Fail'.mysqli_connect_error());
-                        }
+                        require(ROOT_PATH . "/database/config.php");
                         $sql="select * from certificate";
                         $result = mysqli_query($conn,$sql);
                         $list_ca = mysqli_fetch_all($result);
@@ -36,7 +34,6 @@ include('../path.php');
                 <table class="table table-striped table-hover bg-white table-borderless rounded">
                     <thead>
                         <tr>
-                            <th>STT</th>
                             <th>Tên chứng chỉ</th>
                             <th>Chi tiết</th>
                             <th>Sửa</th>
@@ -46,11 +43,10 @@ include('../path.php');
                     <tbody>
                     <?php foreach($list_ca as $ca){
                         echo'<tr>';
-                        echo'<td>'.$ca[3].'</td>'; 
                         echo'<td>'.$ca[1].'</td>'; 
                         echo'<td><a href="ca_detail.php?certificate_id='.$ca[3].'"><i class="fas fa-book-reader"></i></a></td>';
                         echo'<td><a href="ca_edit.php?certificate_id='.$ca[3].'"><i class="far fa-edit"></i></a></td>';
-                        echo'<td><a href="#"><i class="far fa-trash"></i></a></td>';
+                        echo'<td><a href="ca_edit.php?delete_id='.$ca[3].'"><i class="far fa-trash"></i></a></td>';
                         echo'</tr>';
                     } 
                     ?>

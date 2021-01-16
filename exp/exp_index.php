@@ -22,16 +22,21 @@ include('../path.php');
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <!--  resume -->
-                <h3 class="admin-title">Kinh nghiệm làm việc</h3>
+                <div class="title-box">
+                    <h3 class="admin-title">experience</h3>
+                </div>
+                <?php
+                    require(ROOT_PATH . "/database/config.php");
+                    $sql="select * from experience";
+                    $result = mysqli_query($conn,$sql);
+                    $list_exp = mysqli_fetch_all($result);
+                ?>
                 <table class="table table-striped table-hover bg-white table-borderless rounded">
                     <thead>
                         <tr>
-                            <th>STT</th>
                             <th>Ngày bắt đầu</th>
                             <th>Ngày kết thúc</th>
                             <th>Tên công ty</th>
-                            <th>Mô tả</th>
                             <th>Chi tiết</th>
                             <th>Sửa</th>
                             <th>Xóa</th>
@@ -39,16 +44,17 @@ include('../path.php');
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>dd/mm/yyyy</td>
-                            <td>dd/mm/yyyy</td>
-                            <td>Apple Inc</td>
-                            <td>Lorem ipsum dolor sit amet...</td>
-                            <td><a href="exp_detail.php"><i class="fas fa-book-reader"></i></a></td>
-                            <td><a href="exp_edit.php"><i class="far fa-edit"></i></a></td>
-                            <td><a href="#"><i class="far fa-trash"></i></a></td>
-                        </tr>
+                    <?php foreach($list_exp as $exp){
+                        echo'<tr>';
+                        echo'<td>'.$exp[1].'</td>'; 
+                        echo'<td>'.$exp[2].'</td>'; 
+                        echo'<td>'.$exp[3].'</td>'; 
+                        echo'<td><a href="exp_detail.php?exp_id='.$exp[0].'"><i class="fas fa-book-reader"></i></a></td>';
+                        echo'<td><a href="exp_edit.php?exp_id='.$exp[0].'"><i class="far fa-edit"></i></a></td>';
+                        echo'<td><a href="exp_edit.php?delete_id='.$exp[0].'"><i class="far fa-trash"></i></a></td>';
+                        echo'</tr>';
+                        }
+                        ?>
                     </tbody>
                 </table>
                 <a href="exp_add.php" class="btn-skill"><i class="fas fa-plus"></i></a>

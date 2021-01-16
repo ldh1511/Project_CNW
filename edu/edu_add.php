@@ -1,5 +1,6 @@
 <?php
 include('../path.php');
+require(ROOT_PATH . "/controllers/edu.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -22,26 +23,31 @@ include('../path.php');
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <!--  resume -->
-                <h3 class="admin-title">Thêm thông tin trình độ học vấn</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">Add education</h3>
+                </div>
                 <form action="edu_add.php" method="post" class="form-manage form">
                     <div class="form-group">
                         <label for="">Ngày bắt đầu</label>
-                        <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
+                        <input type="date" name="edu_start" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">Ngày tốt nghiệp</label>
-                        <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
+                        <input type="date" name="edu_finish" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">Tên trường học</label>
-                        <input type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></input>
+                        <input type="text" name="type" id="" class="form-control form-input" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
                         <label for="">Mô tả</label>
-                        <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
+                        <textarea type="text" name="edu_des" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="edu_add">Thêm <div class="btn-manage-box"></div></button>
+                    <div class="form-group">
+                        <label for="">Người thêm</label>
+                        <input type="text" name="edit_id" id="" class="form-control form-input" aria-describedby="helpId"></input>
+                    </div>
+                    <button class="btn btn-primary btn-manage" name="edu_add">Add <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="edu_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

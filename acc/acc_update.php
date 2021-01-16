@@ -21,30 +21,31 @@
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <!--  resume -->
-                <h3 class="admin-title">Cập nhật mật khẩu</h3>
-                <?php include(ROOT_PATH."/helper/formErrors.php") ?>
+                    <div class="title-box">
+                        <h3 class="admin-title">Update Password</h3>
+                    </div>
+                <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                 <form action="acc_update.php" method="post">
                     <input type="hidden" name="id" value="<?php echo  $_SESSION['account_id'] ?>">
                     <div class="container">
                         <div class="form-group">
-                            <label for="">Tên đăng nhập</label>
+                            <label for="">User name</label>
                             <input type="text" name="" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $_SESSION['account_name'] ?>" disabled>
                         </div>
                         <div class="form-group">
-                            <label for="">Mật khẩu hiện tại</label>
+                            <label for="">Current Password</label>
                             <input type="password" name="pass_old" id="" class="form-control input-read" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                            <label for="">Mật khẩu mới</label>
+                            <label for="">New Password</label>
                             <input type="password" name="pass_new" id="" class="form-control input-read" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                            <label for="">Nhập lại mật khẩu mới</label>
+                            <label for="">Confirm Password</label>
                             <input type="password" name="pass_conf" id="" class="form-control input-read" aria-describedby="helpId">
                         </div>
                         <button class="btn btn-primary btn-manage" name="updatePass">
-                            Lưu lại
+                            Save
                             <div class="btn-manage-box"></div>
                         </button>
                     </div>

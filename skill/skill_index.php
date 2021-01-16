@@ -22,31 +22,40 @@ include('../path.php');
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <!--  resume -->
-                <h3 class="admin-title">Các kỹ năng</h3>
+                <div class="title-box">
+                    <h3 class="admin-title">skill</h3>
+                </div>
+                <?php
+                    require(ROOT_PATH . "/database/config.php");
+                    $sql="select * from skill";
+                    $result = mysqli_query($conn,$sql);
+                    $list_skill = mysqli_fetch_all($result);
+                ?>
                 <table class="table table-striped table-hover bg-white table-borderless rounded">
                     <thead>
                         <tr>
-                            <th>STT</th>
-                            <th>Tên kỹ năng</th>
-                            <th>Mô tả</th>
-                            <th>Ngày thêm</th>
-                            <th>Chi tiết</th>
-                            <th>Sửa</th>
-                            <th>Xóa</th>
-
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Detail</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>PHP</td>
-                            <td>Lorem ipsum dolor sit amet...</td>
-                            <td>dd/mm/yyyy</td>
-                            <td><a href="skill_detail.php"><i class="fas fa-book-reader"></i></a></td>
-                            <td><a href="skill_edit.php"><i class="far fa-edit"></i></a></td>
-                            <td><a href="#"><i class="far fa-trash"></i></a></td>
-                        </tr>
+                    <?php foreach($list_skill as $skill){
+                        echo'<tr>';
+                        echo'<td>'.$skill[0].'</td>'; 
+                        echo'<td>'.$skill[1].'</td>'; 
+                        echo'<td>'.$skill[2].'</td>'; 
+                        echo'<td>'.$skill[3].'</td>';
+                        echo'<td><a href="skill_detail.php?skill_id='.$skill[0].'"><i class="fas fa-book-reader"></i></a></td>';
+                        echo'<td><a href="skill_edit.php?skill_id='.$skill[0].'"><i class="far fa-edit"></i></a></td>';
+                        echo'<td><a href="#"><i class="far fa-trash"></i></a></td>';
+                        echo'</tr>';
+                        }
+                        ?>
                     </tbody>
                 </table>
                 <a href="skill_add.php" class="btn-skill"><i class="fas fa-plus"></i></a>

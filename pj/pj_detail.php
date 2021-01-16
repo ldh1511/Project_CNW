@@ -23,26 +23,32 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Kinh nghiệm làm việc</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">project detail</h3>
+                    </div>
 
                 <div class="form-group">
-                    <label for="">Ngày bắt đầu</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                    <label for="">Thời gian</label>
+                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" disabled>
                 </div>
                 <div class="form-group">
-                    <label for="">Ngày kết thúc</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                    <label for="">Tên dự án</label>
+                    <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" disabled>
                 </div>
-                <div class="form-group">
-                    <label for="">Tên công ty</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                </div>
+
                 <div class="form-group">
                     <label for="">Mô tả</label>
                     <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
                 </div>
-
-                <a class="btn btn-primary btn-back" href="exp_index.php"><i class="fas fa-chevron-circle-left"></i></a>
+                <div class="form-group">
+                    <label for="">Ảnh</label>
+                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                </div>
+                <div class="form-group">
+                    <label for="">Link</label>
+                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                </div>
+                <a class="btn btn-primary btn-back" href="pj_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

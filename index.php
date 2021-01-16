@@ -1,3 +1,4 @@
+<?php include('path.php'); ?>
 <!doctype html>
 <html lang="en">
 
@@ -76,22 +77,75 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col span-1-of-4">
+              <div class="col span-1-of-3">
                 <i class="fas fa-book-reader icon"></i>
-                <p class="resume">5+ <em>Years Experience</em> </p>
+                <p class="resume">3+ <em>Years Experience</em> </p>
               </div>
-              <div class="col span-1-of-4">
+              <div class="col span-1-of-3">
                 <i class="fas fa-folder-open icon"></i>
-                <p class="resume">28 <em>Completed Projects</em> </p>
+                <p class="resume">10 <em>Completed Projects</em> </p>
               </div>
-              <div class="col span-1-of-4">
+              <div class="col span-1-of-3">
                 <i class="fas fa-user-check icon"></i>
-                <p class="resume">82 <em>Happy Customers</em> </p>
+                <p class="resume">12 <em>Happy Customers</em> </p>
               </div>
-              <div class="col span-1-of-4">
-                <i class="fas fa-medal icon"></i>
-                <p class="resume">22 <em>Honors and Awards</em> </p>
-              </div>
+            </div>
+          </div>
+
+          <!-- CV -->
+          <div class="title">
+            <h4>Our Resume</h4>
+          </div>
+          <div class="container">
+          <!-- cv1 -->
+          <div class="row">
+              <div class="box">
+                <div class="col-md-6 cv-element">
+                <ul>
+                  <li>
+                    <h6>Họ và tên:</h6> <span>Lê Dương Hùng</span>
+                  </li>
+                  <li>
+                    <h6>Ngày sinh:</h6> <span>dd/mm/2000</span>
+                  </li>
+                  <li>
+                    <h6>Thành phố:</h6> <span>????</span>
+                  </li>
+                  <li>
+                    <a href="#">Read CV</a>
+                  </li>
+                </ul>
+                </div>
+                <div class="col-md-6 cv-pic">
+                  <img src="./Img/logo.png" alt="">
+                </div>
+                </div>
+            </div>
+
+          <!-- cv2 -->
+         
+          <div class="row">
+              <div class="box">
+                <div class="col-md-6 cv-element">
+                <ul>
+                  <li>
+                    <h6>Họ và tên:</h6> <span>Ngô Thị Duyên</span>
+                  </li>
+                  <li>
+                    <h6>Ngày sinh:</h6> <span>28/08/2000</span>
+                  </li>
+                  <li>
+                    <h6>Thành phố:</h6> <span>Hà Nội</span>
+                  </li>
+                  <li>
+                    <a href="#">Read CV</a>
+                  </li>
+                </ul>
+                </div>
+                <div class="col-md-6 cv-pic">
+                  <img src="./Img/logo.png" alt="">
+                </div>
+                </div>
             </div>
           </div>
 
@@ -319,23 +373,7 @@
         </div>
 
       </div>
-      <div class="menu-right">
-        <div class="menu-right-box">
-          <div class="right-box-bars">
-            <i class="fas fa-bars"></i>
-          </div>
-          <div class="right-box-content">
-            <h5 class="right-box-title">HOME</h5>
-            <ul class="right-menu">
-              <li><a href="index.php">Trang chủ</a></li>
-              <li><a href="#">PORTFOLIO</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="login.php">Quản lý</a></li>
-              <li><a href="#">BLOG</a><i class="fas fa-chevron-right"></i></li>
-              <li><a href="#">CONTACT</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <?php include(ROOT_PATH."/includes/right_menu.php"); ?>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,5 +1,6 @@
 <?php
 include('../path.php');
+include(ROOT_PATH . "/controllers/ca.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -22,22 +23,27 @@ include('../path.php');
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <!--  resume -->
-                <h3 class="admin-title">Sửa thông tin chứng chỉ</h3>
-                <form action="edu_edit.php" method="post">
+                <div class="title-box">
+                        <h3 class="admin-title">Update Certificate</h3>
+                </div>
+                <form action="ca_edit.php" method="post">
+                    <div class="form-group">
+                        <label for="">ID</label>
+                        <input type="text" name="certificate_id" id="" value="<?php echo $certificate_id; ?>" class="form-control input-read" aria-describedby="helpId" readonly></input>
+                    </div>
                     <div class="form-group">
                         <label for="">Ngày cấp</label>
-                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                        <input type="date" name="date" id="" value="<?php echo $ca_date; ?>" class="form-control input-read" aria-describedby="helpId" >
                     </div>
                     <div class="form-group">
                         <label for="">Tên chứng chỉ</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
+                        <input type="text" name="certificate_name" id="" value="<?php echo $ca_name; ?>" class="form-control input-read" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
                         <label for="">Mô tả</label>
-                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
+                        <textarea type="text" name="description" id="" class="form-control input-read" aria-describedby="helpId"><?php echo $ca_des; ?></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="ca_save">Lưu lại <div class="btn-manage-box"></div></button>
+                    <button class="btn btn-primary btn-manage" name="ca_save">Save <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="ca_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

@@ -1,5 +1,7 @@
 <?php
 include('../path.php');
+require(ROOT_PATH . "/controllers/skill.php");
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,17 +25,23 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Sửa thông tin kỹ năng</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">update skill</h3>
+                    </div>
                 <form action="skill_edit.php" method="post">
                     <div class="form-group">
-                        <label for="">Tên kỹ năng</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
+                        <label for="">ID</label>
+                        <input value="<?php echo $skill_id; ?>" type="text" readonly name="skill_id" id="" class="form-control input-read" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
-                        <label for="">Mô tả</label>
-                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
+                        <label for="">Name</label>
+                        <input value="<?php echo $skill_name; ?>" type="text" name="skill_name" id="" class="form-control input-read" aria-describedby="helpId"></input>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="edu_save">Lưu lại <div class="btn-manage-box"></div></button>
+                    <div class="form-group">
+                        <label for="">Describle</label>
+                        <textarea type="text" name="skill_des" id="" class="form-control input-read" aria-describedby="helpId"><?php echo $skill_des; ?></textarea>
+                    </div>
+                    <button class="btn btn-primary btn-manage" name="skill_save">Lưu lại <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

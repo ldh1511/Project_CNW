@@ -1,5 +1,6 @@
 <?php
 include('../path.php');
+require(ROOT_PATH . "/controllers/ca.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -22,8 +23,9 @@ include('../path.php');
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <!--  resume -->
-                <h3 class="admin-title">Thêm thông tin chứng chỉ</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">Add Certificate</h3>
+                </div>
                 <form action="ca_add.php" method="post" class="form-manage form">
                     <div class="form-group">
                         <label for="">Ngày cấp</label>
@@ -37,10 +39,15 @@ include('../path.php');
                         <label for="">Mô tả</label>
                         <textarea type="text" name="ca_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="ca_add">Thêm <div class="btn-manage-box"></div></button>
+                    <div class="form-group">
+                        <label for="">Người thêm</label>
+                        <input type="text" name="ca_id" id="" class="form-control form-input" aria-describedby="helpId"></input>
+                    </div>
+                    <button class="btn btn-primary btn-manage" name="ca_add">Add <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="ca_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
+   
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

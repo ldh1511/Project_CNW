@@ -25,20 +25,30 @@ include(ROOT_PATH . "/controllers/ca.php");
                 include(ROOT_PATH . "/includes/left_menu.php")       
             ?>
             <div class="content-right admin-container">
-                <h3 class="admin-title">Chi tiết chứng chỉ</h3>
-                <div class="form-group">
-                    <label for="">Ngày cấp</label>
-                    <input type="text" name="ca_date" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $date ?> " readonly>
+                <div class="title-box">
+                    <h3 class="admin-title">Certificate detail</h3>
                 </div>
-                <div class="form-group">
-                    <label for="">Tên chứng chỉ</label>
-                    <input type="text" name="ca_name" id="" class="form-control input-read" aria-describedby="helpId" disabled value="<?php echo $certificate_name ?> " readonly></input>
-                </div>
-                <div class="form-group">
-                    <label for="">Mô tả</label>
-                    <textarea type="text" name="ca_description" id="" class="form-control input-read" aria-describedby="helpId" disabled readonly><?php echo $description ?></textarea>
-                </div>
-
+                <table class="table table-bordered border-primary">
+                <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Certificate</th>
+                    <th>Description</th>
+                    <th>Editer</th>
+                    </tr>
+                </thead>
+                <tbody> <?php
+                    echo'<tr>';
+                    echo'<td>'.$certificate_id.'</td>';
+                    echo'<td>'.$ca_name.'</td>';
+                    echo'<td>'.$ca_date.'</td>';
+                    echo'<td>'.$ca_des.'</td>';
+                    echo'<td>'.$editer.'</td>';
+                    echo'<tr>';
+                    ?>
+                </tbody>
+                </table>
                 <a class="btn btn-primary btn-back" href="ca_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
             <!-- Optional JavaScript -->

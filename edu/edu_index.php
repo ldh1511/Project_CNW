@@ -22,33 +22,40 @@ include('../path.php');
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <!--  resume -->
-                <h3 class="admin-title">Trình độ học vấn</h3>
+                <div class="title-box">
+                    <h3 class="admin-title">education</h3>
+                </div>
+                <?php
+                    require(ROOT_PATH . "/database/config.php");
+                    $sql="select * from education";
+                    $result = mysqli_query($conn,$sql);
+                    $list_edu = mysqli_fetch_all($result);
+                ?>
                 <table class="table table-striped table-hover bg-white table-borderless rounded">
                     <thead>
                         <tr>
-                            <th>STT</th>
-                            <th>Ngày bắt đầu</th>
-                            <th>Ngày tốt nghiệp</th>
-                            <th>Tên trường học</th>
-                            <th>Mô tả</th>
-                            <th>Chi tiết</th>
-                            <th>Sửa</th>
-                            <th>Xóa</th>
-
+                            <th>Start</th>
+                            <th>Finish</th>
+                            <th>School</th>
+                            <th>Description</th>
+                            <th>Detail</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>dd/mm/yyyy</td>
-                            <td>dd/mm/yyyy</td>
-                            <td>Apple Inc</td>
-                            <td>Lorem ipsum dolor sit amet...</td>
-                            <td><a href="edu_detail.php"><i class="fas fa-book-reader"></i></a></td>
-                            <td><a href="edu_edit.php"><i class="far fa-edit"></i></a></td>
-                            <td><a href="#"><i class="far fa-trash"></i></a></td>
-                        </tr>
+                        <?php foreach($list_edu as $edu){
+                        echo'<tr>';
+                        echo'<td>'.$edu[1].'</td>'; 
+                        echo'<td>'.$edu[2].'</td>'; 
+                        echo'<td>'.$edu[3].'</td>'; 
+                        echo'<td>'.$edu[4].'</td>'; 
+                        echo'<td><a href="edu_detail.php?education_id='.$edu[0].'"><i class="fas fa-book-reader"></i></a></td>';
+                        echo'<td><a href="edu_edit.php?education_id='.$edu[0].'"><i class="far fa-edit"></i></a></td>';
+                        echo'<td><a href="edu_edit.php?delete_id='.$edu[0].'"><i class="far fa-trash"></i></a></td>';
+                        echo'</tr>';
+                        }
+                        ?>
                     </tbody>
                 </table>
                 <a href="edu_add.php" class="btn-skill"><i class="fas fa-plus"></i></a>

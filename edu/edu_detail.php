@@ -1,5 +1,6 @@
 <?php
 include('../path.php');
+require(ROOT_PATH . "/controllers/edu.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,24 +24,33 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Trình độ học vấn</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">Detail education</h3>
+                </div>
 
-                <div class="form-group">
-                    <label for="">Ngày bắt đầu</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Ngày tốt nghiệp</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Tên trường học</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                </div>
-                <div class="form-group">
-                    <label for="">Mô tả</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
-                </div>
+                <table class="table table-bordered border-primary">
+                <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Start</th>
+                    <th>Finish</th>
+                    <th>School</th>
+                    <th>Description</th>
+                    <th>Editer</th>
+                    </tr>
+                </thead>
+                <tbody> <?php
+                    echo'<tr>';
+                    echo'<td>'.$education_id.'</td>';
+                    echo'<td>'.$edu_start.'</td>';
+                    echo'<td>'.$edu_finish.'</td>';
+                    echo'<td>'.$type.'</td>';
+                    echo'<td>'.$edu_des.'</td>';
+                    echo'<td>'.$editer.'</td>';
+                    echo'<tr>';
+                    ?>
+                </tbody>
+                </table>
 
                 <a class="btn btn-primary btn-back" href="edu_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

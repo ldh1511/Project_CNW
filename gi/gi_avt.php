@@ -22,35 +22,21 @@ include('../path.php');
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <!--  resume -->
+                <div class="container">
                 <div class="title-box">
-                        <h3 class="admin-title">Add project</h3>
+                        <h3 class="admin-title">Cập nhật mật khẩu</h3>
                     </div>
-                <form action="pj_add.php" method="post">
-                    <div class="form-group">
-                        <label for="">Thời gian</label>
-                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Tên dự án</label>
-                        <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Mô tả</label>
-                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Ảnh</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Link</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
-                    <button class="btn btn-primary btn-manage" name="exp_save">Add<div class="btn-manage-box"></div></button>
-                </form>
-                <a class="btn btn-primary btn-back" href="pj_index.php"><i class="fas fa-chevron-circle-left"></i></a>
+                    <form action="gi_avt.php" method="post" class="form-manage form form-info">
+                        <div class="form-group">
+                            <label for="">Ảnh đại diện</label>
+                            <div class="info-avt">
+                                <img src="../Img/logo.png" alt="">
+                            </div>
+                            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                            <button class="btn btn-primary btn-manage" name="edu_save">Save <div class="btn-manage-box"></div></button>
+                        </div>
+                    </form>
+                </div>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

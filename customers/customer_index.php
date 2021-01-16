@@ -22,35 +22,39 @@ include('../path.php');
         <div class="content-box">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
-                <!--  resume -->
                 <div class="title-box">
-                        <h3 class="admin-title">Add project</h3>
-                    </div>
-                <form action="pj_add.php" method="post">
-                    <div class="form-group">
-                        <label for="">Thời gian</label>
-                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Tên dự án</label>
-                        <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Mô tả</label>
-                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Ảnh</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Link</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
-                    <button class="btn btn-primary btn-manage" name="exp_save">Add<div class="btn-manage-box"></div></button>
-                </form>
-                <a class="btn btn-primary btn-back" href="pj_index.php"><i class="fas fa-chevron-circle-left"></i></a>
+                    <h3 class="admin-title">Liên hệ</h3>
+                </div>
+                <?php
+                    require(ROOT_PATH . "/database/config.php");
+                    $sql="select * from customers";
+                    $result = mysqli_query($conn,$sql);
+                    $list_ct = mysqli_fetch_all($result);
+                ?>
+                <table class="table table-striped table-hover bg-white table-borderless rounded">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên</th>
+                            <th>Tiêu đề</th>
+                            <th>Trạng thái</th>
+                            <th>Chi tiết</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach($list_ct as $ct){
+                        echo'<tr>';
+                        echo'<td>'.$ct[0].'</td>'; 
+                        echo'<td>'.$ct[1].'</td>'; 
+                        echo'<td>'.$ct[2].'</td>'; 
+                        echo'<td>'.$ct[3].'</td>'; 
+                        echo'<td><a href="customer_detail.php?education_id='.$ct[0].'">Waiting</a></td>';
+                        echo'</tr>';
+                    }
+                    ?>
+                    </tbody>
+                </table>
+                <a href="customer_new.php" class="btn-skill"><i class="fas fa-plus"></i></a>
             </div>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->

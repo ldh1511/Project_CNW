@@ -1,5 +1,7 @@
 <?php
 include('../path.php');
+require(ROOT_PATH . "/controllers/exp.php");
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,24 +25,33 @@ include('../path.php');
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Kinh nghiệm làm việc</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">experience detail</h3>
+                    </div>
 
-                <div class="form-group">
-                    <label for="">Ngày bắt đầu</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Ngày kết thúc</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Tên công ty</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                </div>
-                <div class="form-group">
-                    <label for="">Mô tả</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
-                </div>
+                    <table class="table table-bordered border-primary">
+                <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Start</th>
+                    <th>Finish</th>
+                    <th>Company</th>
+                    <th>Description</th>
+                    <th>Editer</th>
+                    </tr>
+                </thead>
+                <tbody> <?php
+                    echo'<tr>';
+                    echo'<td>'.$exp_id.'</td>';
+                    echo'<td>'.$exp_start.'</td>';
+                    echo'<td>'.$exp_finish.'</td>';
+                    echo'<td>'.$company.'</td>';
+                    echo'<td>'.$exp_des.'</td>';
+                    echo'<td>'.$editer.'</td>';
+                    echo'<tr>';
+                    ?>
+                </tbody>
+                </table>
 
                 <a class="btn btn-primary btn-back" href="exp_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

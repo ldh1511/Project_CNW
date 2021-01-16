@@ -1,5 +1,5 @@
-<?php include('../path.php');?>
-<?php include(ROOT_PATH."/controllers/acc.php"); ?>
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
 <!doctype html>
 <html lang="en">
 
@@ -22,19 +22,21 @@
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <!--  resume -->
-                <h3 class="admin-title">Thông tin cá nhân</h3>
+                <div class="title-box">
+                        <h3 class="admin-title">Information</h3>
+                    </div>
                 <div class="container">
                     <div class="row  p-0 m-0">
                         <div class="form-group flex-grow-1 mr-2">
-                            <label for="">Họ và tên</label>
+                            <label for="">Full name</label>
                             <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['name'] ?>" disabled>
                         </div>
                         <div class="form-group mr-2">
-                            <label for="">Tuổi</label>
+                            <label for="">Age</label>
                             <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['age'] ?>" disabled>
                         </div>
                         <div class="form-group ">
-                            <label for="">Giới tính</label>
+                            <label for="">Gender</label>
                             <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['gender'] ?>" disabled>
                         </div>
                     </div>
@@ -44,24 +46,30 @@
                             <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['email'] ?>" disabled>
                         </div>
                         <div class="form-group flex-grow-1">
-                            <label for="">Số điện thoại</label>
+                            <label for="">Phone number</label>
                             <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['phone_number'] ?>" disabled>
                         </div>
                     </div>
-
+                    <div class="row  p-0 m-0">
+                        <div class="form-group form-group flex-grow-1 mr-2">
+                            <label for="">Target</label>
+                            <input type="text" name="target" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['target'] ?>">
+                        </div>
+                        <div class="form-group form-group flex-grow-1">
+                            <label for="">Hobby</label>
+                            <input type="text" name="hobby" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['hobby'] ?>">
+                        </div>
+                    </div>
                     <div class="form-group">
-                        <label for="">Tóm lược</label>
+                        <label for="">Sumary</label>
                         <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $info['sumary'] ?></textarea>
                     </div>
+
                     <div class="form-group">
-                        <label for="">Mục tiêu</label>
-                        <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['target'] ?>" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Địa chỉ</label>
+                        <label for="">Address</label>
                         <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['address'] ?>" disabled>
                     </div>
-                    <a href="accdetail_edit.php"><i class="far fa-edit h5"></i></a>
+                    <a href="accdetail_edit.php?edit_id=<?php echo $info['id'] ?>"><i class="far fa-edit h5"></i></a>
                 </div>
             </div>
             <!-- Optional JavaScript -->
