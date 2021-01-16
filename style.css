@@ -965,3 +965,13 @@ form h2{
     border-radius: 95px;
     margin-bottom: 10px;
 }
+.cv-pic img{
+    width: 100%;
+    border-radius: 5px;
+}
+.cv-element ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 4% 10%;
+}

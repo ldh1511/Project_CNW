@@ -96,6 +96,68 @@
             </div>
           </div>
 
+          <!-- CV -->
+          <div class="title">
+            <h4>Our Resume</h4>
+          </div>
+          <div class="container">
+                      <!-- cv1 -->
+          <div class="row cv-row">
+              <div class="box">
+                <div class="row">
+                <div class="col-md-4 cv-pic">
+                  <img src="./Img/no_Img.jpg" alt="">
+                </div>
+                <div class="col-md-8 cv-element">
+                <ul>
+                  <li>
+                    <h6>Họ và tên:</h6> <span>Lê Dương Hùng</span>
+                  </li>
+                  <li>
+                    <h6>Ngày sinh:</h6> <span>dd/mm/2000</span>
+                  </li>
+                  <li>
+                    <h6>Thành phố:</h6> <span>????</span>
+                  </li>
+                  <li>
+                    <a href="#">Read CV</a>
+                  </li>
+                </ul>
+                </div>
+                </div>
+                
+                </div>
+            </div>
+
+          <!-- cv2 -->        
+          <div class="row cv-row">
+              <div class="box"> 
+                <div class="row">
+                <div class="col-md-4 cv-pic">
+                  <img src="./Img/Duyen.jpeg" alt="">
+                </div>  
+                <div class="col-md-8 cv-element">
+                <ul>
+                  <li>
+                    <h6>Họ và tên:</h6> <span>Ngô Thị Duyên</span>
+                  </li>
+                  <li>
+                    <h6>Ngày sinh:</h6> <span>28/08/2000</span>
+                  </li>
+                  <li>
+                    <h6>Thành phố:</h6> <span>Hà Nội</span>
+                  </li>
+                  <li>
+                    <a href="#">Read CV</a>
+                  </li>
+                </ul>
+                </div> 
+                </div>
+                            
+              </div>
+            </div>
+          </div>
+
           <!-- services -->
           <div class="title">
             <h4>Our Services</h4>
