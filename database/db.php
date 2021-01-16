@@ -91,6 +91,7 @@ function update($table, $id, $data,$nameID){
 function delete($table, $id, $nameID){
     global $conn;
     $sql="delete from $table where $nameID='$id'";
+    echo $sql;
     mysqli_query($conn, $sql);
 }
 

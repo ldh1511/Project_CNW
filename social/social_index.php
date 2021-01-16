@@ -1,5 +1,5 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/svc.php");
+<?php include(ROOT_PATH . "/controllers/social.php");
 adminOnly();
 ?>
 <!doctype html>
@@ -26,38 +26,48 @@ adminOnly();
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                    <h3 class="admin-title">service's update history</h3>
+                    <h3 class="admin-title">Social links</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
-                    
+                    <div class="search-box">
+                        <div class="header-btn-container">
+                            <div class="header-button">
+                                <a href="social_import.php" class="btn-import"><i class="fas fa-file-import"></i> Import</a>
+                            </div>
+                        </div>
+                        <form class="search-box-form">
+                            <input type="text" name="" id="" class="input-search" placeholder="Search here...">
+                            <button type="button" class="btn"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
                 </div>
                 <?php include(ROOT_PATH . "/includes/message.php") ?>
                 <table class="table table-striped table-hover bg-white table-borderless rounded table-admin" id="result">
                     <thead>
                         <tr>
                             <th>Number</th>
-                            <th>Content</th>
-                            <th>Time</th>
-                            <th>Update By</th>
+                            <th>Name</th>
+                            <th>Link</th>
+                            <th>Edit</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $i = 1; ?>
-                        <?php foreach ($history as $key) : ?>
+                        <?php foreach ($social as $key) : ?>
                             <tr>
                                 <td><?php echo $i ?></td>
                                 <td><?php echo $key[1] ?></td>
                                 <td><?php echo $key[2] ?></td>
-                                <td><?php echo $key[5] ?></td>
-                                <td><a href="svc_edit.php?history_id=<?php echo $key[0] ?>"><i class="far fa-trash"></i></a></td>
+                                <td><a href="social_edit.php?edit_Id=<?php echo $key[0] ?>"><i class="far fa-edit"></i></a></td>
+                                <td><a href="social_edit.php?delete_Id=<?php echo $key[0] ?>"><i class="far fa-trash"></i></a></td>
                             </tr>
                             <?php $i++ ?>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <a class="btn btn-primary btn-back" href="svc_index.php"><i class="fas fa-chevron-circle-left"></i></a>
+                <a href="social_add.php" class="btn-skill"><i class="fas fa-plus"></i></a>
             </div>
         </div>
     </div>
@@ -71,7 +81,7 @@ adminOnly();
                 var result = $('#result');
                 if (inputVal.length) {
                     $.ajax({
-                        url: "/project/controllers/svc.php",
+                        url: "/project/controllers/social.php",
                         type: "get",
                         data: {
                             term: inputVal

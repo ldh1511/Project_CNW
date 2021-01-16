@@ -41,6 +41,10 @@ adminOnly();
                                 <input type="text" name="name" class="form-control input-read" aria-describedby="helpId" value="<?php echo $name ?>">
                             </div>
                             <div class="form-group mr-2">
+                                <label for="">Birthday</label>
+                                <input type="date" name="birthday" class="form-control input-read" aria-describedby="helpId" value="<?php echo $birthday ?>">
+                            </div>
+                            <div class="form-group mr-2">
                                 <label for="">Age</label>
                                 <input type="text" name="age" class="form-control input-read" aria-describedby="helpId" value="<?php echo $age ?>">
                             </div>

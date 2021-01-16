@@ -8,6 +8,7 @@ $sumary = '';
 $target = '';
 $hobby = '';
 $age = '';
+$birthday = '';
 $address = '';
 $email = '';
 $phone_number = '';
@@ -111,6 +112,7 @@ if (isset($_GET['edit_id'])) {
     $target = $acc_info['target'];
     $hobby = $acc_info['hobby'];
     $age = $acc_info['age'];
+    $birthday = $acc_info['birthday'];
     $address = $acc_info['address'];
     $email = $acc_info['email'];
     $phone_number = $acc_info['phone_number'];
@@ -146,6 +148,9 @@ if (isset($_POST['acc_infoUpdate'])) {
     if (empty($_POST['gender'])) {
         array_push($errors, 'Gender is required');
     }
+    if (empty($_POST['birthday'])) {
+        array_push($errors, 'Birthday is required');
+    }
     if (count($errors) === 0) {
         $id = $_POST['id'];
         unset($_POST['acc_infoUpdate'], $_POST['id']);
@@ -158,9 +163,12 @@ if (isset($_POST['acc_infoUpdate'])) {
         $name = $_POST['name'];
         $sumary = $_POST['sumary'];
         $target = $_POST['target'];
+        $hobby=$_POST['hobby'];
         $age = $_POST['age'];
+        $birthday = $_POST['birthday'];
         $address = $_POST['address'];
         $email = $_POST['email'];
         $phone_number = $_POST['phone_number'];
+        $gender=$_POST['gender'];
     }
 }

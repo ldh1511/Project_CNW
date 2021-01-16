@@ -39,6 +39,10 @@ adminOnly();
                             <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['name'] ?>" disabled>
                         </div>
                         <div class="form-group mr-2">
+                            <label for="">Birthday</label>
+                            <input type="text" name="birthday" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['birthday'] ?>" disabled>
+                        </div>
+                        <div class="form-group mr-2">
                             <label for="">Age</label>
                             <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['age'] ?>" disabled>
                         </div>

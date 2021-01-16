@@ -27,41 +27,21 @@ require(ROOT_PATH . "/controllers/skill.php");
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                    <h3 class="admin-title">Skill detail</h3>
+                    <h3 class="admin-title">detail skill</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
-<<<<<<< HEAD
-                    <table class="table table-bordered border-primary">
-                <thead>
-                    <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody> <?php
-                    echo'<tr>';
-                    echo'<td>'.$skill_id.'</td>';
-                    echo'<td>'.$skill_name.'</td>';
-                    echo'<td>'.$skill_des.'</td>';
-                    echo'<td>'.$skill_date.'</td>';
-                    echo'<tr>';
-                    ?>
-                </tbody>
-                </table>
-=======
                 </div>
-                <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Description</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
-                </div>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
+                <form action="skill_detail.php" method="post">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" name="skill_name" value="<?php echo $name; ?>" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Describle</label>
+                        <textarea type="text" name="skill_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $des; ?></textarea>
+                    </div>
+                </form>
                 <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
         </div>

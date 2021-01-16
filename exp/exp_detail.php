@@ -1,7 +1,7 @@
 <?php
 include('../path.php');
-require(ROOT_PATH . "/controllers/exp.php");
-
+include(ROOT_PATH . "/controllers/exp.php");
+adminOnly();
 ?>
 <!doctype html>
 <html lang="en">
@@ -32,50 +32,24 @@ require(ROOT_PATH . "/controllers/exp.php");
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-
-<<<<<<< HEAD
-                    <table class="table table-bordered border-primary">
-                <thead>
-                    <tr>
-                    <th>ID</th>
-                    <th>Start</th>
-                    <th>Finish</th>
-                    <th>Company</th>
-                    <th>Description</th>
-                    <th>Editer</th>
-                    </tr>
-                </thead>
-                <tbody> <?php
-                    echo'<tr>';
-                    echo'<td>'.$exp_id.'</td>';
-                    echo'<td>'.$exp_start.'</td>';
-                    echo'<td>'.$exp_finish.'</td>';
-                    echo'<td>'.$company.'</td>';
-                    echo'<td>'.$exp_des.'</td>';
-                    echo'<td>'.$editer.'</td>';
-                    echo'<tr>';
-                    ?>
-                </tbody>
-                </table>
-=======
-                <div class="form-group">
-                    <label for="">Start date</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">End date</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                </div>
-                <div class="form-group">
-                    <label for="">Description</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
-                </div>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
-
+                <form action="exp_edit.php" method="post">
+                    <div class="form-group">
+                        <label for="">Start date</label>
+                        <input type="date" value="<?php echo $exp_start; ?>" name="exp_start" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">End date</label>
+                        <input type="date" value="<?php echo $exp_finish; ?>" name="exp_finish" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Name of Company</label>
+                        <input type="text" value="<?php echo $company; ?>" name="company" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description</label>
+                        <textarea type="text" name="exp_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $exp_des; ?></textarea>
+                    </div>
+                </form>
                 <a class="btn btn-primary btn-back" href="exp_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
         </div>

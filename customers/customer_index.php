@@ -24,38 +24,8 @@ adminOnly();
         <div class="content-box-admin">
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
+                <!--  resume -->
                 <div class="title-box">
-<<<<<<< HEAD
-                    <h3 class="admin-title">Liên hệ</h3>
-                </div>
-                <?php
-                    require(ROOT_PATH . "/database/config.php");
-                    $sql="select * from customers";
-                    $result = mysqli_query($conn,$sql);
-                    $list_ct = mysqli_fetch_all($result);
-                ?>
-                <table class="table table-striped table-hover bg-white table-borderless rounded">
-                    <thead>
-                        <tr>
-                            <th>STT</th>
-                            <th>Tên</th>
-                            <th>Tiêu đề</th>
-                            <th>Trạng thái</th>
-                            <th>Chi tiết</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach($list_ct as $ct){
-                        echo'<tr>';
-                        echo'<td>'.$ct[0].'</td>'; 
-                        echo'<td>'.$ct[1].'</td>'; 
-                        echo'<td>'.$ct[2].'</td>'; 
-                        echo'<td>'.$ct[3].'</td>'; 
-                        echo'<td><a href="customer_detail.php?education_id='.$ct[0].'">Waiting</a></td>';
-                        echo'</tr>';
-                    }
-                    ?>
-=======
                     <h3 class="admin-title">Customer</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
@@ -102,7 +72,6 @@ adminOnly();
                             </tr>
                             <?php $i++; ?>
                         <?php endforeach; ?>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                     </tbody>
                 </table>
                 <!-- <a href="customer_new.php" class="btn-skill"><i class="fas fa-plus"></i></a> -->

@@ -1,7 +1,6 @@
-<?php
-include('../path.php');
-require(ROOT_PATH . "/controllers/skill.php");
-
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/skill.php");
+adminOnly();
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,25 +26,22 @@ require(ROOT_PATH . "/controllers/skill.php");
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                    <h3 class="admin-title">update skill</h3>
+                    <h3 class="admin-title">Add skill</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-                <form action="skill_edit.php" method="post">
-                    <div class="form-group">
-                        <label for="">ID</label>
-                        <input value="<?php echo $skill_id; ?>" type="text" readonly name="skill_id" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
+                <form action="skill_add.php" method="post" class="form-manage form">
+                    <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input value="<?php echo $skill_name; ?>" type="text" name="skill_name" id="" class="form-control input-read" aria-describedby="helpId"></input>
+                        <input type="text" name="skill_name" id="" class="form-control form-input" aria-describedby="helpId" value="<?php echo $name ?>">
                     </div>
                     <div class="form-group">
                         <label for="">Describle</label>
-                        <textarea type="text" name="skill_des" id="" class="form-control input-read" aria-describedby="helpId"><?php echo $skill_des; ?></textarea>
+                        <textarea type="text" name="skill_des" id="" class="form-control form-input" aria-describedby="helpId"><?php echo $des ?></textarea>
                     </div>
-                    <button class="btn btn-primary btn-manage" name="skill_save">Lưu lại <div class="btn-manage-box"></div></button>
+                    <button class="btn btn-primary btn-manage" name="skill_add">Add <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

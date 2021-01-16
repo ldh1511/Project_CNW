@@ -1,6 +1,7 @@
 <?php
 include('../path.php');
-require(ROOT_PATH . "/controllers/edu.php");
+include(ROOT_PATH . "/controllers/edu.php");
+adminOnly();
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,9 +27,6 @@ require(ROOT_PATH . "/controllers/edu.php");
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-<<<<<<< HEAD
-                        <h3 class="admin-title">Detail education</h3>
-=======
                     <h3 class="admin-title">Detail education</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
@@ -37,45 +35,20 @@ require(ROOT_PATH . "/controllers/edu.php");
 
                 <div class="form-group">
                     <label for="">Start date</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $edu_start ?>" disabled></input>
                 </div>
                 <div class="form-group">
-                    <label for="">End date</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                    <label for="">Finish date</label>
+                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $edu_finish ?>" disabled></input>
                 </div>
                 <div class="form-group">
                     <label for="">Name</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                    <input type="text" name="edu_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $edu_name ?>" disabled></input>
                 </div>
                 <div class="form-group">
                     <label for="">Description</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
+                    <textarea type="text" name="edu_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $edu_des ?></textarea>
                 </div>
-
-                <table class="table table-bordered border-primary">
-                <thead>
-                    <tr>
-                    <th>ID</th>
-                    <th>Start</th>
-                    <th>Finish</th>
-                    <th>School</th>
-                    <th>Description</th>
-                    <th>Editer</th>
-                    </tr>
-                </thead>
-                <tbody> <?php
-                    echo'<tr>';
-                    echo'<td>'.$education_id.'</td>';
-                    echo'<td>'.$edu_start.'</td>';
-                    echo'<td>'.$edu_finish.'</td>';
-                    echo'<td>'.$type.'</td>';
-                    echo'<td>'.$edu_des.'</td>';
-                    echo'<td>'.$editer.'</td>';
-                    echo'<tr>';
-                    ?>
-                </tbody>
-                </table>
 
                 <a class="btn btn-primary btn-back" href="edu_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

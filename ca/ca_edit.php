@@ -25,44 +25,22 @@ include(ROOT_PATH . "/controllers/ca.php");
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <div class="title-box">
-<<<<<<< HEAD
-                        <h3 class="admin-title">Update Certificate</h3>
-                </div>
-                <form action="ca_edit.php" method="post">
-                    <div class="form-group">
-                        <label for="">ID</label>
-                        <input type="text" name="certificate_id" id="" value="<?php echo $certificate_id; ?>" class="form-control input-read" aria-describedby="helpId" readonly></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Ngày cấp</label>
-                        <input type="date" name="date" id="" value="<?php echo $ca_date; ?>" class="form-control input-read" aria-describedby="helpId" >
-                    </div>
-                    <div class="form-group">
-                        <label for="">Tên chứng chỉ</label>
-                        <input type="text" name="certificate_name" id="" value="<?php echo $ca_name; ?>" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Mô tả</label>
-                        <textarea type="text" name="description" id="" class="form-control input-read" aria-describedby="helpId"><?php echo $ca_des; ?></textarea>
-=======
                     <h3 class="admin-title">Update Certificate</h3>
-                    <div class="admin-bars">
-                        <i class="fas fa-bars"></i>
-                    </div>
                 </div>
                 <form action="ca_edit.php" method="post">
+                    <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                    <input type="hidden" name="certificate_id" value="<?php echo $certificate_id; ?>"></input>
                     <div class="form-group">
-                        <label for="">Date of Issue</label>
-                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                        <label for="">Date</label>
+                        <input type="date" name="date" id="" value="<?php echo $ca_date; ?>" class="form-control input-read" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
+                        <input type="text" name="certificate_name" id="" value="<?php echo $ca_name; ?>" class="form-control input-read" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
                         <label for="">Description</label>
-                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
+                        <textarea type="text" name="description" id="" class="form-control input-read" aria-describedby="helpId"><?php echo $ca_des; ?></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="ca_save">Save <div class="btn-manage-box"></div></button>
                 </form>

@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'login');
+$conn = mysqli_connect('localhost', 'root', '', 'cv');
 mysqli_set_charset($conn, 'UTF8');
 if (!$conn) {
     die('error');

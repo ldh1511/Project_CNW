@@ -1,6 +1,6 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/svc.php");
- adminOnly(); 
+<?php include(ROOT_PATH . "/controllers/exp.php");
+adminOnly();
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,7 +26,7 @@
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                    <h3 class="admin-title">Import service</h3>
+                    <h3 class="admin-title">Import Experience</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
@@ -40,10 +40,10 @@
                             <thead>
                                 <tr>
                                     <th>Number</th>
-                                    <th>Name</th>
-                                    <th>Price</th>
+                                    <th>Start date</th>
+                                    <th>End date</th>
+                                    <th>Name of Company</th>
                                     <th>Description</th>
-                                    <th>Add by</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -53,30 +53,29 @@
                                         <td><?php echo $i ?></td>
                                         <td><?php echo $key[0] ?></td>
                                         <td><?php echo $key[1] ?></td>
-                                        <td><?php echo html_entity_decode(substr($key[2], 0, 35) . "..."); ?></td>
-                                        <td><?php echo $key[3] ?></td>
+                                        <td><?php echo $key[2] ?></td>
+                                        <td><?php echo html_entity_decode(substr($key[3], 0, 35) . "..."); ?></td>
                                     </tr>
                                     <?php $i++ ?>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                        <form action="svc_import.php" method="post">
+                        <form action="exp_import.php" method="post">
                             <input type="hidden" name="array_import" value="<?php echo $sql; ?>">
-                            <input type="hidden" name="array_error" value="<?php echo $count; ?>">
-                            <button class="btn btn-primary btn-import-prv" name="svc_import_prv">Go</button>
+                            <button class="btn btn-primary btn-import-prv" name="exp_import_prv">Go</button>
                         </form>
                     </div>
                 <?php endif; ?>
 
-                <form action="svc_import.php" method="post" class="form-manage form-import" enctype="multipart/form-data">
+                <form action="exp_import.php" method="post" class="form-manage form-import" enctype="multipart/form-data">
                     <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                     <div class="form-group">
                         <label for="Import"></label>
                         <input type="file" name="file" />
                     </div>
-                    <button class="btn btn-primary btn-manage" name="svc_preview">Preview</button>
+                    <button class="btn btn-primary btn-manage" name="exp_preview">Preview</button>
                 </form>
-                <a class="btn btn-primary btn-back" href="svc_index.php"><i class="fas fa-chevron-circle-left"></i></a>
+                <a class="btn btn-primary btn-back" href="exp_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
         </div>
     </div>

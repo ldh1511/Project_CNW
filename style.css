@@ -926,21 +926,6 @@ form h2{
     margin-bottom: 15px;
 }
 
-<<<<<<< HEAD
-/* intro cv */
-.cv-element{
-    display: table-cell;
-    width: 50%;
-}
-.cv-pic img{
-    width: 50%;
-}
-.cv-element ul li{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0px;
-=======
 .btn-status{
     padding: 5px;
     border-radius: 27px;
@@ -979,5 +964,4 @@ form h2{
     height: 7px;
     border-radius: 95px;
     margin-bottom: 10px;
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
 }

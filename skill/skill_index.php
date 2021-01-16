@@ -1,5 +1,6 @@
-<?php
-include('../path.php');
+<?php include('../path.php'); ?>
+<?php include(ROOT_PATH . "/controllers/skill.php");
+adminOnly();
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,56 +26,36 @@ include('../path.php');
             <div class="content-right admin-container">
                 <div class="title-box">
                     <h3 class="admin-title">skill</h3>
-<<<<<<< HEAD
-                </div>
-                <?php
-                    require(ROOT_PATH . "/database/config.php");
-                    $sql="select * from skill";
-                    $result = mysqli_query($conn,$sql);
-                    $list_skill = mysqli_fetch_all($result);
-                ?>
-                <table class="table table-striped table-hover bg-white table-borderless rounded">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Date</th>
-                            <th>Detail</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-=======
-                    <div class="admin-bars">
-                        <i class="fas fa-bars"></i>
+                    <div class="search-box" style="justify-content: flex-end;">
+                        <form class="search-box-form">
+                            <input type="text" name="" id="" class="input-search" placeholder="Search here...">
+                            <button type="button" class="btn"><i class="fas fa-search"></i></button>
+                        </form>
                     </div>
                 </div>
-                <table class="table table-striped table-hover bg-white table-borderless rounded">
+                <?php include(ROOT_PATH . "/includes/message.php") ?>
+                <table class="table table-striped table-hover bg-white table-borderless rounded" id="result">
                     <thead>
                         <tr>
                             <th>Number</th>
-                            <th>Date</th>
+                            <th>Name</th>
                             <th>Description</th>
-                            <th>Add at</th>
                             <th>Detail</th>
-                            <th>Edit</th>
                             <th>Delete</th>
-
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                         </tr>
                     </thead>
                     <tbody>
-                    <?php foreach($list_skill as $skill){
-                        echo'<tr>';
-                        echo'<td>'.$skill[0].'</td>'; 
-                        echo'<td>'.$skill[1].'</td>'; 
-                        echo'<td>'.$skill[2].'</td>'; 
-                        echo'<td>'.$skill[3].'</td>';
-                        echo'<td><a href="skill_detail.php?skill_id='.$skill[0].'"><i class="fas fa-book-reader"></i></a></td>';
-                        echo'<td><a href="skill_edit.php?skill_id='.$skill[0].'"><i class="far fa-edit"></i></a></td>';
-                        echo'<td><a href="#"><i class="far fa-trash"></i></a></td>';
-                        echo'</tr>';
-                        }
-                        ?>
+                        <?php $i = 1 ?>
+                        <?php foreach ($skill as $key) : ?>
+                            <tr>
+                                <td> <?php echo $i ?> </td>
+                                <td> <?php echo $key[1] ?> </td>
+                                <td> <?php echo $key[2] ?> </td>
+                                <td><a href="skill_detail.php?detail_id=<?php echo $key[0]?>"><i class=" fas fa-book-reader"></i></a></td>
+                                <td><a href="skill_detail.php?delete_id=<?php echo $key[0]?>"><i class=" far fa-trash"></i></a></td>
+                            </tr>
+                            <?php $i++ ?>
+                        <?php endforeach ?>
                     </tbody>
                 </table>
                 <a href="skill_add.php" class="btn-skill"><i class="fas fa-plus"></i></a>
@@ -83,7 +64,27 @@ include('../path.php');
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function() {
+            $('.search-box-form input[type="text"]').on('keyup input', function() {
+                var inputVal = $(this).val();
+                var result = $('#result');
+                if (inputVal.length) {
+                    $.ajax({
+                        url: "/project/controllers/skill.php",
+                        type: "get",
+                        data: {
+                            term: inputVal
+                        },
+                        success: function(e) {
+                            result.html(e)
+                        }
+                    })
+                }
+            })
+        })
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="../script_admin.js"></script>

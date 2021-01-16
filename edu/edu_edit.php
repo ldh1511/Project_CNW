@@ -1,6 +1,7 @@
 <?php
 include('../path.php');
-require(ROOT_PATH . "/controllers/edu.php");
+include(ROOT_PATH . "/controllers/edu.php");
+adminOnly();
 ?>
 <!doctype html>
 <html lang="en">
@@ -31,46 +32,23 @@ require(ROOT_PATH . "/controllers/edu.php");
                     </div>
                 </div>
                 <form action="edu_edit.php" method="post">
+                    <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
+                    <input type="hidden" value="<?php echo $education_id; ?>" name="education_id"></input>
                     <div class="form-group">
-<<<<<<< HEAD
-                        <label for="">ID</label>
-                        <input type="text" value="<?php echo $education_id; ?>"  name="education_id" id="" class="form-control input-read" aria-describedby="helpId" readonly></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Ngày bắt đầu</label>
-                        <input type="date" value="<?php echo $edu_start; ?>"  name="edu_start" id="" class="form-control input-read" aria-describedby="helpId">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Ngày tốt nghiệp</label>
-                        <input type="date" value="<?php echo $edu_finish; ?>"  name="edu_finish" id="" class="form-control input-read" aria-describedby="helpId">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Tên trường học</label>
-                        <input type="text" value="<?php echo $type; ?>"  name="type" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Mô tả</label>
-                        <textarea type="text" name="edu_des" id="" class="form-control input-read" aria-describedby="helpId"> <?php echo $edu_des; ?> </textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Người sửa</label>
-                        <input type="text" value="<?php echo $editer; ?>"  name="editer" id="" class="form-control input-read" aria-describedby="helpId"></input>
-=======
                         <label for="">Start date</label>
-                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                        <input type="date" value="<?php echo $edu_start; ?>" name="edu_start" id="" class="form-control input-read" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">End date</label>
-                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
+                        <input type="date" value="<?php echo $edu_finish; ?>" name="edu_finish" id="" class="form-control input-read" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Name</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
+                        <label for="">Name of School</label>
+                        <input type="text" value="<?php echo $edu_name; ?>" name="edu_name" id="" class="form-control input-read" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
                         <label for="">Description</label>
-                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
+                        <textarea type="text" name="edu_des" id="" class="form-control input-read" aria-describedby="helpId"> <?php echo $edu_des; ?> </textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="edu_save">Save <div class="btn-manage-box"></div></button>
                 </form>

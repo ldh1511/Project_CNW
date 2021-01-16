@@ -33,7 +33,7 @@ adminOnly();
                     <div class="search-box">
                         <div class="header-btn-container">
                             <div class="header-button">
-                                <a href="svc_history.php" class="btn-import"><i class="fas fa-history"></i> History</a>
+                                <a href="svc_history.php" class="btn-import"><i class="fas fa-history"></i> Update</a>
                             </div>
                             <div class="header-button">
                                 <a href="svc_import.php" class="btn-import"><i class="fas fa-file-import"></i> Import</a>

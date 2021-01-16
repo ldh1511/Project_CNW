@@ -1,5 +1,7 @@
 <?php
 include('../path.php');
+include(ROOT_PATH . "/controllers/edu.php");
+adminOnly();
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,54 +27,47 @@ include('../path.php');
             <div class="content-right admin-container">
                 <div class="title-box">
                     <h3 class="admin-title">education</h3>
-<<<<<<< HEAD
-                </div>
-                <?php
-                    require(ROOT_PATH . "/database/config.php");
-                    $sql="select * from education";
-                    $result = mysqli_query($conn,$sql);
-                    $list_edu = mysqli_fetch_all($result);
-                ?>
-                <table class="table table-striped table-hover bg-white table-borderless rounded">
-                    <thead>
-                        <tr>
-                            <th>Start</th>
-                            <th>Finish</th>
-                            <th>School</th>
-=======
-                    <div class="admin-bars">
-                        <i class="fas fa-bars"></i>
+                    <div class="search-box">
+                        <div class="header-btn-container">
+                            <div class="header-button">
+                                <a href="edu_import.php" class="btn-import"><i class="fas fa-file-import"></i> Import</a>
+                            </div>
+                        </div>
+                        <form class="search-box-form">
+                            <input type="text" name="" id="" class="input-search" placeholder="Search here...">
+                            <button type="button" class="btn"><i class="fas fa-search"></i></button>
+                        </form>
+
                     </div>
                 </div>
-                <table class="table table-striped table-hover bg-white table-borderless rounded">
+                <?php include(ROOT_PATH . "/includes/message.php") ?>
+                <table class="table table-striped table-hover bg-white table-borderless rounded" id="result">
                     <thead>
                         <tr>
-                            <th>STT</th>
+                            <th>Number</th>
                             <th>Start date</th>
-                            <th>End date</th>
-                            <th>Name</th>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
+                            <th>Finish date</th>
+                            <th>School</th>
                             <th>Description</th>
                             <th>Detail</th>
                             <th>Edit</th>
                             <th>Delete</th>
-<<<<<<< HEAD
-=======
-
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($list_edu as $edu){
-                        echo'<tr>';
-                        echo'<td>'.$edu[1].'</td>'; 
-                        echo'<td>'.$edu[2].'</td>'; 
-                        echo'<td>'.$edu[3].'</td>'; 
-                        echo'<td>'.$edu[4].'</td>'; 
-                        echo'<td><a href="edu_detail.php?education_id='.$edu[0].'"><i class="fas fa-book-reader"></i></a></td>';
-                        echo'<td><a href="edu_edit.php?education_id='.$edu[0].'"><i class="far fa-edit"></i></a></td>';
-                        echo'<td><a href="edu_edit.php?delete_id='.$edu[0].'"><i class="far fa-trash"></i></a></td>';
-                        echo'</tr>';
+                    <?php $i=1; ?>
+                        <?php foreach ($list_edu as $edu) {
+                            echo '<tr>';
+                            echo '<td>' . $i . '</td>';
+                            echo '<td>' . $edu[1] . '</td>';
+                            echo '<td>' . $edu[2] . '</td>';
+                            echo '<td>' . $edu[3] . '</td>';
+                            echo '<td>' . $edu[4] . '</td>';
+                            echo '<td><a href="edu_detail.php?detail_id=' . $edu[0] . '"><i class="fas fa-book-reader"></i></a></td>';
+                            echo '<td><a href="edu_edit.php?edit_id=' . $edu[0] . '"><i class="far fa-edit"></i></a></td>';
+                            echo '<td><a href="edu_edit.php?delete_id=' . $edu[0] . '"><i class="far fa-trash"></i></a></td>';
+                            echo '</tr>';
+                            $i++;
                         }
                         ?>
                     </tbody>
@@ -83,7 +78,27 @@ include('../path.php');
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function() {
+            $('.search-box-form input[type="text"]').on('keyup input', function() {
+                var inputVal = $(this).val();
+                var result = $('#result');
+                if (inputVal.length) {
+                    $.ajax({
+                        url: "/project/controllers/edu.php",
+                        type: "get",
+                        data: {
+                            term: inputVal
+                        },
+                        success: function(e) {
+                            result.html(e)
+                        }
+                    })
+                }
+            })
+        })
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="../script_admin.js"></script>

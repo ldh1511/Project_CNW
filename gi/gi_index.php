@@ -30,7 +30,7 @@ adminOnly();
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
-                    <div class="search-box">
+                    <div class="search-box" style="justify-content: flex-end;">
                         <div class="header-btn-container">
                             <div class="header-button">
                                 <a href="gi_history.php" class="btn-import"><i class="fas fa-history"></i> History</a>

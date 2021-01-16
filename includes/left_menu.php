@@ -4,7 +4,6 @@
             <i class="fas fa-times"></i>
         </div>
         <div class="menu-admin">
-
             <ul>
                 <li>
                     <a href="#">Team</a>
@@ -12,6 +11,7 @@
                         <ul>
                             <li><a href="<?php echo BASE_URL . "/gi/gi_index.php" ?>">Information</a></li>
                             <li><a href="<?php echo BASE_URL . "/svc/svc_index.php" ?>">Service</a></li>
+                            <li><a href="<?php echo BASE_URL . "/gi_skill/skill_index.php" ?>">Skill</a></li>
                             <li><a href="<?php echo BASE_URL . "/gi/gi_bg.php" ?>">Banner</a></li>
                             <li><a href="<?php echo BASE_URL . "/gi/gi_avt.php" ?>">Avatar</a></li>
                             <li><a href="<?php echo BASE_URL . "/customers/customer_index.php" ?>">Customer</a></li>
@@ -36,6 +36,7 @@
                 <li><a href="<?php echo BASE_URL . "/exp/exp_index.php" ?>">My Experience</a></li>
                 <li><a href="<?php echo BASE_URL . "/pj/pj_index.php" ?>">My Project</a></li>
                 <li><a href="<?php echo BASE_URL . "/skill/skill_index.php" ?>">My Skill</a></li>
+                <li><a href="<?php echo BASE_URL . "/social/social_index.php" ?>">My Social links</a></li>
                 <li><a href="<?php echo BASE_URL . "/logout.php" ?>">Log out</a></li>
             </ul>
             <div class="login-info">

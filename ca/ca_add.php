@@ -1,6 +1,6 @@
 <?php
 include('../path.php');
-require(ROOT_PATH . "/controllers/ca.php");
+include(ROOT_PATH . "/controllers/ca.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,66 +25,32 @@ require(ROOT_PATH . "/controllers/ca.php");
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <div class="title-box">
-<<<<<<< HEAD
-                        <h3 class="admin-title">Add Certificate</h3>
+                    <h3 class="admin-title">Add Certificate</h3>
                 </div>
                 <form action="ca_add.php" method="post" class="form-manage form">
+                    <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                     <div class="form-group">
-                        <label for="">Ngày cấp</label>
+                        <label for="">Date of Issue</label>
                         <input type="date" name="ca_date" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
-                        <label for="">Tên chứng chỉ</label>
+                        <label for="">Name</label>
                         <input type="text" name="ca_name" id="" class="form-control form-input" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
-                        <label for="">Mô tả</label>
-                        <textarea type="text" name="ca_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Người thêm</label>
-                        <input type="text" name="ca_id" id="" class="form-control form-input" aria-describedby="helpId"></input>
-=======
-                    <h3 class="admin-title">Add Certificate</h3>
-                    <div class="admin-bars">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-                <form action="ca_add.php" method="post" class="form-manage form">
-                    <div class="form-group">
-                        <label for="">Date of Issue</label>
-                        <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Name</label>
-                        <input type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></input>
-                    </div>
-                    <div class="form-group">
                         <label for="">Description</label>
-                        <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
+                        <textarea type="text" name="ca_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="ca_add">Add <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="ca_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
-<<<<<<< HEAD
-   
+
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-=======
-        </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../script_admin.js"></script>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
 </body>
 
 </html>

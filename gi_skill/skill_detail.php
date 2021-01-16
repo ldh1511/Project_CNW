@@ -1,7 +1,7 @@
 <?php
 include('../path.php');
-include(ROOT_PATH . "/controllers/exp.php");
-adminOnly();
+require(ROOT_PATH . "/controllers/gi_skill.php");
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,33 +27,22 @@ adminOnly();
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                    <h3 class="admin-title">Update experience</h3>
+                    <h3 class="admin-title">detail skill</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-                <form action="exp_edit.php" method="post">
-                    <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
-                    <input type="hidden" name="exp_id" value="<?php echo $exp_id; ?>"></input>
+                <form action="skill_detail.php" method="post">
                     <div class="form-group">
-                        <label for="">Start date</label>
-                        <input type="date" value="<?php echo $exp_start; ?>" name="exp_start" id="" class="form-control input-read" aria-describedby="helpId">
+                        <label for="">Name</label>
+                        <input type="text" name="skill_name" value="<?php echo $skill_name; ?>" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
                     </div>
                     <div class="form-group">
-                        <label for="">End date</label>
-                        <input type="date" value="<?php echo $exp_finish; ?>" name="exp_finish" id="" class="form-control input-read" aria-describedby="helpId">
+                        <label for="">Describle</label>
+                        <textarea type="text" name="skill_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $skill_des; ?></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="">Name of Company</label>
-                        <input type="text" value="<?php echo $company; ?>" name="company" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Description</label>
-                        <textarea type="text" name="exp_des" id="" class="form-control input-read" aria-describedby="helpId"><?php echo $exp_des; ?></textarea>
-                    </div>
-                    <button class="btn btn-primary btn-manage" name="exp_save">Save <div class="btn-manage-box"></div></button>
                 </form>
-                <a class="btn btn-primary btn-back" href="exp_index.php"><i class="fas fa-chevron-circle-left"></i></a>
+                <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
         </div>
     </div>
