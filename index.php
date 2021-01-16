@@ -18,82 +18,12 @@
 <body>
   <div class="main-container">
     <div class="content-box">
-      <div class="content-left">
-        <div class="left-element">
-          <div class="info-box">
-            <div class="info-avt">
-              <img src="./Img/logo.png" alt="">
-            </div>
-            <h4>Lê Dương Hùng</h4>
-            <h4>Ngô Thị Duyên</h4>
-            <p>Front-end Deweloper</p>
-          </div>
-          <div class="info-content">
-            <div class="info-content-element">
-              <ul>
-                <li>
-                  <h6>Địa chỉ:</h6><span>Đại học Thủy lợi</span>
-                </li>
-                <li>
-                  <h6>Thành phố:</h6><span>Hà Nội</span>
-                </li>
-              </ul>
-            </div>
-            <div class="info-content-element info-skill">
-              <ul>
-                <li><i class="far fa-check-circle"></i> Bootstrap</li>
-                <li><i class="far fa-check-circle"></i> HTML, CSS</li>
-                <li><i class="far fa-check-circle"></i> PHP</li>
-                <li><i class="far fa-check-circle"></i> GIT knowledge</li>
-              </ul>
-            </div>
-            <div class="info-content-element info-skill">
-              <ul>
-                <li><i class="far fa-check-circle"></i> SQL</li>
-                <li><i class="far fa-check-circle"></i> C#</li>
-                <li><i class="far fa-check-circle"></i> C++</li>
-                <li><i class="far fa-check-circle"></i> Python</li>
-              </ul>
-            </div>
-            <div class="info-content-element info-download">
-              <a href="#0">DOWNLOAD CV <i class="fas fa-download"></i></a>
-            </div>
-
-          </div>
-          <div class="info-bottom">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-dribbble"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </div>
-        </div>
-      </div>
+    <?php include(ROOT_PATH . "/includes/cv_left_menu.php"); ?>
       <div class="content-right">
         <!--  resume -->
         <div class="container">
           <div class="banner">
             <img src="./Img/banner.jpg" alt="">
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col span-1-of-4">
-                <i class="fas fa-book-reader icon"></i>
-                <p class="resume">5+ <em>Years Experience</em> </p>
-              </div>
-              <div class="col span-1-of-4">
-                <i class="fas fa-folder-open icon"></i>
-                <p class="resume">28 <em>Completed Projects</em> </p>
-              </div>
-              <div class="col span-1-of-4">
-                <i class="fas fa-user-check icon"></i>
-                <p class="resume">82 <em>Happy Customers</em> </p>
-              </div>
-              <div class="col span-1-of-4">
-                <i class="fas fa-medal icon"></i>
-                <p class="resume">22 <em>Honors and Awards</em> </p>
-              </div>
-            </div>
           </div>
 
           <!-- CV -->
@@ -101,59 +31,58 @@
             <h4>Our Resume</h4>
           </div>
           <div class="container">
-                      <!-- cv1 -->
-          <div class="row cv-row">
+            <!-- cv1 -->
+            <div class="row cv-row">
               <div class="box">
                 <div class="row">
-                <div class="col-md-4 cv-pic">
-                  <img src="./Img/no_Img.jpg" alt="">
+                  <div class="col-md-4 cv-pic">
+                    <img src="./Img/no_Img.jpg" alt="">
+                  </div>
+                  <div class="col-md-8 cv-element">
+                    <ul>
+                      <li>
+                        <h6>Name:</h6> <span>Lê Dương Hùng</span>
+                      </li>
+                      <li>
+                        <h6>Birthday:</h6> <span>dd/mm/2000</span>
+                      </li>
+                      <li>
+                        <h6>City:</h6> <span>????</span>
+                      </li>
+                      <li>
+                        <a href="#">Read CV</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="col-md-8 cv-element">
-                <ul>
-                  <li>
-                    <h6>Họ và tên:</h6> <span>Lê Dương Hùng</span>
-                  </li>
-                  <li>
-                    <h6>Ngày sinh:</h6> <span>dd/mm/2000</span>
-                  </li>
-                  <li>
-                    <h6>Thành phố:</h6> <span>????</span>
-                  </li>
-                  <li>
-                    <a href="#">Read CV</a>
-                  </li>
-                </ul>
-                </div>
-                </div>
-                
-                </div>
+              </div>
             </div>
 
-          <!-- cv2 -->        
-          <div class="row cv-row">
-              <div class="box"> 
+            <!-- cv2 -->
+            <div class="row cv-row">
+              <div class="box">
                 <div class="row">
-                <div class="col-md-4 cv-pic">
-                  <img src="./Img/Duyen.jpeg" alt="">
-                </div>  
-                <div class="col-md-8 cv-element">
-                <ul>
-                  <li>
-                    <h6>Họ và tên:</h6> <span>Ngô Thị Duyên</span>
-                  </li>
-                  <li>
-                    <h6>Ngày sinh:</h6> <span>28/08/2000</span>
-                  </li>
-                  <li>
-                    <h6>Thành phố:</h6> <span>Hà Nội</span>
-                  </li>
-                  <li>
-                    <a href="#">Read CV</a>
-                  </li>
-                </ul>
-                </div> 
+                  <div class="col-md-4 cv-pic">
+                    <img src="./Img/Duyen.jpeg" alt="">
+                  </div>
+                  <div class="col-md-8 cv-element">
+                    <ul>
+                      <li>
+                        <h6>Name:</h6> <span>Ngô Thị Duyên</span>
+                      </li>
+                      <li>
+                        <h6>Birthday:</h6> <span>28/08/2000</span>
+                      </li>
+                      <li>
+                        <h6>City:</h6> <span>Hà Nội</span>
+                      </li>
+                      <li>
+                        <a href="#">Read CV</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                            
+
               </div>
             </div>
           </div>
@@ -164,114 +93,81 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-md-3 box">
-                <h5>Web Developer</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                  quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                <h6><a href="#">Order now ></a></h6>
+              <div class="col-lg-4 col-md-6">
+                <div class="box">
+                  <h5>Web Developer</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                  <h6><a href="#">Order now ></a></h6>
+                </div>
+
               </div>
-              <div class="col-md-1"></div>
-              <div class="col-md-3 box">
-                <h5>UI/UX Design</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                  quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                <h6><a href="#">Order now ></a></h6>
+              <!-- <div class="col-md-1"></div> -->
+              <div class="col-lg-4 col-md-6">
+                <div class="box">
+                  <h5>UI/UX Design</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                  <h6><a href="#">Order now ></a></h6>
+                </div>
+
               </div>
-              <div class="col-md-1"></div>
-              <div class="col-md-3 box">
-                <h5>Sound Design</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                  quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                <h6><a href="#">Order now ></a></h6>
+              <!-- <div class="col-md-1"></div> -->
+              <div class="col-lg-4 col-md-6">
+                <div class="box">
+                  <h5>Sound Design</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                  <h6><a href="#">Order now ></a></h6>
+                </div>
               </div>
-              <div class="col-md-1"></div>
             </div>
 
 
             <div class="row">
-              <div class="col-md-3 box">
-                <h5>Game Design</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                  quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                <h6><a href="#">Order now ></a></h6>
+              <div class="col-lg-4 col-md-6">
+                <div class="box">
+                  <h5>Web Developer</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                  <h6><a href="#">Order now ></a></h6>
+                </div>
+
               </div>
-              <div class="col-md-1"></div>
-              <div class="col-md-3 box">
-                <h5>Advertising</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                  quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                <h6><a href="#">Order now ></a></h6>
+              <!-- <div class="col-md-1"></div> -->
+              <div class="col-lg-4 col-md-6">
+                <div class="box">
+                  <h5>UI/UX Design</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                  <h6><a href="#">Order now ></a></h6>
+                </div>
+
               </div>
-              <div class="col-md-1"></div>
-              <div class="col-md-3 box">
-                <h5>Photography</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                  quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                <h6><a href="#">Order now ></a></h6>
+              <!-- <div class="col-md-1"></div> -->
+              <div class="col-lg-4 col-md-6">
+                <div class="box">
+                  <h5>Sound Design</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                  <h6><a href="#">Order now ></a></h6>
+                </div>
               </div>
-              <div class="col-md-1"></div>
             </div>
           </div>
-          <!-- price plan -->
-          <div class="title">
-            <h4>Price plan</h4>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3 box">
-                <h5>Starter Price</h5>
-                <p class="price"><em>$</em>FREE <em>hour</em></p>
-                <ul>
-                  <li><i class="fas fa-check icon-price"></i>Ui Design</li>
-                  <li><i class="fas fa-check icon-price"></i>Web Development</li>
-                  <li class="price-no"><i class="fas fa-times icon-price"></i>Logo design</li>
-                  <li class="price-no"><i class="fas fa-times icon-price"></i>SEO optimization</li>
-                  <li class="price-no"><i class="fas fa-times icon-price"></i>WordPress integration</li>
-                </ul>
-                <h6><a href="#">Order now ></a></h6>
-              </div>
-              <div class="col-md-1">
-              </div>
-              <div class="col-md-3 box">
-                <h5>Hourly Payment</h5>
-                <p class="price"><em>$</em>29 <em>hour</em></p>
-                <ul>
-                  <li><i class="fas fa-check icon-price"></i>Ui Design</li>
-                  <li><i class="fas fa-check icon-price"></i>Web Development</li>
-                  <li><i class="fas fa-check icon-price"></i>Logo design</li>
-                  <li class="price-no"><i class="fas fa-times icon-price"></i>SEO optimization</li>
-                  <li class="price-no"><i class="fas fa-times icon-price"></i>WordPress integration</li>
-                </ul>
-                <h6><a href="#">Order now ></a></h6>
-              </div>
-              <div class="col-md-1"></div>
-              <div class="col-md-3 box">
-                <h5>Full time</h5>
-                <p class="price"><em>$</em>2999<em>hour</em></p>
-                <ul>
-                  <li><i class="fas fa-check icon-price"></i>Ui Design</li>
-                  <li><i class="fas fa-check icon-price"></i>Web Development</li>
-                  <li><i class="fas fa-check icon-price"></i>Logo design</li>
-                  <li><i class="fas fa-check icon-price"></i>SEO optimization</li>
-                  <li><i class="fas fa-check icon-price"></i>WordPress integration</li>
-                </ul>
-                <h6><a href="#">Order now ></a></h6>
-              </div>
-              <div class="col-md-1"></div>
-            </div>
-          </div>
+
 
           <!-- Recommendations -->
           <div class="title">
             <h4>Recommendations</h4>
           </div>
-          <div class="row">
+          <div class="container">
 
             <head>
               <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             </head>
 
-            <div class="col-lg-10 pt-5 pb-5 text-light" style="background-color: #f00f0f">
+            <div class="col text-light recomments-box" style="background-color: #f00f0f">
               <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel" style="height:200px;">
                 <div class="carousel-inner" role="listbox">
                   <div class="carousel-item active text-center p-4">
@@ -354,35 +250,52 @@
                 </ol>
               </div>
             </div>
-            <!-- icon -->
+          </div>
+          <div class="conatainer">
             <div class="row">
-              <div class="col-md-3">
+              <!-- icon -->
+              <div class="col-md-3 icon-client">
                 <img src="./Img/design.png" alt="" class="logo">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 icon-client">
                 <img src="./Img/showtime.png" alt="" class="logo">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 icon-client">
                 <img src="./Img/vintage.png" alt="" class="logo">
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 icon-client">
                 <img src="./Img/design.png" alt="" class="logo">
               </div>
+              <!-- contact -->
             </div>
-            <!-- contact -->
+          </div>
+          <div class="container footer-box">
             <div class="row">
-              <div class="col-md-8">
+            
+                <p class="copy">&copy;2020 All Rights Reserved.</p>
+                <p class="email">Emai:admin@gmail.com</p>
+              <!-- <div class="col-md-8">
                 <p class="copy">&copy;2020 All Rights Reserved.</p>
               </div>
               <div class="col-md-4">
                 <p class="email">Emai:admin@gmail.com</p>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
 
       </div>
-      <?php include(ROOT_PATH."/includes/right_menu.php"); ?>
+      <div class="menu-right">
+        <div class="menu-right-box">
+          <div class="right-box-bars">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="right-box-content">
+            <h5 class="right-box-title">HOME</h5>
+            <?php include(ROOT_PATH . "/includes/right_menu.php"); ?>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

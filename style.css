@@ -185,6 +185,12 @@ html,body{
 .content-right .container {
     background-color: #f9f9f9;
 }
+
+.recomments-box {
+    background-color: white !important;
+    color: black !important;
+    border-radius: 15px;
+}
 /* Menu left */
 .info-box{
     padding: 30px;
@@ -364,9 +370,10 @@ html,body{
     font-weight: 200%;
 }
 .row{
-    padding-left: 30px;
-    padding-top: 20px;
+    /* padding-left: 30px; */
+    /* padding-top: 20px; */
     justify-content: space-between;
+    padding: 10px;
 }
 h5{
     padding-top: 10%;
@@ -398,7 +405,12 @@ h5{
 }
 .box{
     background-color: white;
+    border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
 }
 ul{
     list-style: none;
@@ -418,10 +430,12 @@ ul{
     border-radius: 50%;
 }
 img.logo{
-    height: 200px;
-    width: 200px;
+    height: 120px;
+    width: 120px;
     opacity: 0.6;
 }
+
+.icon-client {display: flex;justify-content: center;align-items: center;}
 img.logo:hover{
     opacity: 1;
 }
@@ -967,11 +981,15 @@ form h2{
 }
 .cv-pic img{
     width: 100%;
-    border-radius: 5px;
+    border-radius: 11px;
 }
 .cv-element ul li{
     list-style: none;
     display: flex;
     justify-content: space-between;
     padding: 4% 10%;
+}
+.footer-box{
+    background-color: white!important;
+    border-radius: 15px;
 }

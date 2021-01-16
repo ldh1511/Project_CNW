@@ -27,9 +27,6 @@ if (isset($_POST['edu_add'])) {
     if (empty($_POST['edu_start'])) {
         array_push($errors, 'Enter start date');
     }
-    if (empty($_POST['edu_finish'])) {
-        array_push($errors, 'Enter finish date');
-    }
     if (empty($_POST['edu_name'])) {
         array_push($errors, 'Enter name of school');
     }
@@ -73,9 +70,6 @@ if (isset($_GET['edit_id'])) {
 if (isset($_POST['edu_save'])) {
     if (empty($_POST['edu_start'])) {
         array_push($errors, 'Enter start date');
-    }
-    if (empty($_POST['edu_finish'])) {
-        array_push($errors, 'Enter finish date');
     }
     if (empty($_POST['edu_name'])) {
         array_push($errors, 'Enter name of school');
