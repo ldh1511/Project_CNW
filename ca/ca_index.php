@@ -25,7 +25,6 @@ include('../path.php');
             <div class="content-right admin-container">
                 <div class="title-box">
                     <h3 class="admin-title">Certificate</h3>
-<<<<<<< HEAD
                 </div>
                 <?php
                         require(ROOT_PATH . "/database/config.php");
@@ -40,23 +39,6 @@ include('../path.php');
                             <th>Chi tiết</th>
                             <th>Sửa</th>
                             <th>Xóa</th>
-=======
-                    <div class="admin-bars">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-                <table class="table table-striped table-hover bg-white table-borderless rounded">
-                    <thead>
-                        <tr>
-                            <th>Number</th>
-                            <th>Date of Issue</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Detail</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                         </tr>
                     </thead>
                     <tbody>

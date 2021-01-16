@@ -31,7 +31,6 @@ require(ROOT_PATH . "/controllers/skill.php");
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
-<<<<<<< HEAD
                     <table class="table table-bordered border-primary">
                 <thead>
                     <tr>
@@ -51,17 +50,6 @@ require(ROOT_PATH . "/controllers/skill.php");
                     ?>
                 </tbody>
                 </table>
-=======
-                </div>
-                <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Description</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
-                </div>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                 <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
         </div>

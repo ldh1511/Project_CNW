@@ -25,7 +25,6 @@ require(ROOT_PATH . "/controllers/edu.php");
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <div class="title-box">
-<<<<<<< HEAD
                         <h3 class="admin-title">Add education</h3>
                 </div>
                 <form action="edu_add.php" method="post" class="form-manage form">
@@ -48,29 +47,6 @@ require(ROOT_PATH . "/controllers/edu.php");
                     <div class="form-group">
                         <label for="">Người thêm</label>
                         <input type="text" name="edit_id" id="" class="form-control form-input" aria-describedby="helpId"></input>
-=======
-                    <h3 class="admin-title">Add education</h3>
-                    <div class="admin-bars">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-                <form action="edu_add.php" method="post" class="form-manage form">
-                    <div class="form-group">
-                        <label for="">Start date</label>
-                        <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
-                    </div>
-                    <div class="form-group">
-                        <label for="">End date</label>
-                        <input type="date" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Name</label>
-                        <input type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Description</label>
-                        <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                     </div>
                     <button class="btn btn-primary btn-manage" name="edu_add">Add <div class="btn-manage-box"></div></button>
                 </form>

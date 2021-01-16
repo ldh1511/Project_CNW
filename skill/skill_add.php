@@ -34,21 +34,12 @@ require(ROOT_PATH . "/controllers/skill.php");
                 </div>
                 <form action="skill_add.php" method="post" class="form-manage form">
                     <div class="form-group">
-<<<<<<< HEAD
                         <label for="">Tên kỹ năng</label>
                         <input type="text" name="skill_name" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">Mô tả</label>
                         <textarea type="text" name="skill_des" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
-=======
-                        <label for="">Name</label>
-                        <input type="text" name="service_name" id="" class="form-control form-input" aria-describedby="helpId">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Desciption</label>
-                        <textarea type="text" name="service_description" id="" class="form-control form-input" aria-describedby="helpId"></textarea>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                     </div>
                     <button class="btn btn-primary btn-manage" name="skill_add">Add <div class="btn-manage-box"></div></button>
                 </form>

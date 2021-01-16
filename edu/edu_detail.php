@@ -26,31 +26,7 @@ require(ROOT_PATH . "/controllers/edu.php");
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-<<<<<<< HEAD
                         <h3 class="admin-title">Detail education</h3>
-=======
-                    <h3 class="admin-title">Detail education</h3>
-                    <div class="admin-bars">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="">Start date</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">End date</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                </div>
-                <div class="form-group">
-                    <label for="">Description</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                 </div>
 
                 <table class="table table-bordered border-primary">

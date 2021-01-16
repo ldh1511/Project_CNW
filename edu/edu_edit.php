@@ -32,7 +32,6 @@ require(ROOT_PATH . "/controllers/edu.php");
                 </div>
                 <form action="edu_edit.php" method="post">
                     <div class="form-group">
-<<<<<<< HEAD
                         <label for="">ID</label>
                         <input type="text" value="<?php echo $education_id; ?>"  name="education_id" id="" class="form-control input-read" aria-describedby="helpId" readonly></input>
                     </div>
@@ -55,22 +54,6 @@ require(ROOT_PATH . "/controllers/edu.php");
                     <div class="form-group">
                         <label for="">Người sửa</label>
                         <input type="text" value="<?php echo $editer; ?>"  name="editer" id="" class="form-control input-read" aria-describedby="helpId"></input>
-=======
-                        <label for="">Start date</label>
-                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                    </div>
-                    <div class="form-group">
-                        <label for="">End date</label>
-                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Name</label>
-                        <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Description</label>
-                        <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId"></textarea>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                     </div>
                     <button class="btn btn-primary btn-manage" name="edu_save">Save <div class="btn-manage-box"></div></button>
                 </form>

@@ -21,19 +21,13 @@ include(ROOT_PATH . "/controllers/ca.php");
 
 <body>
     <div class="main-container">
-<<<<<<< HEAD
         <div class="content-box">
             <?php 
                 include(ROOT_PATH . "/includes/left_menu.php")       
             ?>
-=======
-        <div class="content-box-admin">
-            <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
             <div class="content-right admin-container">
                 <div class="title-box">
                     <h3 class="admin-title">Certificate detail</h3>
-<<<<<<< HEAD
                 </div>
                 <table class="table table-bordered border-primary">
                 <thead>
@@ -56,26 +50,6 @@ include(ROOT_PATH . "/controllers/ca.php");
                     ?>
                 </tbody>
                 </table>
-=======
-                    <div class="admin-bars">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="">Date of Issue</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                </div>
-                <div class="form-group">
-                    <label for="">Description</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
-                </div>
-
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                 <a class="btn btn-primary btn-back" href="ca_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
         </div>

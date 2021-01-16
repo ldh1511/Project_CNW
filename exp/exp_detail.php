@@ -33,7 +33,6 @@ require(ROOT_PATH . "/controllers/exp.php");
                     </div>
                 </div>
 
-<<<<<<< HEAD
                     <table class="table table-bordered border-primary">
                 <thead>
                     <tr>
@@ -57,24 +56,6 @@ require(ROOT_PATH . "/controllers/exp.php");
                     ?>
                 </tbody>
                 </table>
-=======
-                <div class="form-group">
-                    <label for="">Start date</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">End date</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId">
-                </div>
-                <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                </div>
-                <div class="form-group">
-                    <label for="">Description</label>
-                    <textarea type="text" name="service_description" id="" class="form-control input-read" aria-describedby="helpId" disabled></textarea>
-                </div>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
 
                 <a class="btn btn-primary btn-back" href="exp_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

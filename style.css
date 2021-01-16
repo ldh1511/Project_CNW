@@ -926,58 +926,15 @@ form h2{
     margin-bottom: 15px;
 }
 
-<<<<<<< HEAD
 /* intro cv */
-.cv-element{
-    display: table-cell;
-    width: 50%;
-}
+
 .cv-pic img{
-    width: 50%;
+    width: 100%;
+    border-radius: 5px;
 }
 .cv-element ul li{
     list-style: none;
     display: flex;
     justify-content: space-between;
-    margin: 5px 0px;
-=======
-.btn-status{
-    padding: 5px;
-    border-radius: 27px;
-    color: white;
-    transition: .1s;
-}
-.btn-status:hover{
-    text-decoration: none;
-    color: white;
-}
-.pj-img-box{
-    display: flex;
-    align-items: center;
-}
-.pj-img{
-    width: 365px;
-    height: 140px;
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-}
-.pj-img img{
-    width: 100%;
-    height: 100%;
-}
-.img-col{
-    width: 100px;
-    height: 50px;
-    overflow: hidden;
-    display: block;
-    border-radius: 10px;
-}
-.menu-admin-line{
-    background-color: #e0e0e0;
-    height: 7px;
-    border-radius: 95px;
-    margin-bottom: 10px;
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
+    padding: 4% 10%;
 }

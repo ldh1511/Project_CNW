@@ -25,7 +25,6 @@ adminOnly();
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <div class="title-box">
-<<<<<<< HEAD
                     <h3 class="admin-title">Liên hệ</h3>
                 </div>
                 <?php
@@ -55,54 +54,6 @@ adminOnly();
                         echo'</tr>';
                     }
                     ?>
-=======
-                    <h3 class="admin-title">Customer</h3>
-                    <div class="admin-bars">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <div class="search-box" style="justify-content: flex-end;">
-                        <form class="search-box-form">
-                            <input type="text" name="" id="" class="input-search" placeholder="Search here...">
-                            <button type="button" class="btn"><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
-                <?php include(ROOT_PATH . "/includes/message.php") ?>
-                <table class="table table-striped table-hover bg-white table-borderless rounded table-admin" id="result">
-                    <thead>
-                        <tr>
-                            <th>Number</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Title</th>
-                            <th>Content</th>
-                            <th>Sending time</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $i = 1; ?>
-                        <?php foreach ($customer as $key) : ?>
-                            <tr>
-                                <td><?php echo $i ?></td>
-                                <td><?php echo $key[1] ?></td>
-                                <td><?php echo $key[2] ?></td>
-                                <td><?php echo $key[3] ?></td>
-                                <td><?php echo $key[4] ?></td>
-                                <td><?php echo $key[5] ?></td>
-                                <td>
-                                    <?php $id = $key[0]; ?>
-                                    <?php if ($key[6] === 'Waiting') : ?>
-                                        <a class="btn-status bg-warning" href="customer_reply.php?repId=<?php echo $id ?>"><?php echo $key[6] ?></a>
-                                    <?php else : ?>
-                                        <a class="btn-status bg-success" href="customer_detail.php?detail_Id=<?php echo $id ?>"><?php echo $key[6] ?></a>
-                                    <?php endif; ?>
-                                </td>
-
-                            </tr>
-                            <?php $i++; ?>
-                        <?php endforeach; ?>
->>>>>>> bc08804253b275e89be6f1723094410de4afb5bc
                     </tbody>
                 </table>
                 <!-- <a href="customer_new.php" class="btn-skill"><i class="fas fa-plus"></i></a> -->
