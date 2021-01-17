@@ -27,20 +27,20 @@ include(ROOT_PATH . "/controllers/ca.php");
                 <div class="title-box">
                     <h3 class="admin-title">Update Certificate</h3>
                 </div>
-                <form action="ca_edit.php" method="post">
+                <form action="ca_edit.php" method="post" class="form-manage form">
                     <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                     <input type="hidden" name="certificate_id" value="<?php echo $certificate_id; ?>"></input>
                     <div class="form-group">
                         <label for="">Date</label>
-                        <input type="date" name="date" id="" value="<?php echo $ca_date; ?>" class="form-control input-read" aria-describedby="helpId">
+                        <input type="date" name="date" id="" value="<?php echo $ca_date; ?>" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input type="text" name="certificate_name" id="" value="<?php echo $ca_name; ?>" class="form-control input-read" aria-describedby="helpId"></input>
+                        <input type="text" name="certificate_name" id="" value="<?php echo $ca_name; ?>" class="form-control form-input" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
                         <label for="">Description</label>
-                        <textarea type="text" name="description" id="" class="form-control input-read" aria-describedby="helpId"><?php echo $ca_des; ?></textarea>
+                        <textarea type="text" name="description" id="" class="form-control form-input" aria-describedby="helpId"><?php echo $ca_des; ?></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="ca_save">Save <div class="btn-manage-box"></div></button>
                 </form>

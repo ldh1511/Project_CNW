@@ -47,7 +47,6 @@ adminOnly();
                             <th>Name</th>
                             <th>Description</th>
                             <th>Image</th>
-                            <th>Link</th>
                             <th>Detail</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -62,11 +61,10 @@ adminOnly();
                                 <td class="align-middle"><?php echo $key[1] ?></td>
                                 <td class="align-middle"><?php echo $key[2] ?></td>
                                 <td class="align-middle"><?php echo $key[3] ?></td>
-                                <td class="align-middle"><?php echo $key[4] ?></td>
+                                <td class="align-middle"><?php echo html_entity_decode(substr($key[4], 0, 35) . "...") ?></td>
                                 <td class="align-middle">
                                     <img class="img-col" src="<?php echo '../Img/' . $key[5] ?>" alt="">
                                 </td>
-                                <td class="align-middle"><?php echo $key[6] ?></td>
                                 <td class="align-middle"><a href="pj_detail.php?pj_id=<?php echo $key[0] ?>"><i class="fas fa-book-reader"></i></a></td>
                                 <td class="align-middle"><a href="pj_edit.php?edit_id=<?php echo $key[0] ?>"><i class="far fa-edit"></i></a></td>
                                 <td class="align-middle"><a href="pj_edit.php?delete_id=<?php echo $key[0] ?>"><i class="far fa-trash"></i></a></td>

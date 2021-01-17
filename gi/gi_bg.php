@@ -25,7 +25,7 @@ adminOnly();
             <?php include(ROOT_PATH . "/includes/left_menu.php") ?>
             <div class="content-right admin-container">
                 <div class="title-box">
-                    <h3 class="admin-title">Update Banner</h3>
+                    <h3 class="admin-title">Update team's banner</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>

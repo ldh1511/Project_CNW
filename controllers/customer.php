@@ -79,7 +79,7 @@ if (isset($_POST['customer_reply'])) {
         $body = '' . $reply_content . '';
 
         unset($_POST['customer_reply'], $_POST['customer_email']);
-        insert('reply', $_POST);
+        insert('reply_info', $_POST);
         update('customers', $_POST['customer_id'], ['status' => 'Replied'], 'customer_id');
 
         $mail = new PHPMailer();
@@ -114,7 +114,7 @@ if (isset($_POST['customer_reply'])) {
 if (isset($_GET['detail_Id'])) {
     adminOnly();
     $id = $_GET['detail_Id'];
-    $detail = selectOneWithCol('reply.*, customer_email, account.name', 'reply, customers, account', [0 => 'reply.customer_id=customers.customer_id', 1 => 'reply.id=account.id', 2 => "reply.customer_id=$id"]);
+    $detail = selectOneWithCol('reply_info.*, customer_email, account.name', 'reply_info, customers, account', [0 => 'reply_info.customer_id=customers.customer_id', 1 => 'reply_info.id=account.id', 2 => "reply_info.customer_id=$id"]);
     $reply_email = $detail['customer_email'];
     $reply_subject = $detail['reply_subject'];
     $reply_content = $detail['reply_content'];

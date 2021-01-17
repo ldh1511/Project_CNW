@@ -27,19 +27,21 @@ require(ROOT_PATH . "/controllers/gi_skill.php");
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                    <h3 class="admin-title">detail skill</h3>
+                    <h3 class="admin-title">skill detail</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
                 <form action="skill_detail.php" method="post">
-                    <div class="form-group">
-                        <label for="">Name</label>
-                        <input type="text" name="skill_name" value="<?php echo $skill_name; ?>" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Describle</label>
-                        <textarea type="text" name="skill_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $skill_des; ?></textarea>
+                    <div class="container">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" name="skill_name" value="<?php echo $skill_name; ?>" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Describle</label>
+                            <textarea type="text" name="skill_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $skill_des; ?></textarea>
+                        </div>
                     </div>
                 </form>
                 <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>

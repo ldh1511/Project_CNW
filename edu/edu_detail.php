@@ -27,29 +27,29 @@ adminOnly();
             <div class="content-right admin-container">
                 <!--  resume -->
                 <div class="title-box">
-                    <h3 class="admin-title">Detail education</h3>
+                    <h3 class="admin-title">education detail</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="">Start date</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $edu_start ?>" disabled></input>
+                <div class="container">
+                    <div class="form-group">
+                        <label for="">Start date</label>
+                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $edu_start ?>" disabled></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Finish date</label>
+                        <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $edu_finish ?>" disabled></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" name="edu_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $edu_name ?>" disabled></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description</label>
+                        <textarea type="text" name="edu_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $edu_des ?></textarea>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="">Finish date</label>
-                    <input type="date" name="service_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $edu_finish ?>" disabled></input>
-                </div>
-                <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" name="edu_name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $edu_name ?>" disabled></input>
-                </div>
-                <div class="form-group">
-                    <label for="">Description</label>
-                    <textarea type="text" name="edu_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $edu_des ?></textarea>
-                </div>
-
                 <a class="btn btn-primary btn-back" href="edu_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>
         </div>

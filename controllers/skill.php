@@ -64,7 +64,7 @@ if (isset($_REQUEST['term'])) {
         echo "<tr>";
         echo "<td>" . $i . "</td>";
         echo "<td>" . $key[1] . "</td>";
-        echo "<td>" . $key[2] . "</td>";
+        echo "<td>" . html_entity_decode(substr($key[2], 0, 35) . "...") . "</td>";
         echo "<td><a href='skill_detail.php?detail_id=" . $key[0] . "'><i class='fas fa-book-reader'></i></a></td>";
         echo "<td><a href='skill_detail.php?delete_id=" . $key[0] . "'><i class='far fa-trash'></i></a></td>";
         echo "</tr>";

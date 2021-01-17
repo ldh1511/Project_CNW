@@ -50,7 +50,7 @@ adminOnly();
                             <tr>
                                 <td> <?php echo $i ?> </td>
                                 <td> <?php echo $key[1] ?> </td>
-                                <td> <?php echo $key[2] ?> </td>
+                                <td> <?php echo html_entity_decode(substr($key[2], 0, 35) . "...") ?> </td>
                                 <td><a href="skill_detail.php?detail_id=<?php echo $key[0]?>"><i class=" fas fa-book-reader"></i></a></td>
                                 <td><a href="skill_detail.php?delete_id=<?php echo $key[0]?>"><i class=" far fa-trash"></i></a></td>
                             </tr>

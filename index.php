@@ -64,7 +64,9 @@ include('get_data.php');
                             <h6>Address:</h6> <span><?php echo $key[11] ?></span>
                           </li>
                           <li>
-                            <a href="#">Read CV</a>
+                          <!-- <?php if($key[5]=='Le Duong Hung'):?>
+                            <a href="./cv_LeDuongHung/per_cv.php">Read CV</a>
+                          <?php endif ?> -->
                           </li>
                         </ul>
                       </div>
@@ -85,7 +87,6 @@ include('get_data.php');
                     <div class="box">
                       <h5><?php echo $key[1] ?></h5>
                       <p><?php echo $key[3] ?></p>
-                      <h6><a href="#">Order now ></a></h6>
                     </div>
                   </div>
                 <?php endforeach; ?>
@@ -108,9 +109,9 @@ include('get_data.php');
                   <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active text-center p-4">
                       <blockquote class="blockquote text-center">
-                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
+                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with this team has been a pleasure. Better yet -
                           I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
-                          couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
+                          couldn't ask for better support. Thank you very much!.</p>
                         <div class="row">
                           <div class="col-md-4">
                             <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-1-140x140.jpg" alt="" class="avt">
@@ -132,9 +133,9 @@ include('get_data.php');
                     </div>
                     <div class="carousel-item text-center p-4">
                       <blockquote class="blockquote text-center">
-                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
+                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with this team has been a pleasure. Better yet -
                           I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
-                          couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
+                          couldn't ask for better support. Thank you very much!.</p>
                         <div class="row">
                           <div class="col-md-4">
                             <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-3-140x140.jpg" alt="" class="avt">
@@ -156,9 +157,9 @@ include('get_data.php');
                     </div>
                     <div class="carousel-item text-center p-4">
                       <blockquote class="blockquote text-center">
-                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
+                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with this team has been a pleasure. Better yet -
                           I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
-                          couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
+                          couldn't ask for better support. Thank you very much!.</p>
                         <div class="row">
                           <div class="col-md-4">
                             <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-2-140x140.jpg" alt="" class="avt">

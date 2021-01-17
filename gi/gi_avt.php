@@ -26,7 +26,7 @@ adminOnly();
             <div class="content-right admin-container">
 
                 <div class="title-box">
-                    <h3 class="admin-title">Update Team Avatar</h3>
+                    <h3 class="admin-title">Update Team's Avatar</h3>
                     <div class="admin-bars">
                         <i class="fas fa-bars"></i>
                     </div>

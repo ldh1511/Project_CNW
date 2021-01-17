@@ -52,6 +52,9 @@ if (isset($_POST['updatePass'])) {
     if (empty($_POST['pass_conf'])) {
         array_push($errors, 'Password confirm is required');
     }
+    if($_POST['pass_new']!= $_POST['pass_conf']){
+        array_push($errors, 'Password confirm is incorrect');
+    }
     if (count($errors) === 0) {
         $check = selectOne('account', ['id' => $_POST['id']]);
         if (!$check || !password_verify($_POST['pass_old'], $check['password'])) {

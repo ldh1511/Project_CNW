@@ -53,12 +53,12 @@ adminOnly();
                         </tr>
                     </thead>
                     <tbody>
-                    <?php $i=1 ?>
+                    <?php $i=1;?>
                         <?php foreach ($list_skill as $skill) {
                             echo '<tr>';
                             echo '<td>' . $i . '</td>';
                             echo '<td>' . $skill[1] . '</td>';
-                            echo '<td>' . $skill[2] . '</td>';
+                            echo '<td>' . html_entity_decode(substr($skill[2], 0, 35) . "...") . '</td>';
                             echo '<td>' . $skill[3] . '</td>';
                             echo '<td>' . $skill[5] . '</td>';
                             echo '<td><a href="skill_detail.php?detail_id=' . $skill[0] . '"><i class="fas fa-book-reader"></i></a></td>';
@@ -84,7 +84,7 @@ adminOnly();
                 var result = $('#result');
                 if (inputVal.length) {
                     $.ajax({
-                        url: "/project/controllers/skill.php",
+                        url: "/project/controllers/gi_skill.php",
                         type: "get",
                         data: {
                             term: inputVal

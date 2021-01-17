@@ -32,17 +32,18 @@ require(ROOT_PATH . "/controllers/gi_skill.php");
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-                <form action="skill_edit.php" method="post">
+                <form action="skill_edit.php" method="post" class="form-manage form">
                     <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                     <input type="hidden" name="skill_id" value="<?php echo $skill_id; ?>"></input>
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input value="<?php echo $skill_name; ?>" type="text" name="skill_name" id="" class="form-control input-read" aria-describedby="helpId"></input>
+                        <input value="<?php echo $skill_name; ?>" type="text" name="skill_name" id="" class="form-control form-input" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
                         <label for="">Describle</label>
-                        <textarea type="text" name="skill_des" id="" class="form-control input-read" aria-describedby="helpId"><?php echo $skill_des; ?></textarea>
+                        <textarea type="text" name="skill_des" id="" class="form-control form-input" aria-describedby="helpId"><?php echo $skill_des; ?></textarea>
                     </div>
+
                     <button class="btn btn-primary btn-manage" name="skill_save">Save <div class="btn-manage-box"></div></button>
                 </form>
                 <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>
