@@ -1,4 +1,4 @@
-<?php 
+<?php
 include($_SERVER['DOCUMENT_ROOT'] . "/project/database/db.php");
 include($_SERVER['DOCUMENT_ROOT'] . "/project/helper/middleware.php");
 
@@ -95,7 +95,7 @@ if (isset($_POST['svc_edit'])) {
     $svc_name = $_POST['service_name'];
     $count = 0;
     $svc_id = $_POST['svc_id'];
-    $svc=selectCol('*','service',"service_id !=$svc_id");
+    $svc = selectCol('*', 'service', "service_id !=$svc_id");
     if (empty($_POST['service_name'])) {
         array_push($errors, 'Enter service name');
     }
@@ -116,6 +116,7 @@ if (isset($_POST['svc_edit'])) {
         array_push($errors, 'Error: namesake');
     }
     if (count($errors) === 0) {
+        $service_id=$_POST['svc_id'];
         $result = selectOne('service', ['service_id' => $_POST['svc_id']]);
         unset($_POST['svc_edit'], $_POST['svc_id']);
         if ($_POST['service_name'] != $result['service_name']) {
@@ -139,6 +140,7 @@ if (isset($_POST['svc_edit'])) {
                 }
                 $i++;
             }
+            $content=$content ." Service_id: $service_id";
             $sql = "insert into history_service(content,id,service_id) values('$content', '$acc_id','$svc_id')";
             insertWithData($sql);
         }
@@ -253,9 +255,12 @@ if (isset($_POST['svc_import_prv'])) {
     }
 }
 // HISTORY
-if (isset($_GET['history_id'])) {
-    delete('history_service', $_GET['history_id'], 'history_svc_id');
-    $_SESSION['message'] = 'Service history deleted successfully';
+if (isset($_GET['service_id'])) {
+    $service_id=$_GET['service_id'];
+    $id=$_GET['id'];
+    $sql = "delete from history_service where service_id='$service_id' and id='$id'";
+    mysqli_query($conn, $sql);
+    $_SESSION['message'] = "Service's history deleted successfully";
     $_SESSION['type'] = 'success';
     header('location: ' . BASE_URL . "/svc/svc_history.php");
     exit();

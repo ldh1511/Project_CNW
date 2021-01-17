@@ -33,14 +33,17 @@ require(ROOT_PATH . "/controllers/skill.php");
                     </div>
                 </div>
                 <form action="skill_detail.php" method="post">
-                    <div class="form-group">
-                        <label for="">Name</label>
-                        <input type="text" name="skill_name" value="<?php echo $name; ?>" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                    <div class="container">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" name="skill_name" value="<?php echo $name; ?>" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Description</label>
+                            <textarea type="text" name="skill_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $des; ?></textarea>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="">Describle</label>
-                        <textarea type="text" name="skill_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $des; ?></textarea>
-                    </div>
+
                 </form>
                 <a class="btn btn-primary btn-back" href="skill_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

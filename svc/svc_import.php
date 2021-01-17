@@ -43,7 +43,6 @@
                                     <th>Name</th>
                                     <th>Price</th>
                                     <th>Description</th>
-                                    <th>Add by</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,7 +53,6 @@
                                         <td><?php echo $key[0] ?></td>
                                         <td><?php echo $key[1] ?></td>
                                         <td><?php echo html_entity_decode(substr($key[2], 0, 35) . "..."); ?></td>
-                                        <td><?php echo $key[3] ?></td>
                                     </tr>
                                     <?php $i++ ?>
                                 <?php endforeach; ?>

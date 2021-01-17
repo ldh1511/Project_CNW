@@ -31,24 +31,24 @@ adminOnly();
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-                <form action="edu_edit.php" method="post">
+                <form action="edu_edit.php" method="post" class="form-manage form">
                     <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                     <input type="hidden" value="<?php echo $education_id; ?>" name="education_id"></input>
                     <div class="form-group">
                         <label for="">Start date</label>
-                        <input type="date" value="<?php echo $edu_start; ?>" name="edu_start" id="" class="form-control input-read" aria-describedby="helpId">
+                        <input type="date" value="<?php echo $edu_start; ?>" name="edu_start" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">End date</label>
-                        <input type="date" value="<?php echo $edu_finish; ?>" name="edu_finish" id="" class="form-control input-read" aria-describedby="helpId">
+                        <input type="date" value="<?php echo $edu_finish; ?>" name="edu_finish" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">Name of School</label>
-                        <input type="text" value="<?php echo $edu_name; ?>" name="edu_name" id="" class="form-control input-read" aria-describedby="helpId"></input>
+                        <input type="text" value="<?php echo $edu_name; ?>" name="edu_name" id="" class="form-control form-input" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
                         <label for="">Description</label>
-                        <textarea type="text" name="edu_des" id="" class="form-control input-read" aria-describedby="helpId"> <?php echo $edu_des; ?> </textarea>
+                        <textarea type="text" name="edu_des" id="" class="form-control form-input" aria-describedby="helpId"> <?php echo $edu_des; ?> </textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="edu_save">Save <div class="btn-manage-box"></div></button>
                 </form>

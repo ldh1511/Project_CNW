@@ -1,7 +1,7 @@
 <?php
+require_once("../helper/mail/class.phpmailer.php");
+require_once("../helper/mail/class.smtp.php");
 
-require_once(ROOT_PATH . "/helper/mail/class.phpmailer.php");
-require_once(ROOT_PATH . "/helper/mail/class.smtp.php");
 
 if (isset($_POST['Username2'])) {
     //#1
@@ -40,5 +40,6 @@ if (isset($_POST['Username2'])) {
     } else {
         echo 'Thư chưa được gửi.';
     }
+
+
 }
-?>

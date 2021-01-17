@@ -31,7 +31,6 @@ if (isset($_REQUEST['term'])) {
     echo "<th>Name</th>";
     echo "<th>Description</th>";
     echo "<th>Image</th>";
-    echo "<th>Link</th>";
     echo "<th>Detail</th>";
     echo "<th>Edit</th>";
     echo "<th>Delete</th>";
@@ -45,9 +44,8 @@ if (isset($_REQUEST['term'])) {
         echo "<td class='align-middle'>" . $key[1] . "</td>";
         echo "<td class='align-middle'>" . $key[2] . "</td>";
         echo "<td class='align-middle'>" . $key[3] . "</td>";
-        echo "<td class='align-middle'>" . $key[4] . "</td>";
+        echo "<td class='align-middle'>" . html_entity_decode(substr($key[4], 0, 35) . "...") . "</td>";
         echo "<td class='align-middle'><img class='img-col' src='../Img/" . $key[5] . "' alt=''></td>";
-        echo "<td>" . $key[6] . "</td>";
         echo "<td class='align-middle'><a href='pj_detail.php?pj_id=" . $key[0] . "'><i class='fas fa-book-reader'></i></a></td>";
         echo "<td class='align-middle'><a href='pj_edit.php?edit_id=" . $key[0] . "'><i class='far fa-edit'></i></a></td>";
         echo "<td class='align-middle'><a href='pj_edit.php?delete_id=" . $key[0] . "'><i class='far fa-trash'></i></a></td>";

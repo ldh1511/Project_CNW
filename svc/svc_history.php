@@ -48,10 +48,10 @@ adminOnly();
                         <?php foreach ($history as $key) : ?>
                             <tr>
                                 <td><?php echo $i ?></td>
-                                <td><?php echo $key[1] ?></td>
                                 <td><?php echo $key[2] ?></td>
-                                <td><?php echo $key[5] ?></td>
-                                <td><a href="svc_edit.php?history_id=<?php echo $key[0] ?>"><i class="far fa-trash"></i></a></td>
+                                <td><?php echo $key[3] ?></td>
+                                <td><?php echo $key[4] ?></td>
+                                <td><a href="svc_edit.php?service_id=<?php echo $key[1] ?>&id=<?php echo $key[0] ?>"><i class="far fa-trash"></i></a></td>
                             </tr>
                             <?php $i++ ?>
                         <?php endforeach; ?>

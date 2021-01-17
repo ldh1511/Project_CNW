@@ -29,17 +29,19 @@ include(ROOT_PATH . "/controllers/ca.php");
                 <div class="title-box">
                     <h3 class="admin-title">Certificate detail</h3>
                 </div>
-                <div class="form-group">
-                    <label for="">Date of Issue</label>
-                    <input type="date" name="date" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $date ?>" disabled>
-                </div>
-                <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" name="name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $certificate_name ?>" disabled>
-                </div>
-                <div class="form-group">
-                    <label for="">Description</label>
-                    <textarea type="text" name="description" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $description ?> </textarea>
+                <div class="container">
+                    <div class="form-group">
+                        <label for="">Date of Issue</label>
+                        <input type="date" name="date" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $date ?>" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" name="name" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $certificate_name ?>" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description</label>
+                        <textarea type="text" name="description" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $description ?> </textarea>
+                    </div>
                 </div>
                 <a class="btn btn-primary btn-back" href="ca_index.php"><i class="fas fa-chevron-circle-left"></i></a>
             </div>

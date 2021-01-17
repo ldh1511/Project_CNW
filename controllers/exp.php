@@ -27,9 +27,6 @@ if (isset($_POST['exp_add'])) {
     if (empty($_POST['exp_start'])) {
         array_push($errors, 'Enter start date');
     }
-    if (empty($_POST['exp_finish'])) {
-        array_push($errors, 'Enter finish date');
-    }
     if (empty($_POST['company'])) {
         array_push($errors, 'Enter company');
     }
@@ -73,9 +70,6 @@ if (isset($_GET['edit_id'])) {
 if (isset($_POST['exp_save'])) {
     if (empty($_POST['exp_start'])) {
         array_push($errors, 'Enter start date');
-    }
-    if (empty($_POST['exp_finish'])) {
-        array_push($errors, 'Enter finish date');
     }
     if (empty($_POST['company'])) {
         array_push($errors, 'Enter company');

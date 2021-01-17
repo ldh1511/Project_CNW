@@ -75,10 +75,10 @@ function update($table, $id, $data,$nameID){
     $i=0;
     foreach ($data as $key => $value) {
         if($i===0){
-            $sql=$sql." $key='$value'";
+            $sql=$sql." $key=\"$value\"";
         }
         else{
-            $sql=$sql.", $key='$value'";
+            $sql=$sql.", $key=\"$value\"";
         }
         $i++;
     }

@@ -160,6 +160,7 @@
                     </form>
                 </div>
             </div>
+            <a class="btn btn-primary btn-back" href="../index.php"><i class="far fa-arrow-alt-circle-left"></i></i></a>
       </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

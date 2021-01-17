@@ -64,11 +64,11 @@ adminOnly();
                     <div class="row  p-0 m-0">
                         <div class="form-group form-group flex-grow-1 mr-2">
                             <label for="">Target</label>
-                            <input type="text" name="target" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['target'] ?>">
+                            <input type="text" name="target" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['target'] ?>" disabled>
                         </div>
                         <div class="form-group form-group flex-grow-1">
                             <label for="">Hobby</label>
-                            <input type="text" name="hobby" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['hobby'] ?>">
+                            <input type="text" name="hobby" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['hobby'] ?>" disabled>
                         </div>
                     </div>
                     <div class="form-group">

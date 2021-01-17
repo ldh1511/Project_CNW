@@ -32,24 +32,24 @@ adminOnly();
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
-                <form action="exp_edit.php" method="post">
+                <form action="exp_edit.php" method="post" class="form-manage form">
                     <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                     <input type="hidden" name="exp_id" value="<?php echo $exp_id; ?>"></input>
                     <div class="form-group">
                         <label for="">Start date</label>
-                        <input type="date" value="<?php echo $exp_start; ?>" name="exp_start" id="" class="form-control input-read" aria-describedby="helpId">
+                        <input type="date" value="<?php echo $exp_start; ?>" name="exp_start" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">End date</label>
-                        <input type="date" value="<?php echo $exp_finish; ?>" name="exp_finish" id="" class="form-control input-read" aria-describedby="helpId">
+                        <input type="date" value="<?php echo $exp_finish; ?>" name="exp_finish" id="" class="form-control form-input" aria-describedby="helpId">
                     </div>
                     <div class="form-group">
                         <label for="">Name of Company</label>
-                        <input type="text" value="<?php echo $company; ?>" name="company" id="" class="form-control input-read" aria-describedby="helpId"></input>
+                        <input type="text" value="<?php echo $company; ?>" name="company" id="" class="form-control form-input" aria-describedby="helpId"></input>
                     </div>
                     <div class="form-group">
                         <label for="">Description</label>
-                        <textarea type="text" name="exp_des" id="" class="form-control input-read" aria-describedby="helpId"><?php echo $exp_des; ?></textarea>
+                        <textarea type="text" name="exp_des" id="" class="form-control form-input" aria-describedby="helpId"><?php echo $exp_des; ?></textarea>
                     </div>
                     <button class="btn btn-primary btn-manage" name="exp_save">Save <div class="btn-manage-box"></div></button>
                 </form>

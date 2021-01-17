@@ -77,7 +77,8 @@ if (isset($_POST['gi_edit'])) {
 }
 
 if (isset($_GET['delete_Id'])) {
-    delete('history_general_info', $_GET['delete_Id'], 'history_gi_id');
+    $id=$_GET['delete_Id'];
+    delete('history_general_info',$id,'history_gi_id');
     $_SESSION['message'] = "General Information history deleted successfully";
     $_SESSION['type'] = 'success';
     header('location: ' . BASE_URL . "/gi/gi_history.php");

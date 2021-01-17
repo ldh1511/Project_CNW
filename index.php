@@ -35,50 +35,45 @@ include('get_data.php');
         <div class="content-right">
           <!--  resume -->
           <div class="container">
-            <!-- <div class="row">
-              <div class="col span-1-of-3">
-                <i class="fas fa-book-reader icon"></i>
-                <p class="resume">3+ <em>Years Experience</em> </p>
-              </div>
-              <div class="col span-1-of-3">
-                <i class="fas fa-folder-open icon"></i>
-                <p class="resume">10+ <em>Completed Projects</em> </p>
-              </div>
-              <div class="col span-1-of-3">
-                <i class="fas fa-user-check icon"></i>
-                <p class="resume">10 <em>Happy Customers</em> </p>
-              </div>
+            <div class="banner">
+              <img src="./Img/<?php echo $general_info['general_banner'] ?>" alt="">
             </div>
-          </div> -->
 
             <!-- CV -->
             <div class="title">
               <h4>Our Resume</h4>
             </div>
-
-          <!-- cv2 -->        
-          <div class="row cv-row">
-              <div class="box"> 
-                <div class="row">
-                <div class="col-md-4 cv-pic">
-                  <img src="./Img/Duyen.jpeg" alt="">
-                </div>  
-                <div class="col-md-8 cv-element">
-                <ul>
-                  <li>
-                    <h6>Họ và tên:</h6> <span>Ngô Thị Duyên</span>
-                  </li>
-                  <li>
-                    <h6>Ngày sinh:</h6> <span>28/08/2000</span>
-                  </li>
-                  <li>
-                    <h6>Thành phố:</h6> <span>Hà Nội</span>
-                  </li>
-                  <li>
-                    <a href="./cv-duyen/cv-duyen.php">Read CV</a>
-                  </li>
-                </ul>
-                </div> 
+            <div class="container">
+              <!-- cv1 -->
+              <?php foreach ($acc as $key) : ?>
+                <div class="row cv-row">
+                  <div class="box">
+                    <div class="row">
+                      <div class="col-md-4 cv-pic">
+                        <img src="./Img/<?php echo $key[2] ?>" alt="">
+                      </div>
+                      <div class="col-md-8 cv-element">
+                        <ul>
+                          <li>
+                            <h6>Name:</h6> <span><?php echo $key[5] ?></span>
+                          </li>
+                          <li>
+                            <h6>Birthday:</h6> <span><?php echo $key[9] ?></span>
+                          </li>
+                          <li>
+                            <h6>Address:</h6> <span><?php echo $key[11] ?></span>
+                          </li>
+                          <li>
+                          <?php if($key[5]=='Le Duong Hung'):?>
+                            <a href="./cv_LeDuongHung/per_cv.php">Read CV</a>
+                          <?php else:?>
+                            <a href="./cv-duyen/cv-duyen.php">Read CV</a>
+                          <?php endif ?>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               <?php endforeach; ?>
             </div>
@@ -94,7 +89,6 @@ include('get_data.php');
                     <div class="box">
                       <h5><?php echo $key[1] ?></h5>
                       <p><?php echo $key[3] ?></p>
-                      <h6><a href="#">Order now ></a></h6>
                     </div>
                   </div>
                 <?php endforeach; ?>
@@ -117,9 +111,9 @@ include('get_data.php');
                   <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active text-center p-4">
                       <blockquote class="blockquote text-center">
-                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
+                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with this team has been a pleasure. Better yet -
                           I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
-                          couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
+                          couldn't ask for better support. Thank you very much!.</p>
                         <div class="row">
                           <div class="col-md-4">
                             <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-1-140x140.jpg" alt="" class="avt">
@@ -141,9 +135,9 @@ include('get_data.php');
                     </div>
                     <div class="carousel-item text-center p-4">
                       <blockquote class="blockquote text-center">
-                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
+                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with this team has been a pleasure. Better yet -
                           I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
-                          couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
+                          couldn't ask for better support. Thank you very much!.</p>
                         <div class="row">
                           <div class="col-md-4">
                             <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-3-140x140.jpg" alt="" class="avt">
@@ -165,9 +159,9 @@ include('get_data.php');
                     </div>
                     <div class="carousel-item text-center p-4">
                       <blockquote class="blockquote text-center">
-                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
+                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with this team has been a pleasure. Better yet -
                           I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
-                          couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
+                          couldn't ask for better support. Thank you very much!.</p>
                         <div class="row">
                           <div class="col-md-4">
                             <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-2-140x140.jpg" alt="" class="avt">

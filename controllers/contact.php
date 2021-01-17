@@ -2,6 +2,7 @@
 include(ROOT_PATH . "/database/db.php");
 require_once(ROOT_PATH . "/helper/mail/class.phpmailer.php");
 require_once(ROOT_PATH . "/helper/mail/class.smtp.php");
+
 if (isset($_POST['btn-send'])) {
     $name = $_POST['Username'];
     $email = $_POST['Email'];

@@ -33,21 +33,23 @@ adminOnly();
                     </div>
                 </div>
                 <form action="exp_edit.php" method="post">
-                    <div class="form-group">
-                        <label for="">Start date</label>
-                        <input type="date" value="<?php echo $exp_start; ?>" name="exp_start" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">End date</label>
-                        <input type="date" value="<?php echo $exp_finish; ?>" name="exp_finish" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Name of Company</label>
-                        <input type="text" value="<?php echo $company; ?>" name="company" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Description</label>
-                        <textarea type="text" name="exp_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $exp_des; ?></textarea>
+                    <div class="container">
+                        <div class="form-group">
+                            <label for="">Start date</label>
+                            <input type="date" value="<?php echo $exp_start; ?>" name="exp_start" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="">End date</label>
+                            <input type="date" value="<?php echo $exp_finish; ?>" name="exp_finish" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Name of Company</label>
+                            <input type="text" value="<?php echo $company; ?>" name="company" id="" class="form-control input-read" aria-describedby="helpId" disabled></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Description</label>
+                            <textarea type="text" name="exp_des" id="" class="form-control input-read" aria-describedby="helpId" disabled><?php echo $exp_des; ?></textarea>
+                        </div>
                     </div>
                 </form>
                 <a class="btn btn-primary btn-back" href="exp_index.php"><i class="fas fa-chevron-circle-left"></i></a>
