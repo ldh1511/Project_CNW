@@ -64,9 +64,11 @@ include('get_data.php');
                             <h6>Address:</h6> <span><?php echo $key[11] ?></span>
                           </li>
                           <li>
-                          <!-- <?php if($key[5]=='Le Duong Hung'):?>
+                          <?php if($key[5]=='Le Duong Hung'):?>
                             <a href="./cv_LeDuongHung/per_cv.php">Read CV</a>
-                          <?php endif ?> -->
+                          <?php else:?>
+                            <a href="./cv-duyen/cv-duyen.php">Read CV</a>
+                          <?php endif ?>
                           </li>
                         </ul>
                       </div>
