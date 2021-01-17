@@ -156,8 +156,14 @@ html,body{
 .left-element-admin::-webkit-scrollbar{
     display: none;
 }
+.main-nav{
+    display: none;
+}
+.content-box-bottom{
+    display: flex;
+}
 .content-left{
-    width: 23%;
+    width: 300px;
     position: relative;
     overflow: hidden;
 }
@@ -443,6 +449,47 @@ img.logo:hover{
     background-color: #fff;
     height: 100px;
 }
+/* Menu left */
+.menu-left-active{
+    display: unset !important;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    height: 100%;
+    animation: ani-right .5s forwards;
+    width: 300px !important;
+}
+
+.content-left.menu-left-active .left-element {
+    display: unset;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.nav-icon-close {
+    padding: 16px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 25px;
+    height: 75px;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+
+nav-icon-close {
+    padding: 10px;
+}
+
+@keyframes ani-right{
+    from{
+        transform: translateX(-240px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
 /* Menu right */
 .content-right.content-right-active{
     animation: ani2 .5s forwards;
@@ -494,6 +541,10 @@ img.logo:hover{
 .menu-right-box.active2{
    
     animation: ani1_1 .5s forwards;
+}
+.menu-right-active{
+    display: block!important;
+    top: 0;
 }
 @keyframes ani1{
     from{
@@ -785,6 +836,7 @@ form h2{
 .contact-box ul li span{
     font-size: 14px;
 }
+
 .contact-box{
     background-color: white;
     box-shadow: rgba(121, 113, 113, 0.1) 0px 4px 12px;
@@ -992,4 +1044,76 @@ form h2{
 .footer-box{
     background-color: white!important;
     border-radius: 15px;
+}
+
+
+/* REPONSIVE */
+@media only screen and (max-width: 1200px){
+    .content-left {
+        width: 30%;
+    }
+    .left-element {
+        width: 26%;
+    }
+}
+@media only screen and (max-width: 1035px){
+    .content-left {
+        width: 0;
+    }
+    .left-element {
+        display: none;
+    }
+    .menu-right-box {
+        display: none;
+        height: 100vh;
+        right: 0;
+    }
+    .nav-icon-close{
+        display: flex;
+    }
+    .content-box{
+        margin: 0;
+        flex-direction: column;
+    }
+    .contact-container{
+        margin-top: 75px;
+    }
+    .content-box-bottom {
+        margin-top: 85px;
+    }
+    .main-nav{
+        display: block;
+        height: 75px;
+        background: #f4f4f6;
+        position: fixed;
+        z-index: 99999;
+        width: 100%;
+        box-shadow: 0 3px 8px 0 rgba(15,15,20,.2);
+        display: flex;
+        justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        font-size: 25px;
+    }
+    .nav-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .content-box::before, .content-box::after {
+        display: none;
+    }
+    .content-right {
+        width: 100%;
+        padding-right: 0;
+    }
+    .form-login {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 768px){
+
 }

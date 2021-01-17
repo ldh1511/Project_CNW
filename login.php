@@ -19,8 +19,16 @@
 <body>
     <div class="main-container">
         <div class="content-box">
-        <?php include(ROOT_PATH . "/includes/cv_left_menu.php"); ?>
-            <div class="content-right">
+            <nav class="main-nav">
+                <div class="nav-icon nav-icon-left">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="nav-icon nav-icon-right">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <?php include(ROOT_PATH . "/includes/cv_left_menu.php"); ?>
+            <div class="content-right contact-container">
                 <!--  resume -->
                 <div class="container">
 

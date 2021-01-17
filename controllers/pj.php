@@ -3,8 +3,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/project/database/db.php");
 include($_SERVER['DOCUMENT_ROOT'] . "/project/helper/middleware.php");
 if (isset($_SESSION['account_id'])) {
     $acc = selectOne('account', ['id' => $_SESSION['account_id']]);
+    $acc_id=$_SESSION['account_id'];
 }
-$projects = selectAll('projects');
+$projects = selectAll('projects',['id'=>$acc_id]);
 $pj_start = '';
 $pj_end = '';
 $pj_name = '';

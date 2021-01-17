@@ -19,15 +19,23 @@
 <body>
   <div class="main-container">
     <div class="content-box">
+    <nav class="main-nav">
+        <div class="nav-icon nav-icon-left">
+        <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-icon nav-icon-right">
+        <i class="fas fa-bars"></i>
+        </div>
+      </nav>
       <?php include(ROOT_PATH . "/includes/cv_left_menu.php"); ?>
 
       <div class="content-right">
-        <div class="container">
+        <div class="container contact-container">
           <div class="contact-info">
             <h4>Communications</h4>
 
             <div class=row>
-              <div class="col-md-5 contact-box">
+              <div class="col-md-5 contact-box mb-3">
                 <ul>
                   <li>
                     <h6>Address:</h6> <span>Thuyloi University- 175 Tay Son, Đong Da</span>
@@ -38,7 +46,7 @@
                 </ul>
               </div>
               <div class="col-md-2"></div>
-              <div class="col-md-5 contact-box">
+              <div class="col-md-5 contact-box mb-3">
                 <ul>
                   <li>
                     <h6>Email:</h6> <span>admin@gmail.com</span>
@@ -75,10 +83,6 @@
               </div>
             </form>
           </div>
-
-          <!-- Thêm vào db
-              
-              ?> -->
         </div>
       </div>
       <div class="menu-right">

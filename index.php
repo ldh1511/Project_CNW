@@ -17,282 +17,289 @@
 
 <body>
   <div class="main-container">
+
     <div class="content-box">
-    <?php include(ROOT_PATH . "/includes/cv_left_menu.php"); ?>
-      <div class="content-right">
-        <!--  resume -->
-        <div class="container">
-          <div class="banner">
-            <img src="./Img/banner.jpg" alt="">
-          </div>
-
-          <!-- CV -->
-          <div class="title">
-            <h4>Our Resume</h4>
-          </div>
+      <nav class="main-nav">
+        <div class="nav-icon nav-icon-left">
+        <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-icon nav-icon-right">
+        <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+      <div class="content-box-bottom">
+        <?php include(ROOT_PATH . "/includes/cv_left_menu.php"); ?>
+        <div class="content-right">
+          <!--  resume -->
           <div class="container">
-            <!-- cv1 -->
-            <div class="row cv-row">
-              <div class="box">
-                <div class="row">
-                  <div class="col-md-4 cv-pic">
-                    <img src="./Img/no_Img.jpg" alt="">
+            <div class="banner">
+              <img src="./Img/banner.jpg" alt="">
+            </div>
+
+            <!-- CV -->
+            <div class="title">
+              <h4>Our Resume</h4>
+            </div>
+            <div class="container">
+              <!-- cv1 -->
+              <div class="row cv-row">
+                <div class="box">
+                  <div class="row">
+                    <div class="col-md-4 cv-pic">
+                      <img src="./Img/no_Img.jpg" alt="">
+                    </div>
+                    <div class="col-md-8 cv-element">
+                      <ul>
+                        <li>
+                          <h6>Name:</h6> <span>Lê Dương Hùng</span>
+                        </li>
+                        <li>
+                          <h6>Birthday:</h6> <span>dd/mm/2000</span>
+                        </li>
+                        <li>
+                          <h6>City:</h6> <span>????</span>
+                        </li>
+                        <li>
+                          <a href="#">Read CV</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="col-md-8 cv-element">
-                    <ul>
-                      <li>
-                        <h6>Name:</h6> <span>Lê Dương Hùng</span>
-                      </li>
-                      <li>
-                        <h6>Birthday:</h6> <span>dd/mm/2000</span>
-                      </li>
-                      <li>
-                        <h6>City:</h6> <span>????</span>
-                      </li>
-                      <li>
-                        <a href="#">Read CV</a>
-                      </li>
-                    </ul>
+                </div>
+              </div>
+
+              <!-- cv2 -->
+              <div class="row cv-row">
+                <div class="box">
+                  <div class="row">
+                    <div class="col-md-4 cv-pic">
+                      <img src="./Img/Duyen.jpeg" alt="">
+                    </div>
+                    <div class="col-md-8 cv-element">
+                      <ul>
+                        <li>
+                          <h6>Name:</h6> <span>Ngô Thị Duyên</span>
+                        </li>
+                        <li>
+                          <h6>Birthday:</h6> <span>28/08/2000</span>
+                        </li>
+                        <li>
+                          <h6>City:</h6> <span>Hà Nội</span>
+                        </li>
+                        <li>
+                          <a href="#">Read CV</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- services -->
+            <div class="title">
+              <h4>Our Services</h4>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="box">
+                    <h5>Web Developer</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                    <h6><a href="#">Order now ></a></h6>
+                  </div>
+
+                </div>
+                <!-- <div class="col-md-1"></div> -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="box">
+                    <h5>UI/UX Design</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                    <h6><a href="#">Order now ></a></h6>
+                  </div>
+
+                </div>
+                <!-- <div class="col-md-1"></div> -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="box">
+                    <h5>Sound Design</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                    <h6><a href="#">Order now ></a></h6>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="box">
+                    <h5>Web Developer</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                    <h6><a href="#">Order now ></a></h6>
+                  </div>
+
+                </div>
+                <!-- <div class="col-md-1"></div> -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="box">
+                    <h5>UI/UX Design</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                    <h6><a href="#">Order now ></a></h6>
+                  </div>
+
+                </div>
+                <!-- <div class="col-md-1"></div> -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="box">
+                    <h5>Sound Design</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
+                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
+                    <h6><a href="#">Order now ></a></h6>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- cv2 -->
-            <div class="row cv-row">
-              <div class="box">
-                <div class="row">
-                  <div class="col-md-4 cv-pic">
-                    <img src="./Img/Duyen.jpeg" alt="">
-                  </div>
-                  <div class="col-md-8 cv-element">
-                    <ul>
-                      <li>
-                        <h6>Name:</h6> <span>Ngô Thị Duyên</span>
-                      </li>
-                      <li>
-                        <h6>Birthday:</h6> <span>28/08/2000</span>
-                      </li>
-                      <li>
-                        <h6>City:</h6> <span>Hà Nội</span>
-                      </li>
-                      <li>
-                        <a href="#">Read CV</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
 
+            <!-- Recommendations -->
+            <div class="title">
+              <h4>Recommendations</h4>
+            </div>
+            <div class="container">
+
+              <head>
+                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+              </head>
+
+              <div class="col text-light recomments-box" style="background-color: #f00f0f">
+                <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel" style="height:200px;">
+                  <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active text-center p-4">
+                      <blockquote class="blockquote text-center">
+                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
+                          I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
+                          couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-1-140x140.jpg" alt="" class="avt">
+                          </div>
+                          <div class="col-md-4">
+                            <p class="client-review-stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </p>
+                          </div>
+                          <div class="col-md-4">
+                            <footer class="blockquote-footer">Paul Trueman </footer>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                    <div class="carousel-item text-center p-4">
+                      <blockquote class="blockquote text-center">
+                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
+                          I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
+                          couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-3-140x140.jpg" alt="" class="avt">
+                          </div>
+                          <div class="col-md-4">
+                            <p class="client-review-stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </p>
+                          </div>
+                          <div class="col-md-4">
+                            <footer class="blockquote-footer">Paul Trueman </footer>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                    <div class="carousel-item text-center p-4">
+                      <blockquote class="blockquote text-center">
+                        <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
+                          I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
+                          couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-2-140x140.jpg" alt="" class="avt">
+                          </div>
+                          <div class="col-md-4">
+                            <p class="client-review-stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </p>
+                          </div>
+                          <div class="col-md-4">
+                            <footer class="blockquote-footer">Paul Trueman </footer>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                  </div>
+                  <ol class="carousel-indicators">
+                    <li data-target="#client-testimonial-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#client-testimonial-carousel" data-slide-to="1"></li>
+                    <li data-target="#client-testimonial-carousel" data-slide-to="2"></li>
+                  </ol>
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- services -->
-          <div class="title">
-            <h4>Our Services</h4>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4 col-md-6">
-                <div class="box">
-                  <h5>Web Developer</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                  <h6><a href="#">Order now ></a></h6>
+            <div class="conatainer">
+              <div class="row">
+                <!-- icon -->
+                <div class="col-md-3 icon-client">
+                  <img src="./Img/design.png" alt="" class="logo">
                 </div>
-
-              </div>
-              <!-- <div class="col-md-1"></div> -->
-              <div class="col-lg-4 col-md-6">
-                <div class="box">
-                  <h5>UI/UX Design</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                  <h6><a href="#">Order now ></a></h6>
+                <div class="col-md-3 icon-client">
+                  <img src="./Img/showtime.png" alt="" class="logo">
                 </div>
-
-              </div>
-              <!-- <div class="col-md-1"></div> -->
-              <div class="col-lg-4 col-md-6">
-                <div class="box">
-                  <h5>Sound Design</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                  <h6><a href="#">Order now ></a></h6>
+                <div class="col-md-3 icon-client">
+                  <img src="./Img/vintage.png" alt="" class="logo">
                 </div>
+                <div class="col-md-3 icon-client">
+                  <img src="./Img/design.png" alt="" class="logo">
+                </div>
+                <!-- contact -->
               </div>
             </div>
+            <div class="container footer-box">
+              <div class="row">
 
-
-            <div class="row">
-              <div class="col-lg-4 col-md-6">
-                <div class="box">
-                  <h5>Web Developer</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                  <h6><a href="#">Order now ></a></h6>
-                </div>
-
-              </div>
-              <!-- <div class="col-md-1"></div> -->
-              <div class="col-lg-4 col-md-6">
-                <div class="box">
-                  <h5>UI/UX Design</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                  <h6><a href="#">Order now ></a></h6>
-                </div>
-
-              </div>
-              <!-- <div class="col-md-1"></div> -->
-              <div class="col-lg-4 col-md-6">
-                <div class="box">
-                  <h5>Sound Design</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                    quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                  <h6><a href="#">Order now ></a></h6>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- Recommendations -->
-          <div class="title">
-            <h4>Recommendations</h4>
-          </div>
-          <div class="container">
-
-            <head>
-              <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            </head>
-
-            <div class="col text-light recomments-box" style="background-color: #f00f0f">
-              <div id="client-testimonial-carousel" class="carousel slide" data-ride="carousel" style="height:200px;">
-                <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item active text-center p-4">
-                    <blockquote class="blockquote text-center">
-                      <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
-                        I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
-                        couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-1-140x140.jpg" alt="" class="avt">
-                        </div>
-                        <div class="col-md-4">
-                          <p class="client-review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </p>
-                        </div>
-                        <div class="col-md-4">
-                          <footer class="blockquote-footer">Paul Trueman </footer>
-                        </div>
-                      </div>
-                    </blockquote>
-                  </div>
-                  <div class="carousel-item text-center p-4">
-                    <blockquote class="blockquote text-center">
-                      <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
-                        I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
-                        couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-3-140x140.jpg" alt="" class="avt">
-                        </div>
-                        <div class="col-md-4">
-                          <p class="client-review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </p>
-                        </div>
-                        <div class="col-md-4">
-                          <footer class="blockquote-footer">Paul Trueman </footer>
-                        </div>
-                      </div>
-                    </blockquote>
-                  </div>
-                  <div class="carousel-item text-center p-4">
-                    <blockquote class="blockquote text-center">
-                      <p class="mb-0"><i class="fa fa-quote-left"></i>Working with Artur has been a pleasure. Better yet -
-                        I alerted them of a minor issue before going to sleep. The issue was fixed the next morning. I
-                        couldn't ask for better support. Thank you Artur! This is easily a 5 star freelancer.</p>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <img src="https://bslthemes.com/arter-wp/v2/wp-content/uploads/2020/09/testimonial-2-140x140.jpg" alt="" class="avt">
-                        </div>
-                        <div class="col-md-4">
-                          <p class="client-review-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </p>
-                        </div>
-                        <div class="col-md-4">
-                          <footer class="blockquote-footer">Paul Trueman </footer>
-                        </div>
-                      </div>
-                    </blockquote>
-                  </div>
-                </div>
-                <ol class="carousel-indicators">
-                  <li data-target="#client-testimonial-carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#client-testimonial-carousel" data-slide-to="1"></li>
-                  <li data-target="#client-testimonial-carousel" data-slide-to="2"></li>
-                </ol>
-              </div>
-            </div>
-          </div>
-          <div class="conatainer">
-            <div class="row">
-              <!-- icon -->
-              <div class="col-md-3 icon-client">
-                <img src="./Img/design.png" alt="" class="logo">
-              </div>
-              <div class="col-md-3 icon-client">
-                <img src="./Img/showtime.png" alt="" class="logo">
-              </div>
-              <div class="col-md-3 icon-client">
-                <img src="./Img/vintage.png" alt="" class="logo">
-              </div>
-              <div class="col-md-3 icon-client">
-                <img src="./Img/design.png" alt="" class="logo">
-              </div>
-              <!-- contact -->
-            </div>
-          </div>
-          <div class="container footer-box">
-            <div class="row">
-            
                 <p class="copy">&copy;2020 All Rights Reserved.</p>
                 <p class="email">Emai:admin@gmail.com</p>
-              <!-- <div class="col-md-8">
+                <!-- <div class="col-md-8">
                 <p class="copy">&copy;2020 All Rights Reserved.</p>
               </div>
               <div class="col-md-4">
                 <p class="email">Emai:admin@gmail.com</p>
               </div> -->
+              </div>
             </div>
           </div>
-        </div>
 
-      </div>
-      <div class="menu-right">
-        <div class="menu-right-box">
-          <div class="right-box-bars">
-            <i class="fas fa-bars"></i>
-          </div>
-          <div class="right-box-content">
-            <h5 class="right-box-title">HOME</h5>
-            <?php include(ROOT_PATH . "/includes/right_menu.php"); ?>
+        </div>
+        <div class="menu-right">
+          <div class="menu-right-box">
+            <div class="right-box-bars">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="right-box-content">
+              <h5 class="right-box-title">HOME</h5>
+              <?php include(ROOT_PATH . "/includes/right_menu.php"); ?>
+            </div>
           </div>
         </div>
       </div>
