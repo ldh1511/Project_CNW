@@ -76,25 +76,21 @@
             <img src="./Img/banner.jpg" alt="">
           </div>
           <div class="container">
-            <div class="row">
-              <div class="col span-1-of-4">
+            <!-- <div class="row">
+              <div class="col span-1-of-3">
                 <i class="fas fa-book-reader icon"></i>
-                <p class="resume">5+ <em>Years Experience</em> </p>
+                <p class="resume">3+ <em>Years Experience</em> </p>
               </div>
-              <div class="col span-1-of-4">
+              <div class="col span-1-of-3">
                 <i class="fas fa-folder-open icon"></i>
-                <p class="resume">28 <em>Completed Projects</em> </p>
+                <p class="resume">10+ <em>Completed Projects</em> </p>
               </div>
-              <div class="col span-1-of-4">
+              <div class="col span-1-of-3">
                 <i class="fas fa-user-check icon"></i>
-                <p class="resume">82 <em>Happy Customers</em> </p>
-              </div>
-              <div class="col span-1-of-4">
-                <i class="fas fa-medal icon"></i>
-                <p class="resume">22 <em>Honors and Awards</em> </p>
+                <p class="resume">10 <em>Happy Customers</em> </p>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- CV -->
           <div class="title">
@@ -148,7 +144,7 @@
                     <h6>Thành phố:</h6> <span>Hà Nội</span>
                   </li>
                   <li>
-                    <a href="#">Read CV</a>
+                    <a href="./cv-duyen/cv-duyen.php">Read CV</a>
                   </li>
                 </ul>
                 </div> 
