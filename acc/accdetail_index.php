@@ -80,7 +80,7 @@ adminOnly();
                         <label for="">Address</label>
                         <input type="text" name="price" id="" class="form-control input-read" aria-describedby="helpId" value="<?php echo $info['address'] ?>" disabled>
                     </div>
-                    <a href="accdetail_edit.php?edit_id=<?php echo $info['id'] ?>"><i class="far fa-edit h5"></i></a>
+                    <a href="accdetail_edit.php?edit_id=<?php echo $acc_id ?>"><i class="far fa-edit h5"></i></a>
                 </div>
             </div>
         </div>

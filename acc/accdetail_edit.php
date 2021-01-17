@@ -33,7 +33,7 @@ adminOnly();
                 </div>
                 <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
                 <form action="accdetail_edit.php" method="post">
-                    <input type="hidden" name="id" value="<?php echo $id ?>">
+                    <input type="hidden" name="id" value="<?php echo $acc_id ?>">
                     <div class="container">
                         <div class="row  p-0 m-0">
                             <div class="form-group flex-grow-1 mr-2">

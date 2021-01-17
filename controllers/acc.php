@@ -16,6 +16,7 @@ $gender = '';
 if (isset($_SESSION['account_id'])) {
     $info = selectOne('infomation', ['id' => $_SESSION['account_id']]);
     $acc = selectOne('account', ['id' => $_SESSION['account_id']]);
+    $acc_id=$_SESSION['account_id'];
 }
 if (isset($_POST['btn-login'])) {
     if (empty($_POST['name'])) {

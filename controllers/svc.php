@@ -95,6 +95,7 @@ if (isset($_POST['svc_edit'])) {
     $svc_name = $_POST['service_name'];
     $count = 0;
     $svc_id = $_POST['svc_id'];
+    $svc=selectCol('*','service',"service_id !=$svc_id");
     if (empty($_POST['service_name'])) {
         array_push($errors, 'Enter service name');
     }
@@ -106,6 +107,8 @@ if (isset($_POST['svc_edit'])) {
     }
     foreach ($svc as $key) {
         if ($key[1] === $svc_name) {
+            echo $svc_name;
+            echo $key[1];
             $count++;
         }
     }

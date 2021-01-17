@@ -1,5 +1,13 @@
-<?php include('path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/contact.php") ?>
+<?php
+include('path.php');
+include(ROOT_PATH . "/controllers/contact.php");
+
+$service = selectAll('service');
+$general_info = selectOne('general_info', ['general_id' => '1']);
+$acc_info = selectAll('infomation');
+$acc = selectCol('*', 'account, infomation', 'account.id=infomation.id');
+$skill = selectAll('skill');
+?>
 <!doctype html>
 <html lang="en">
 
@@ -19,85 +27,29 @@
 <body>
   <div class="main-container">
     <div class="content-box">
-      <div class="content-left">
-        <div class="left-element">
-          <div class="info-box">
-            <div class="info-avt">
-              <img src="./Img/logo.png" alt="">
-            </div>
-            <h4>Lê Dương Hùng</h4>
-            <h4>Ngô Thị Duyên</h4>
-            <p>Front-end Developer</p>
-          </div>
-          <div class="info-content">
-            <div class="info-content-element">
-              <ul>
-                <li>
-                  <h6>Address:</h6><span>Thuyloi University</span>
-                </li>
-                <li>
-                  <h6>City:</h6><span>Ha Noi</span>
-                </li>
-              </ul>
-            </div>
-            <div class="info-content-element info-skill">
-              <ul>
-                <li><i class="far fa-check-circle"></i> Bootstrap</li>
-                <li><i class="far fa-check-circle"></i> HTML, CSS</li>
-                <li><i class="far fa-check-circle"></i> PHP</li>
-                <li><i class="far fa-check-circle"></i> GIT knowledge</li>
-              </ul>
-            </div>
-            <div class="info-content-element info-skill">
-              <ul>
-                <li><i class="far fa-check-circle"></i> SQL</li>
-                <li><i class="far fa-check-circle"></i> C#</li>
-                <li><i class="far fa-check-circle"></i> C++</li>
-                <li><i class="far fa-check-circle"></i> Python</li>
-              </ul>
-            </div>
-            <div class="info-content-element info-download">
-              <a href="#0">DOWNLOAD CV <i class="fas fa-download"></i></a>
-            </div>
-
-          </div>
-          <div class="info-bottom">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-dribbble"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </div>
+      <nav class="main-nav">
+        <div class="nav-icon nav-icon-left">
+          <i class="fas fa-bars"></i>
         </div>
-      </div>
+        <div class="nav-icon nav-icon-right">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+      <?php include(ROOT_PATH . "/includes/cv_left_menu.php"); ?>
 
       <div class="content-right">
-        <div class="container">
+        <div class="container contact-container">
           <div class="contact-info">
             <h4>Communications</h4>
 
             <div class=row>
-              <div class="col-md-5 contact-box">
+              <div class="col contact-box mb-3">
                 <ul>
                   <li>
-                    <h6></h6> <span>Thuyloi University</span>
+                    <h6>Address:</h6> <span><?php echo $general_info['general_address'] ?></span>
                   </li>
                   <li>
-                    <h6>Address:</h6> <span>175 Tay Son, Đong Da</span>
-                  </li>
-                  <li>
-                    <h6>City:</h6> <span>Ha Noi</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-2"></div>
-              <div class="col-md-5 contact-box">
-                <ul>
-                  <li>
-                    <h6>Email:</h6> <span>admin@gmail.com</span>
-                  </li>
-                  <li>
-                    <h6>Phone number:</h6> <span>03 1111 1111</span>
+                    <h6>Email:</h6> <span><?php echo $general_info['general_mail'] ?></span>
                   </li>
                 </ul>
               </div>
@@ -124,17 +76,23 @@
                   <i class="fas fa-comment-dots"></i>
                   <textarea class="form-control" placeholder="Message to us" aria-label="Message" name="Message"></textarea>
                 </div>
-                <button type="submit" name="btn-send btn"><i class="fas fa-paper-plane"></i>Send</button>
+                <button type="submit" name="btn-send"><i class="fas fa-paper-plane"></i>Send</button>
               </div>
             </form>
           </div>
-
-          <!-- Thêm vào db
-              
-              ?> -->
         </div>
       </div>
-      <?php include(ROOT_PATH . "/includes/right_menu.php"); ?>
+      <div class="menu-right">
+        <div class="menu-right-box">
+          <div class="right-box-bars">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="right-box-content">
+            <h5 class="right-box-title">CONTACT</h5>
+            <?php include(ROOT_PATH . "/includes/right_menu.php"); ?>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -1,5 +1,5 @@
 <?php include('../path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/skill.php");
+<?php include(ROOT_PATH . "/controllers/gi_skill.php");
 adminOnly();
 ?>
 <!doctype html>

@@ -2,6 +2,26 @@ let menu = document.querySelector('.right-box-bars i');
 let content = document.querySelector('.content-right');
 let right_title=document.querySelector('.right-box-title');
 let right_menu=document.querySelector('.right-menu');
+
+let iconleft=document.querySelector('.nav-icon-left');
+let iconright=document.querySelector('.nav-icon-right');
+let iconleftclose=document.querySelector('.nav-icon-close');
+let menuLeft=document.querySelector('.content-left');
+let menuRight=document.querySelector('.menu-right-box');
+iconright.addEventListener('click',(e)=>{
+    menuRight.classList.toggle('menu-right-active');
+	menuRight.classList.toggle('active');
+	let right_menu=document.querySelector('.right-menu');
+	let right_title=document.querySelector('.right-box-title');
+	right_menu.classList.toggle('menu-active');
+	right_title.classList.toggle('hidden');
+})
+iconleft.addEventListener('click',(e)=>{
+    menuLeft.classList.add('menu-left-active');
+})
+iconleftclose.addEventListener('click',(e)=>{
+    menuLeft.classList.remove('menu-left-active');
+})
 menu.addEventListener('click', (e) => {
     let ele = e.target;
     if (ele.classList.contains('fa-bars')) {
@@ -34,3 +54,4 @@ menu.addEventListener('click', (e) => {
         },1)
     }
 })
+

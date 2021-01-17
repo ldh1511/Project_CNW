@@ -1,5 +1,11 @@
-<?php include('./path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
+<?php include('./path.php');
+include(ROOT_PATH . "/controllers/acc.php");
+$service = selectAll('service');
+$general_info = selectOne('general_info', ['general_id' => '1']);
+$acc_info = selectAll('infomation');
+$acc = selectCol('*', 'account, infomation', 'account.id=infomation.id');
+$skill = selectAll('skill');
+?>
 <!doctype html>
 <html lang="en">
 
@@ -19,58 +25,16 @@
 <body>
     <div class="main-container">
         <div class="content-box">
-            <div class="content-left">
-                <div class="left-element">
-                    <div class="info-box">
-                        <div class="info-avt">
-                            <img src="./Img/logo.png" alt="">
-                        </div>
-                        <h4>Lê Dương Hùng</h4>
-                        <h4>Ngô Thị Duyên</h4>
-                        <p>Front-end Deweloper</p>
-                    </div>
-                    <div class="info-content">
-                        <div class="info-content-element">
-                            <ul>
-                                <li>
-                                    <h6>Địa chỉ:</h6><span>Đại học Thủy lợi</span>
-                                </li>
-                                <li>
-                                    <h6>Thành phố:</h6><span>Hà Nội</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="info-content-element info-skill">
-                            <ul>
-                                <li><i class="far fa-check-circle"></i> Bootstrap</li>
-                                <li><i class="far fa-check-circle"></i> HTML, CSS</li>
-                                <li><i class="far fa-check-circle"></i> PHP</li>
-                                <li><i class="far fa-check-circle"></i> GIT knowledge</li>
-                            </ul>
-                        </div>
-                        <div class="info-content-element info-skill">
-                            <ul>
-                                <li><i class="far fa-check-circle"></i> SQL</li>
-                                <li><i class="far fa-check-circle"></i> C#</li>
-                                <li><i class="far fa-check-circle"></i> C++</li>
-                                <li><i class="far fa-check-circle"></i> Python</li>
-                            </ul>
-                        </div>
-                        <div class="info-content-element info-download">
-                            <a href="#0">DOWNLOAD CV <i class="fas fa-download"></i></a>
-                        </div>
-
-                    </div>
-                    <div class="info-bottom">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                        <a href="#"><i class="fab fa-behance"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
+            <nav class="main-nav">
+                <div class="nav-icon nav-icon-left">
+                    <i class="fas fa-bars"></i>
                 </div>
-            </div>
-            <div class="content-right">
+                <div class="nav-icon nav-icon-right">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <?php include(ROOT_PATH . "/includes/cv_left_menu.php"); ?>
+            <div class="content-right contact-container">
                 <!--  resume -->
                 <div class="container">
 
@@ -92,7 +56,17 @@
                     </form>
                 </div>
             </div>
-            <?php include(ROOT_PATH . "/includes/right_menu.php"); ?>
+            <div class="menu-right">
+                <div class="menu-right-box">
+                    <div class="right-box-bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="right-box-content">
+                        <h5 class="right-box-title">MANAGE</h5>
+                        <?php include(ROOT_PATH . "/includes/right_menu.php"); ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
