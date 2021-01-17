@@ -137,11 +137,11 @@
             <div class="contact">
                 <h3><i class="fas fa-envelope-open-text"></i>Contact</h3>
                 <div class="contact-form">
-                    <form action="contact.php" method="post">
+                    <form action="cv-contact.php" method="post">
                         <div class="box">
                             <div class="input-group mb-3 contact-element">
                                 <i class="fas fa-users contact-icon"></i>
-                                <input type="text" class="form-control" placeholder="Your name" aria-label="Username" name="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" placeholder="Your name" aria-label="Username" name="Username2" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3 contact-element">
                                 <i class="fas fa-at contact-icon"></i>
