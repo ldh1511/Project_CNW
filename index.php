@@ -1,4 +1,7 @@
-<?php include('path.php'); ?>
+<?php
+include('path.php');
+include('get_data.php');
+?>
 <!doctype html>
 <html lang="en">
 
@@ -21,10 +24,10 @@
     <div class="content-box">
       <nav class="main-nav">
         <div class="nav-icon nav-icon-left">
-        <i class="fas fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </div>
         <div class="nav-icon nav-icon-right">
-        <i class="fas fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </div>
       </nav>
       <div class="content-box-bottom">
@@ -33,7 +36,7 @@
           <!--  resume -->
           <div class="container">
             <div class="banner">
-              <img src="./Img/banner.jpg" alt="">
+              <img src="./Img/<?php echo $general_info['general_banner'] ?>" alt="">
             </div>
 
             <!-- CV -->
@@ -42,59 +45,33 @@
             </div>
             <div class="container">
               <!-- cv1 -->
-              <div class="row cv-row">
-                <div class="box">
-                  <div class="row">
-                    <div class="col-md-4 cv-pic">
-                      <img src="./Img/no_Img.jpg" alt="">
-                    </div>
-                    <div class="col-md-8 cv-element">
-                      <ul>
-                        <li>
-                          <h6>Name:</h6> <span>Lê Dương Hùng</span>
-                        </li>
-                        <li>
-                          <h6>Birthday:</h6> <span>dd/mm/2000</span>
-                        </li>
-                        <li>
-                          <h6>City:</h6> <span>????</span>
-                        </li>
-                        <li>
-                          <a href="#">Read CV</a>
-                        </li>
-                      </ul>
+              <?php foreach ($acc as $key) : ?>
+                <div class="row cv-row">
+                  <div class="box">
+                    <div class="row">
+                      <div class="col-md-4 cv-pic">
+                        <img src="./Img/<?php echo $key[2] ?>" alt="">
+                      </div>
+                      <div class="col-md-8 cv-element">
+                        <ul>
+                          <li>
+                            <h6>Name:</h6> <span><?php echo $key[5] ?></span>
+                          </li>
+                          <li>
+                            <h6>Birthday:</h6> <span><?php echo $key[9] ?></span>
+                          </li>
+                          <li>
+                            <h6>Address:</h6> <span><?php echo $key[11] ?></span>
+                          </li>
+                          <li>
+                            <a href="#">Read CV</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <!-- cv2 -->
-              <div class="row cv-row">
-                <div class="box">
-                  <div class="row">
-                    <div class="col-md-4 cv-pic">
-                      <img src="./Img/Duyen.jpeg" alt="">
-                    </div>
-                    <div class="col-md-8 cv-element">
-                      <ul>
-                        <li>
-                          <h6>Name:</h6> <span>Ngô Thị Duyên</span>
-                        </li>
-                        <li>
-                          <h6>Birthday:</h6> <span>28/08/2000</span>
-                        </li>
-                        <li>
-                          <h6>City:</h6> <span>Hà Nội</span>
-                        </li>
-                        <li>
-                          <a href="#">Read CV</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+              <?php endforeach; ?>
             </div>
 
             <!-- services -->
@@ -103,62 +80,15 @@
             </div>
             <div class="container">
               <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                  <div class="box">
-                    <h5>Web Developer</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                    <h6><a href="#">Order now ></a></h6>
+                <?php foreach ($service as $key) : ?>
+                  <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="box">
+                      <h5><?php echo $key[1] ?></h5>
+                      <p><?php echo $key[3] ?></p>
+                      <h6><a href="#">Order now ></a></h6>
+                    </div>
                   </div>
-
-                </div>
-                <!-- <div class="col-md-1"></div> -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                  <div class="box">
-                    <h5>UI/UX Design</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                    <h6><a href="#">Order now ></a></h6>
-                  </div>
-
-                </div>
-                <!-- <div class="col-md-1"></div> -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                  <div class="box">
-                    <h5>Sound Design</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                    <h6><a href="#">Order now ></a></h6>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                  <div class="box">
-                    <h5>Web Developer</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                    <h6><a href="#">Order now ></a></h6>
-                  </div>
-
-                </div>
-                <!-- <div class="col-md-1"></div> -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                  <div class="box">
-                    <h5>UI/UX Design</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                    <h6><a href="#">Order now ></a></h6>
-                  </div>
-
-                </div>
-                <!-- <div class="col-md-1"></div> -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                  <div class="box">
-                    <h5>Sound Design</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero
-                      quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-                    <h6><a href="#">Order now ></a></h6>
-                  </div>
-                </div>
+                <?php endforeach; ?>
               </div>
             </div>
 

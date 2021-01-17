@@ -1,5 +1,13 @@
-<?php include('path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/contact.php") ?>
+<?php
+include('path.php');
+include(ROOT_PATH . "/controllers/contact.php");
+
+$service = selectAll('service');
+$general_info = selectOne('general_info', ['general_id' => '1']);
+$acc_info = selectAll('infomation');
+$acc = selectCol('*', 'account, infomation', 'account.id=infomation.id');
+$skill = selectAll('skill');
+?>
 <!doctype html>
 <html lang="en">
 
@@ -19,12 +27,12 @@
 <body>
   <div class="main-container">
     <div class="content-box">
-    <nav class="main-nav">
+      <nav class="main-nav">
         <div class="nav-icon nav-icon-left">
-        <i class="fas fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </div>
         <div class="nav-icon nav-icon-right">
-        <i class="fas fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </div>
       </nav>
       <?php include(ROOT_PATH . "/includes/cv_left_menu.php"); ?>
@@ -35,24 +43,13 @@
             <h4>Communications</h4>
 
             <div class=row>
-              <div class="col-md-5 contact-box mb-3">
+              <div class="col contact-box mb-3">
                 <ul>
                   <li>
-                    <h6>Address:</h6> <span>Thuyloi University- 175 Tay Son, Đong Da</span>
+                    <h6>Address:</h6> <span><?php echo $general_info['general_address'] ?></span>
                   </li>
                   <li>
-                    <h6>City:</h6> <span>Ha Noi</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-2"></div>
-              <div class="col-md-5 contact-box mb-3">
-                <ul>
-                  <li>
-                    <h6>Email:</h6> <span>admin@gmail.com</span>
-                  </li>
-                  <li>
-                    <h6>Phone number:</h6> <span>03 1111 1111</span>
+                    <h6>Email:</h6> <span><?php echo $general_info['general_mail'] ?></span>
                   </li>
                 </ul>
               </div>
@@ -79,7 +76,7 @@
                   <i class="fas fa-comment-dots"></i>
                   <textarea class="form-control" placeholder="Message to us" aria-label="Message" name="Message"></textarea>
                 </div>
-                <button type="submit" name="btn-send btn"><i class="fas fa-paper-plane"></i>Send</button>
+                <button type="submit" name="btn-send"><i class="fas fa-paper-plane"></i>Send</button>
               </div>
             </form>
           </div>

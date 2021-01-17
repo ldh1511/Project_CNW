@@ -5,42 +5,30 @@
     </div>
     <div class="info-box">
       <div class="info-avt">
-        <img src="./Img/logo.png" alt="">
+        <img src="./Img/<?php echo $general_info['general_ava'] ?>" alt="">
       </div>
-      <h4>Le Duong Hung</h4>
-      <h4>Ngo Thi Duyen</h4>
+      <!-- <h4>Le Duong Hung</h4>
+      <h4>Ngo Thi Duyen</h4> -->
+      <?php foreach ($acc_info as $key) : ?>
+        <h4><?php echo $key[0] ?></h4>
+      <?php endforeach ?>
       <p>Front-end Developer</p>
     </div>
     <div class="info-content">
       <div class="info-content-element">
         <ul>
           <li>
-            <h6>Address:</h6><span>Thuyloi University</span>
-          </li>
-          <li>
-            <h6>City:</h6><span>Ha Noi</span>
+            <h6>Address:</h6><span><?php echo $general_info['general_address'] ?></span>
           </li>
         </ul>
       </div>
       <div class="info-content-element info-skill">
         <ul>
-          <li><i class="far fa-check-circle"></i> Bootstrap</li>
-          <li><i class="far fa-check-circle"></i> HTML, CSS</li>
-          <li><i class="far fa-check-circle"></i> PHP</li>
-          <li><i class="far fa-check-circle"></i> GIT knowledge</li>
+          <?php foreach ($skill as $key) : ?>
+            <li><i class="far fa-check-circle"></i><?php echo $key[1] ?></li>
+          <?php endforeach  ?>
         </ul>
       </div>
-      <div class="info-content-element info-skill">
-        <ul>
-          <li><i class="far fa-check-circle"></i> SQL</li>
-          <li><i class="far fa-check-circle"></i> C#</li>
-          <li><i class="far fa-check-circle"></i> C++</li>
-          <li><i class="far fa-check-circle"></i> Python</li>
-        </ul>
-      </div>
-      <!-- <div class="info-content-element info-download">
-              <a href="#0">DOWNLOAD CV <i class="fas fa-download"></i></a>
-            </div> -->
 
     </div>
     <div class="info-bottom">

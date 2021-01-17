@@ -1,5 +1,11 @@
-<?php include('./path.php'); ?>
-<?php include(ROOT_PATH . "/controllers/acc.php"); ?>
+<?php include('./path.php');
+include(ROOT_PATH . "/controllers/acc.php");
+$service = selectAll('service');
+$general_info = selectOne('general_info', ['general_id' => '1']);
+$acc_info = selectAll('infomation');
+$acc = selectCol('*', 'account, infomation', 'account.id=infomation.id');
+$skill = selectAll('skill');
+?>
 <!doctype html>
 <html lang="en">
 

@@ -2,6 +2,7 @@ let menu = document.querySelector('.right-box-bars i');
 let content = document.querySelector('.content-right');
 let right_title=document.querySelector('.right-box-title');
 let right_menu=document.querySelector('.right-menu');
+
 let iconleft=document.querySelector('.nav-icon-left');
 let iconright=document.querySelector('.nav-icon-right');
 let iconleftclose=document.querySelector('.nav-icon-close');
