@@ -26,6 +26,9 @@ include(ROOT_PATH . "/controllers/ca.php");
             <div class="content-right admin-container">
                 <div class="title-box">
                     <h3 class="admin-title">Add Certificate</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
                 <form action="ca_add.php" method="post" class="form-manage form">
                     <?php include(ROOT_PATH . "/helper/formErrors.php") ?>

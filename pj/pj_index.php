@@ -43,9 +43,9 @@ adminOnly();
                         <tr>
                             <th>Number</th>
                             <th>Start Date</th>
-                            <th>End Date</th>
+                            <th class="col-hidden">End Date</th>
                             <th>Name</th>
-                            <th>Description</th>
+                            <th class="col-hidden">Description</th>
                             <th>Image</th>
                             <th>Detail</th>
                             <th>Edit</th>
@@ -59,9 +59,9 @@ adminOnly();
                             <tr>
                                 <td class="align-middle"><?php echo $i ?></td>
                                 <td class="align-middle"><?php echo $key[1] ?></td>
-                                <td class="align-middle"><?php echo $key[2] ?></td>
+                                <td class="align-middle col-hidden"><?php echo $key[2] ?></td>
                                 <td class="align-middle"><?php echo $key[3] ?></td>
-                                <td class="align-middle"><?php echo html_entity_decode(substr($key[4], 0, 35) . "...") ?></td>
+                                <td class="align-middle col-hidden"><?php echo html_entity_decode(substr($key[4], 0, 35) . "...") ?></td>
                                 <td class="align-middle">
                                     <img class="img-col" src="<?php echo '../Img/' . $key[5] ?>" alt="">
                                 </td>

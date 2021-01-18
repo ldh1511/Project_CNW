@@ -24,11 +24,21 @@ if (isset($_GET['detail_id'])) {
 }
 //INSERT
 if (isset($_POST['skill_add'])) {
+    $name = $_POST['skill_name'];
+    $count = 0;
     if (empty($_POST['skill_name'])) {
         array_push($errors, 'Enter name');
     }
     if (empty($_POST['skill_des'])) {
         array_push($errors, 'Enter describle');
+    }
+    foreach ($list_skill as $key) {
+        if ($key[1] === $name) {
+            $count++;
+        }
+    }
+    if ($count > 0) {
+        array_push($errors, 'Error: namesake');
     }
     if (count($errors) === 0) {
         $name = $_POST['skill_name'];
@@ -59,11 +69,23 @@ if (isset($_GET['edit_id'])) {
     }
 }
 if (isset($_POST['skill_save'])) {
+    $skill_name = $_POST['skill_name'];
+    $skill_id = $_POST['skill_id'];
+    $list_skill = selectCol('*', 'skill', "skill_id !=$skill_id");
+    $count = 0;
     if (empty($_POST['skill_name'])) {
         array_push($errors, 'Enter name');
     }
     if (empty($_POST['skill_des'])) {
         array_push($errors, 'Enter describle');
+    }
+    foreach ($list_skill as $key) {
+        if ($key[1] === $skill_name) {
+            $count++;
+        }
+    }
+    if ($count > 0) {
+        array_push($errors, 'Error: namesake');
     }
     if (count($errors) === 0) {
         $skill_id = $_POST['skill_id'];
@@ -86,7 +108,7 @@ if (isset($_POST['skill_save'])) {
 // DELETE
 if (isset($_GET['delete_id'])) {
     $delete_id = $_GET['delete_id'];
-    delete('skill_account',$delete_id,'skill_id');
+    delete('skill_account', $delete_id, 'skill_id');
     $sql = "delete from skill where skill_id = $delete_id";
     mysqli_query($conn, $sql);
     $_SESSION['message'] = 'Skill deleted successfully';
@@ -109,9 +131,9 @@ if (isset($_REQUEST['term'])) {
     echo "<tr>";
     echo "<th>Number</th>";
     echo "<th>Name</th>";
-    echo "<th>Description</th>";
+    echo "<th class='col-hidden'>Description</th>";
     echo "<th>Date</th>";
-    echo "<th>Add by</th>";
+    echo "<th class='col-hidden'>Add by</th>";
     echo "<th>Detail</th>";
     echo "<th>Edit</th>";
     echo "<th>Delete</th>";
@@ -123,9 +145,9 @@ if (isset($_REQUEST['term'])) {
         echo "<tr>";
         echo "<td>" . $i . "</td>";
         echo "<td>" . $key[1] . "</td>";
-        echo "<td>" . html_entity_decode(substr($key[2], 0, 35) . "...") . "</td>";
+        echo "<td class='col-hidden'>" . html_entity_decode(substr($key[2], 0, 35) . "...") . "</td>";
         echo "<td>" . $key[3] . "</td>";
-        echo "<td>" . $key[5] . "</td>";
+        echo "<td class='col-hidden'>" . $key[5] . "</td>";
         echo "<td><a href='skill_detail.php?detail_id=" . $key[0] . "'><i class='fas fa-book-reader'></i></a></td>";
         echo "<td><a href='skill_edit.php?edit_id=" . $key[0] . "'><i class='far fa-edit'></i></a></td>";
         echo "<td><a href='skill_edit.php?delete_id=" . $key[0] . "'><i class='far fa-trash'></i></a></td>";
@@ -148,6 +170,14 @@ if (isset($_POST['skill_preview'])) {
                 $sql = $sql . "insert into skill(skill_name,skill_description,id) values('" . $line[0] . "','" . $line[1] . "','" . $acc_id . "');";
                 array_push($array, $line);
             }
+            $count = 0;
+            foreach ($list_skill as $key) {
+                foreach ($array as $key2) {
+                    if ($key[1] === $key2[0]) {
+                        $count++;
+                    }
+                }
+            }
         }
     } else {
         array_push($errors, 'Enter your file');
@@ -156,16 +186,20 @@ if (isset($_POST['skill_preview'])) {
 
 if (isset($_POST['skill_import_prv'])) {
     adminOnly();
-    $sql = $_POST['array_import'];
-    $sql = trim($sql, "\t");
-    $newArr = explode(';', $sql);
-    foreach ($newArr as $key => $value) {
-        if ($value !== '') {
-            insertWithData($value);
+    if ($_POST['array_error'] == '0') {
+        $sql = $_POST['array_import'];
+        $sql = trim($sql, "\t");
+        $newArr = explode(';', $sql);
+        foreach ($newArr as $key => $value) {
+            if ($value !== '') {
+                insertWithData($value);
+            }
         }
+        $_SESSION['message'] = 'Skill imported successfully';
+        $_SESSION['type'] = 'success';
+        header('location: ' . BASE_URL . "/gi_skill/skill_index.php");
+        exit();
+    }else {
+        array_push($errors, 'Can not update duplicate name');
     }
-    $_SESSION['message'] = 'Skill imported successfully';
-    $_SESSION['type'] = 'success';
-    header('location: ' . BASE_URL . "/gi_skill/skill_index.php");
-    exit();
 }

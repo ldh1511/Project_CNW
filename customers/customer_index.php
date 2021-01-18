@@ -42,11 +42,11 @@ adminOnly();
                     <thead>
                         <tr>
                             <th>Number</th>
-                            <th>Name</th>
+                            <th class="col-hidden">Name</th>
                             <th>Email</th>
                             <th>Title</th>
-                            <th>Content</th>
-                            <th>Sending time</th>
+                            <th class="col-hidden">Content</th>
+                            <th class="col-hidden">Sending time</th>
                             <th>Status</th>
                         </tr>
                     </thead>
@@ -55,11 +55,11 @@ adminOnly();
                         <?php foreach ($customer as $key) : ?>
                             <tr>
                                 <td><?php echo $i ?></td>
-                                <td><?php echo $key[1] ?></td>
+                                <td class="col-hidden"><?php echo $key[1] ?></td>
                                 <td><?php echo $key[2] ?></td>
                                 <td><?php echo $key[3] ?></td>
-                                <td><?php echo $key[4] ?></td>
-                                <td><?php echo $key[5] ?></td>
+                                <td class="col-hidden"><?php echo $key[4] ?></td>
+                                <td class="col-hidden"><?php echo $key[5] ?></td>
                                 <td>
                                     <?php $id = $key[0]; ?>
                                     <?php if ($key[6] === 'Waiting') : ?>

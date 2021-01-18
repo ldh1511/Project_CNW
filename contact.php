@@ -59,6 +59,7 @@ $skill = selectAll('skill');
           <div class="contact-form">
             <h4>Contact with Us</h4>
             <form action="contact.php" method="post">
+              <?php include(ROOT_PATH . "/helper/formErrors.php") ?>
               <div class="contact-form-box">
                 <div class="input-group mb-3 contact-element">
                   <i class="fas fa-users"></i>

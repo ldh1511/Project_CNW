@@ -25,11 +25,11 @@ if (isset($_REQUEST['term'])) {
     echo "<thead>";
     echo "<tr>";
     echo "<th>Number</th>";
-    echo "<th>Name</th>";
+    echo "<th class='col-hidden'>Name</th>";
     echo "<th>Email</th>";
     echo "<th>Title</th>";
-    echo "<th>Content</th>";
-    echo "<th>Sending time</th>";
+    echo "<th class='col-hidden'>Content</th>";
+    echo "<th class='col-hidden'>Sending time</th>";
     echo "<th>Status</th>";
     echo "</tr>";
     echo "</thead>";
@@ -38,11 +38,11 @@ if (isset($_REQUEST['term'])) {
     foreach ($resultSearch as $key) {
         echo "<tr>";
         echo "<td>" . $i . "</td>";
-        echo "<td>" . $key[1] . "</td>";
+        echo "<td class='col-hidden'>" . $key[1] . "</td>";
         echo "<td>" . $key[2] . "</td>";
         echo "<td>" . $key[3] . "</td>";
-        echo "<td>" . $key[4] . "</td>";
-        echo "<td>" . $key[5] . "</td>";
+        echo "<td class='col-hidden'>" . $key[4] . "</td>";
+        echo "<td class='col-hidden'>" . $key[5] . "</td>";
         echo "<td>";
         $id = $key[0];
         if ($key[6] === 'Waiting') {

@@ -26,6 +26,9 @@ adminOnly();
             <div class="content-right admin-container">
                 <div class="title-box">
                     <h3 class="admin-title">skill</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
                     <div class="search-box" style="justify-content: flex-end;">
                         <form class="search-box-form">
                             <input type="text" name="" id="" class="input-search" placeholder="Search here...">
@@ -34,7 +37,7 @@ adminOnly();
                     </div>
                 </div>
                 <?php include(ROOT_PATH . "/includes/message.php") ?>
-                <table class="table table-striped table-hover bg-white table-borderless rounded" id="result">
+                <table class="table table-striped table-hover bg-white table-borderless rounded table-admin" id="result">
                     <thead>
                         <tr>
                             <th>Number</th>
@@ -51,8 +54,8 @@ adminOnly();
                                 <td> <?php echo $i ?> </td>
                                 <td> <?php echo $key[1] ?> </td>
                                 <td> <?php echo html_entity_decode(substr($key[2], 0, 35) . "...") ?> </td>
-                                <td><a href="skill_detail.php?detail_id=<?php echo $key[0]?>"><i class=" fas fa-book-reader"></i></a></td>
-                                <td><a href="skill_detail.php?delete_id=<?php echo $key[0]?>"><i class=" far fa-trash"></i></a></td>
+                                <td><a href="skill_detail.php?detail_id=<?php echo $key[0] ?>"><i class=" fas fa-book-reader"></i></a></td>
+                                <td><a href="skill_detail.php?delete_id=<?php echo $key[0] ?>"><i class=" far fa-trash"></i></a></td>
                             </tr>
                             <?php $i++ ?>
                         <?php endforeach ?>

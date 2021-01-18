@@ -44,7 +44,7 @@ adminOnly();
                     </div>
                 </div>
                 <?php include(ROOT_PATH . "/includes/message.php") ?>
-                <table class="table table-striped table-hover bg-white table-borderless rounded" id="result">
+                <table class="table table-striped table-hover bg-white table-borderless rounded table-admin" id="result">
                     <thead>
                         <tr>
                             <th>Number</th>

@@ -58,6 +58,7 @@ adminOnly();
                         </table>
                         <form action="skill_import.php" method="post">
                             <input type="hidden" name="array_import" value="<?php echo $sql; ?>">
+                            <input type="hidden" name="array_error" value="<?php echo $count; ?>">
                             <button class="btn btn-primary btn-import-prv" name="skill_import_prv">Go</button>
                         </form>
                     </div>

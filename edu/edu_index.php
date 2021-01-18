@@ -27,6 +27,9 @@ adminOnly();
             <div class="content-right admin-container">
                 <div class="title-box">
                     <h3 class="admin-title">education</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
                     <div class="search-box">
                         <div class="header-btn-container">
                             <div class="header-button">
@@ -41,14 +44,14 @@ adminOnly();
                     </div>
                 </div>
                 <?php include(ROOT_PATH . "/includes/message.php") ?>
-                <table class="table table-striped table-hover bg-white table-borderless rounded" id="result">
+                <table class="table table-striped table-hover bg-white table-borderless rounded table-admin" id="result">
                     <thead>
                         <tr>
                             <th>Number</th>
                             <th>Start date</th>
-                            <th>Finish date</th>
+                            <th class="col-hidden">Finish date</th>
                             <th>School</th>
-                            <th>Description</th>
+                            <th class="col-hidden">Description</th>
                             <th>Detail</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -60,9 +63,9 @@ adminOnly();
                             echo '<tr>';
                             echo '<td>' . $i . '</td>';
                             echo '<td>' . $edu[1] . '</td>';
-                            echo '<td>' . $edu[2] . '</td>';
+                            echo '<td class="col-hidden">' . $edu[2] . '</td>';
                             echo '<td>' . $edu[3] . '</td>';
-                            echo '<td>' . $edu[4] . '</td>';
+                            echo '<td class="col-hidden">' . html_entity_decode(substr($edu[4], 0, 35) . "...") . '</td>';
                             echo '<td><a href="edu_detail.php?detail_id=' . $edu[0] . '"><i class="fas fa-book-reader"></i></a></td>';
                             echo '<td><a href="edu_edit.php?edit_id=' . $edu[0] . '"><i class="far fa-edit"></i></a></td>';
                             echo '<td><a href="edu_edit.php?delete_id=' . $edu[0] . '"><i class="far fa-trash"></i></a></td>';
