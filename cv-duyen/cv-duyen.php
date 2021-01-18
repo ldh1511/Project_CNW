@@ -1,3 +1,5 @@
+<?php include("../path.php"); ?>
+<?php include("cv-data.php"); ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -48,60 +50,72 @@
                 <h3><i class="fa fa-graduation-cap"></i>Education</h3>
                 <ul class="timeline">
                     <li>
+                    <?php foreach($edu as $e):?>
                         <div class="direction-r">
                             <div class="flag-wrapper">
-                                <span class="flag">University</span>
-                                <span class="time-wrapper"><span class="time">2018 - present</span></span>
+                                <?php if($e[3]=='University'){?>
+                                <span class="flag"><?php echo $e[3];?></span>
+                                <span class="time-wrapper"><span class="time"><?php echo $e[1] ?>- <?php echo $e[2] ?></span></span>
                             </div>
-                            <div class="desc">Thuy Loi University</div>
+                            <div class="desc"><?php echo $e[4];?></div>
+                            <?php }?>
                         </div>
                     </li>
 
                     <li>
                         <div class="direction-l">
                             <div class="flag-wrapper">
-                                <span class="flag">High School</span>
-                                <span class="time-wrapper"><span class="time">2015 - 2018</span></span>
+                            <?php if($e[3]=='High School'){?>
+                                <span class="flag"><?php echo $e[3];?></span>
+                                <span class="time-wrapper"><span class="time"><?php echo $e[1] ?>- <?php echo $e[2] ?></span></span>
                             </div>
-                            <div class="desc">To Hieu - Thuong Tin High School</div>
+                            <div class="desc"><?php echo $e[4];?></div>
+                            <?php }?>
                         </div>
                     </li>
 
                     <li>
                         <div class="direction-r">
                             <div class="flag-wrapper">
-                                <span class="flag">Primary School</span>
-                                <span class="time-wrapper"><span class="time">2012 - 2015</span></span>
+                            <?php if($e[3]=='Secondary School'){?>
+                                <span class="flag"><?php echo $e[3];?></span>
+                                <span class="time-wrapper"><span class="time"><?php echo $e[1] ?>- <?php echo $e[2] ?></span></span>
                             </div>
-                            <div class="desc">To Hieu Primary School</div>
+                            <div class="desc"><?php echo $e[4];?></div>
+                            <?php }?>
                         </div>
                     </li>
-
+                    <?php endforeach; ?>
                 </ul>
             </div>
             <div class="work">
                 <h3><i class="fa fa-briefcase"></i>Work Experience</h3>
                 <ul class="timeline">
-
+                <?php foreach ($exp as $e) : ?>
                     <li>
                         <div class="direction-r">
                             <div class="flag-wrapper">
-                                <span class="flag">Interns</span>
-                                <span class="time-wrapper"><span class="time">Dec 2020 - present</span></span>
+                            <?php if($e[4]=='first'){?>
+                                <span class="flag"><?php echo $e[4];?></span>
+                                <span class="time-wrapper"><span class="time"><?php echo $e[1] ?>- <?php echo $e[2] ?></span></span>
                             </div>
-                            <div class="desc">XXX Company</div>
+                            <div class="desc"><?php echo $e[3];?></div>
+                            <?php }?>
                         </div>
                     </li>
 
                     <li>
                         <div class="direction-l">
                             <div class="flag-wrapper">
-                                <span class="flag">Interns</span>
-                                <span class="time-wrapper"><span class="time">Aug 2020 - Nov 2020</span></span>
+                            <?php if($e[4]=='second'){?>
+                                <span class="flag"><?php echo $e[4];?></span>
+                                <span class="time-wrapper"><span class="time"><?php echo $e[1] ?>- <?php echo $e[2] ?></span></span>
                             </div>
-                            <div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
+                            <div class="desc"><?php echo $e[3];?></div>
+                            <?php }?>
                         </div>
                     </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
             <div class="skills-prog">
