@@ -87,13 +87,13 @@ if (isset($_POST['customer_reply'])) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com;';
         $mail->SMTPAuth = true;
-        $mail->Username = 'leduonghung1511@gmail.com';
-        $mail->Password = 'mtulzulvdavpmoek';
+        $mail->Username = 'duyen2882@gmail.com';
+        $mail->Password = 'mfiwowkmcbabnhcf';
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
-        $mail->setFrom('leduonghung1511@gmail.com');
+        $mail->setFrom('duyen2882@gmail.com');
         $mail->addAddress($email);
-        $mail->addReplyTo('leduonghung1511@gmail.com');
+        $mail->addReplyTo('duyen2882@gmail.com');
         $mail->isHTML(true);
         $mail->Subject = $subject;
         $mail->Body = $body;
