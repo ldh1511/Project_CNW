@@ -13,6 +13,7 @@ $link = '';
 $id = '';
 // INSERT
 if (isset($_POST['social_add'])) {
+    adminOnly();
     if (empty($_POST['social_name'])) {
         array_push($errors, 'Enter name');
     }
@@ -40,6 +41,7 @@ if (isset($_GET['edit_Id'])) {
     $id = $result['social_id'];
 }
 if (isset($_POST['social_edit'])) {
+    adminOnly();
     if (empty($_POST['social_name'])) {
         array_push($errors, 'Enter name');
     }
@@ -61,6 +63,7 @@ if (isset($_POST['social_edit'])) {
 }
 // DELETE
 if (isset($_GET['delete_Id'])) {
+    adminOnly();
     delete('social_links', $_GET['delete_Id'], 'social_id');
     $_SESSION['message'] = 'Social link deleted successfully';
     $_SESSION['type'] = 'success';

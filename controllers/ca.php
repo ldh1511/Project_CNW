@@ -26,6 +26,9 @@ if (isset($_GET['detail_id'])) {
 // <!-- Add certificate -->
 
 if (isset($_POST['ca_add'])) {
+    adminOnly();
+    $ca_name = $_POST['ca_name'];
+    $count = 0;
     if (empty($_POST['ca_date'])) {
         array_push($errors, 'Enter date');
     }
@@ -34,6 +37,14 @@ if (isset($_POST['ca_add'])) {
     }
     if (empty($_POST['ca_description'])) {
         array_push($errors, 'Enter description');
+    }
+    foreach ($list_ca as $key) {
+        if ($key[1] === $ca_name) {
+            $count++;
+        }
+    }
+    if ($count > 0) {
+        array_push($errors, 'Error: namesake');
     }
     if (count($errors) === 0) {
         $ca_date = $_POST['ca_date'];
@@ -71,6 +82,13 @@ if (isset($_GET['edit_id'])) {
 }
 // <!-- Update certificate -->
 if (isset($_POST['ca_save'])) {
+    adminOnly();
+    $changeArr = array();
+    $ca_name = $_POST['certificate_name'];
+    $count = 0;
+    $certificate_id = $_POST['certificate_id'];
+    $condition = "id='$acc_id' and certificate_id!='$certificate_id' ";
+    $list_ca = selectCol('*', 'certificate', $condition);
     if (empty($_POST['date'])) {
         array_push($errors, 'Enter date');
     }
@@ -79,6 +97,14 @@ if (isset($_POST['ca_save'])) {
     }
     if (empty($_POST['description'])) {
         array_push($errors, 'Enter description');
+    }
+    foreach ($list_ca as $key) {
+        if ($key[1] === $ca_name) {
+            $count++;
+        }
+    }
+    if ($count > 0) {
+        array_push($errors, 'Error: namesake');
     }
     if (count($errors) === 0) {
         $certificate_id = $_POST['certificate_id'];
@@ -103,6 +129,7 @@ if (isset($_POST['ca_save'])) {
 // <!-- Delete certificate -->
 
 if (isset($_GET['delete_id'])) {
+    adminOnly();
     $delete_id = $_GET['delete_id'];
     $sql = "delete from certificate where certificate_id = $delete_id";
     mysqli_query($conn, $sql);
@@ -161,6 +188,14 @@ if (isset($_POST['ca_preview'])) {
                 $sql = $sql . "insert into certificate(date,certificate_name,description,id) values('" . $line[0] . "','" . $line[1] . "','" . $line[2] . "','" . $acc_id . "');";
                 array_push($array, $line);
             }
+            $count = 0;
+            foreach ($list_ca as $key) {
+                foreach ($array as $key2) {
+                    if ($key[1] === $key2[1]) {
+                        $count++;
+                    }
+                }
+            }
         }
     } else {
         array_push($errors, 'Enter your file');
@@ -169,16 +204,20 @@ if (isset($_POST['ca_preview'])) {
 
 if (isset($_POST['ca_import_prv'])) {
     adminOnly();
-    $sql = $_POST['array_import'];
-    $sql = trim($sql, "\t");
-    $newArr = explode(';', $sql);
-    foreach ($newArr as $key => $value) {
-        if ($value !== '') {
-            insertWithData($value);
+    if ($_POST['array_error'] == '0') {
+        $sql = $_POST['array_import'];
+        $sql = trim($sql, "\t");
+        $newArr = explode(';', $sql);
+        foreach ($newArr as $key => $value) {
+            if ($value !== '') {
+                insertWithData($value);
+            }
         }
+        $_SESSION['message'] = 'Certificate imported successfully';
+        $_SESSION['type'] = 'success';
+        header('location: ' . BASE_URL . "/ca/ca_index.php");
+        exit();
+    } else {
+        array_push($errors, 'Can not update duplicate name');
     }
-    $_SESSION['message'] = 'Certificate imported successfully';
-    $_SESSION['type'] = 'success';
-    header('location: ' . BASE_URL . "/ca/ca_index.php");
-    exit();
 }

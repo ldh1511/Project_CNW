@@ -48,6 +48,7 @@ function selectCol($name, $tables, $conditions){
     $sql="select $name from $tables where $conditions";
     $data = mysqli_query($conn, $sql);
     $result = mysqli_fetch_all($data);
+
     return $result;
 }
 
@@ -67,6 +68,7 @@ function selectOneWithCol($name, $tables, $conditions){
     $data = mysqli_query($conn, $sql);
     $result = mysqli_fetch_assoc($data);
     return $result;
+    
 }
 
 function update($table, $id, $data,$nameID){

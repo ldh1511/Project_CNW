@@ -14,7 +14,7 @@ foreach ($general_info as $key) {
     $gi_email = $key[5];
     $gi_intro = $key[1];
 }
-$history = selectCol('history_general_info.*, account.name','history_general_info, account','history_general_info.id=account.id');
+$history = selectCol('history_general_info.*, account.name', 'history_general_info, account', 'history_general_info.id=account.id');
 $errors = array();
 
 if (isset($_GET['edit_id'])) {
@@ -28,6 +28,7 @@ if (isset($_GET['edit_id'])) {
 }
 
 if (isset($_POST['gi_edit'])) {
+    adminOnly();
     $changeArr = array();
     if (empty($_POST['general_address'])) {
         array_push($errors, 'Enter address');
@@ -64,11 +65,11 @@ if (isset($_POST['gi_edit'])) {
             }
             $sql = "insert into history_general_info(content,id,general_id) values('$content', '$acc_id','$gi_id')";
             insertWithData($sql);
-            $_SESSION['message'] = 'General Information changed successfully';
-            $_SESSION['type'] = 'success';
-            header('location: ' . BASE_URL . "/gi/gi_index.php");
-            exit();
         }
+        $_SESSION['message'] = 'General Information changed successfully';
+        $_SESSION['type'] = 'success';
+        header('location: ' . BASE_URL . "/gi/gi_index.php");
+        exit();
     } else {
         $gi_address = $_POST['general_address'];
         $gi_email = $_POST['general_mail'];
@@ -77,8 +78,8 @@ if (isset($_POST['gi_edit'])) {
 }
 
 if (isset($_GET['delete_Id'])) {
-    $id=$_GET['delete_Id'];
-    delete('history_general_info',$id,'history_gi_id');
+    $id = $_GET['delete_Id'];
+    delete('history_general_info', $id, 'history_gi_id');
     $_SESSION['message'] = "General Information history deleted successfully";
     $_SESSION['type'] = 'success';
     header('location: ' . BASE_URL . "/gi/gi_history.php");

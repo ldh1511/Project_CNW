@@ -24,6 +24,7 @@ if (isset($_GET['detail_id'])) {
 }
 //INSERT
 if (isset($_POST['skill_add'])) {
+    adminOnly();
     $name = $_POST['skill_name'];
     $count = 0;
     if (empty($_POST['skill_name'])) {
@@ -69,6 +70,7 @@ if (isset($_GET['edit_id'])) {
     }
 }
 if (isset($_POST['skill_save'])) {
+    adminOnly();
     $skill_name = $_POST['skill_name'];
     $skill_id = $_POST['skill_id'];
     $list_skill = selectCol('*', 'skill', "skill_id !=$skill_id");
@@ -107,6 +109,7 @@ if (isset($_POST['skill_save'])) {
 }
 // DELETE
 if (isset($_GET['delete_id'])) {
+    adminOnly();
     $delete_id = $_GET['delete_id'];
     delete('skill_account', $delete_id, 'skill_id');
     $sql = "delete from skill where skill_id = $delete_id";

@@ -24,6 +24,7 @@ if (isset($_GET['detail_id'])) {
 }
 // INSERT
 if (isset($_POST['edu_add'])) {
+    adminOnly();
     if (empty($_POST['edu_start'])) {
         array_push($errors, 'Enter start date');
     }
@@ -68,6 +69,7 @@ if (isset($_GET['edit_id'])) {
     }
 }
 if (isset($_POST['edu_save'])) {
+    adminOnly();
     if (empty($_POST['edu_start'])) {
         array_push($errors, 'Enter start date');
     }
@@ -101,6 +103,7 @@ if (isset($_POST['edu_save'])) {
 }
 // DELETE
 if (isset($_GET['delete_id'])) {
+    adminOnly();
     $delete_id = $_GET['delete_id'];
     $sql = "delete from education where education_id = $delete_id";
     mysqli_query($conn, $sql);

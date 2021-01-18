@@ -16,6 +16,7 @@ if (isset($_GET['detail_id'])) {
 }
 // INSERT
 if (isset($_POST['skill_add'])) {
+    adminOnly();
     if (empty($_POST['skill_id'])) {
         array_push($errors, 'You must choose skill');
     }
@@ -30,6 +31,7 @@ if (isset($_POST['skill_add'])) {
 }
 // DELETE
 if (isset($_GET['delete_id'])) {
+    adminOnly();
     $skill_id = $_GET['delete_id'];
     $sql = "delete from skill_account where skill_id='$skill_id' and id='$acc_id'";
     mysqli_query($conn, $sql);
