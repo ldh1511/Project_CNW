@@ -27,6 +27,9 @@ adminOnly();
             <div class="content-right admin-container">
                 <div class="title-box">
                     <h3 class="admin-title">experience</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
                     <div class="search-box">
                         <div class="header-btn-container">
                             <div class="header-button">
@@ -40,7 +43,7 @@ adminOnly();
                     </div>
                 </div>
                 <?php include(ROOT_PATH . "/includes/message.php") ?>
-                <table class="table table-striped table-hover bg-white table-borderless rounded" id="result">
+                <table class="table table-striped table-hover bg-white table-borderless rounded table-admin" id="result">
                     <thead>
                         <tr>
                             <th>Number</th>

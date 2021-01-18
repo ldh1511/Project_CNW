@@ -28,6 +28,9 @@ include(ROOT_PATH . "/controllers/ca.php");
             <div class="content-right admin-container">
                 <div class="title-box">
                     <h3 class="admin-title">Certificate detail</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
                 <div class="container">
                     <div class="form-group">

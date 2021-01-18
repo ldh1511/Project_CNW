@@ -26,6 +26,9 @@ adminOnly();
             <div class="content-right admin-container">
                 <div class="title-box">
                     <h3 class="admin-title">skill</h3>
+                    <div class="admin-bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
                     <div class="search-box">
                         <div class="header-btn-container">
                             <div class="header-button">
@@ -39,14 +42,14 @@ adminOnly();
                     </div>
                 </div>
                 <?php include(ROOT_PATH . "/includes/message.php") ?>
-                <table class="table table-striped table-hover bg-white table-borderless rounded" id="result">
+                <table class="table table-striped table-hover bg-white table-borderless rounded table-admin" id="result">
                     <thead>
                         <tr>
                             <th>Number</th>
                             <th>Name</th>
-                            <th>Description</th>
+                            <th class="col-hidden">Description</th>
                             <th>Date</th>
-                            <th>Add by</th>
+                            <th class="col-hidden">Add by</th>
                             <th>Detail</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -58,9 +61,9 @@ adminOnly();
                             echo '<tr>';
                             echo '<td>' . $i . '</td>';
                             echo '<td>' . $skill[1] . '</td>';
-                            echo '<td>' . html_entity_decode(substr($skill[2], 0, 35) . "...") . '</td>';
+                            echo '<td class="col-hidden">' . html_entity_decode(substr($skill[2], 0, 35) . "...") . '</td>';
                             echo '<td>' . $skill[3] . '</td>';
-                            echo '<td>' . $skill[5] . '</td>';
+                            echo '<td class="col-hidden">' . $skill[5] . '</td>';
                             echo '<td><a href="skill_detail.php?detail_id=' . $skill[0] . '"><i class="fas fa-book-reader"></i></a></td>';
                             echo '<td><a href="skill_edit.php?edit_id=' . $skill[0] . '"><i class="far fa-edit"></i></a></td>';
                             echo '<td><a href="skill_edit.php?delete_id=' . $skill[0] . '""><i class="far fa-trash"></i></a></td>';

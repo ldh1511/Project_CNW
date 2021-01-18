@@ -47,7 +47,7 @@ adminOnly();
                     <thead>
                         <tr>
                             <th>Number</th>
-                            <th>Name</th>
+                            <th class="col-hidden">Name</th>
                             <th>Link</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -58,7 +58,7 @@ adminOnly();
                         <?php foreach ($social as $key) : ?>
                             <tr>
                                 <td><?php echo $i ?></td>
-                                <td><?php echo $key[1] ?></td>
+                                <td class="col-hidden"><?php echo $key[1] ?></td>
                                 <td><?php echo $key[2] ?></td>
                                 <td><a href="social_edit.php?edit_Id=<?php echo $key[0] ?>"><i class="far fa-edit"></i></a></td>
                                 <td><a href="social_edit.php?delete_Id=<?php echo $key[0] ?>"><i class="far fa-trash"></i></a></td>

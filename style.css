@@ -321,7 +321,7 @@ html,body{
 }
 .left-element-admin.active-menu{
     opacity: 1;
-    z-index: 99999;
+    z-index: 99999999;
     position: fixed;
     width: 245px;
 }
@@ -1057,6 +1057,9 @@ form h2{
     .left-element {
         width: 26%;
     }
+    .carousel{
+        height: 245px !important;
+    }
 }
 @media only screen and (max-width: 1035px){
     .content-left {
@@ -1115,7 +1118,13 @@ form h2{
     .form-login {
         width: 100%;
     }
+    
 }
 @media only screen and (max-width: 768px){
-
+    .col-hidden{
+        display: none;
+    }
+    .carousel{
+        height: 433px !important;
+    }
 }

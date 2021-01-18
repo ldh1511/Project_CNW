@@ -107,8 +107,6 @@ if (isset($_POST['svc_edit'])) {
     }
     foreach ($svc as $key) {
         if ($key[1] === $svc_name) {
-            echo $svc_name;
-            echo $key[1];
             $count++;
         }
     }
@@ -153,7 +151,6 @@ if (isset($_POST['svc_edit'])) {
         $svc_des = $_POST['service_description'];
         $svc_price = $_POST['price'];
         $svc_id = $_POST['svc_id'];
-        print_r($errors);
     }
 }
 // DELETE
@@ -183,7 +180,7 @@ if (isset($_REQUEST['term'])) {
     echo "<th>Number</th>";
     echo "<th>Name</th>";
     echo "<th>Price</th>";
-    echo "<th>Description</th>";
+    echo "<th class='col-hidden'>Description</th>";
     echo "<th>Add by</th>";
     echo "<th>Detail</th>";
     echo "<th>Edit</th>";
@@ -197,7 +194,7 @@ if (isset($_REQUEST['term'])) {
         echo "<td>" . $i . "</td>";
         echo "<td>" . $key[1] . "</td>";
         echo "<td>" . $key[2] . "</td>";
-        echo "<td>" . html_entity_decode(substr($key[3], 0, 35) . "...") . "</td>";
+        echo "<td class='col-hidden'>" . html_entity_decode(substr($key[3], 0, 35) . "...") . "</td>";
         echo "<td>" . $key[4] . "</td>";
         echo "<td><a href='svc_detail.php?id=" . $key[0] . "'><i class='fas fa-book-reader'></i></a></td>";
         echo "<td><a href='svc_edit.php?editId=" . $key[0] . "'><i class='far fa-edit'></i></a></td>";

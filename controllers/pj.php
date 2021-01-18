@@ -27,9 +27,9 @@ if (isset($_REQUEST['term'])) {
     echo "<tr>";
     echo "<th>Number</th>";
     echo "<th>Start Date</th>";
-    echo "<th>End Date</th>";
+    echo "<th class='col-hidden'>End Date</th>";
     echo "<th>Name</th>";
-    echo "<th>Description</th>";
+    echo "<th class='col-hidden'>Description</th>";
     echo "<th>Image</th>";
     echo "<th>Detail</th>";
     echo "<th>Edit</th>";
@@ -42,9 +42,9 @@ if (isset($_REQUEST['term'])) {
         echo "<tr>";
         echo "<td class='align-middle'>" . $i . "</td>";
         echo "<td class='align-middle'>" . $key[1] . "</td>";
-        echo "<td class='align-middle'>" . $key[2] . "</td>";
+        echo "<td class='align-middle col-hidden'>" . $key[2] . "</td>";
         echo "<td class='align-middle'>" . $key[3] . "</td>";
-        echo "<td class='align-middle'>" . html_entity_decode(substr($key[4], 0, 35) . "...") . "</td>";
+        echo "<td class='align-middle col-hidden'>" . html_entity_decode(substr($key[4], 0, 35) . "...") . "</td>";
         echo "<td class='align-middle'><img class='img-col' src='../Img/" . $key[5] . "' alt=''></td>";
         echo "<td class='align-middle'><a href='pj_detail.php?pj_id=" . $key[0] . "'><i class='fas fa-book-reader'></i></a></td>";
         echo "<td class='align-middle'><a href='pj_edit.php?edit_id=" . $key[0] . "'><i class='far fa-edit'></i></a></td>";

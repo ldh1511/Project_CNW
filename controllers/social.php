@@ -72,7 +72,7 @@ if (isset($_REQUEST['term'])) {
     adminOnly();
     $param_term = mysqli_real_escape_string($conn, $_REQUEST['term']);
     if (strlen($param_term) > 0) {
-        $sql = "select * from social_links where social_name LIKE '%" . $param_term . "%' or link LIKE '%" . $param_term . "%'";
+        $sql = "select * from social_links where id='".$acc_id."' and (social_name LIKE '%" . $param_term . "%' or link LIKE '%" . $param_term . "%')";
         $data = mysqli_query($conn, $sql);
         $resultSearch = mysqli_fetch_all($data);
     } else {
@@ -81,7 +81,7 @@ if (isset($_REQUEST['term'])) {
     echo "<thead>";
     echo "<tr>";
     echo "<th>Number</th>";
-    echo "<th>Name</th>";
+    echo "<th class='col-hidden'>Name</th>";
     echo "<th>Link</th>";
     echo "<th>Edit</th>";
     echo "<th>Delete</th>";
@@ -92,7 +92,7 @@ if (isset($_REQUEST['term'])) {
     foreach ($resultSearch as $key) {
         echo "<tr>";
         echo "<td>" . $i . "</td>";
-        echo "<td>" . $key[1] . "</td>";
+        echo "<td class='col-hidden'>" . $key[1] . "</td>";
         echo "<td>" . $key[2] . "</td>";
         echo "<td><a href='social_edit.php?edit_Id=" . $key[0] . "'><i class='far fa-edit'></i></a></td>";
         echo "<td><a href='social_edit.php?delete_Id=" . $key[0] . "'><i class='far fa-trash'></i></a></td>";

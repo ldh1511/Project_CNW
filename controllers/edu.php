@@ -124,9 +124,9 @@ if (isset($_REQUEST['term'])) {
     echo "<tr>";
     echo "<th>Number</th>";
     echo "<th>Start date</th>";
-    echo "<th>Finish date</th>";
+    echo "<th class='col-hidden'>Finish date</th>";
     echo "<th>School</th>";
-    echo "<th>Description</th>";
+    echo "<th class='col-hidden'>Description</th>";
     echo "<th>Detail</th>";
     echo "<th>Edit</th>";
     echo "<th>Delete</th>";
@@ -138,9 +138,9 @@ if (isset($_REQUEST['term'])) {
         echo "<tr>";
         echo "<td>" . $i . "</td>";
         echo "<td>" . $key[1] . "</td>";
-        echo "<td>" . $key[2] . "</td>";
+        echo "<td class='col-hidden'>" . $key[2] . "</td>";
         echo "<td>" . $key[3] . "</td>";
-        echo "<td>" . $key[4] . "</td>";
+        echo "<td class='col-hidden'>" . html_entity_decode(substr($key[4], 0, 35) . "...") . "</td>";
         echo "<td><a href='edu_detail.php?detail_id=" . $key[0] . "'><i class='fas fa-book-reader'></i></a></td>";
         echo "<td><a href='edu_edit.php?edit_id=" . $key[0] . "'><i class='far fa-edit'></i></a></td>";
         echo "<td><a href='edu_edit.php?delete_id=" . $key[0] . "'><i class='far fa-trash'></i></a></td>";
